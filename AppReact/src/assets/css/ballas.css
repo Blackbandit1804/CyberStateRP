@@ -1,0 +1,74 @@
+.gangWrap .gangPad .ballasPad .menuWrap .mainPad .padBtnRow .btn:hover{
+    border: 1px solid #dc1fed;
+}
+
+.gangWrap .gangPad .ballasPad .gangBankInfoUse::-webkit-scrollbar,
+.gangWrap .gangPad .ballasPad .gangLesterOpt::-webkit-scrollbar,
+.gangWrap .gangPad .ballasPad .gangPlayerList::-webkit-scrollbar {
+    width: 7px;
+    background-color: #4d1d5a;
+    border-radius: 3px;
+}
+ 
+.gangWrap .gangPad .ballasPad .gangBankInfoUse::-webkit-scrollbar-track,
+.gangWrap .gangPad .ballasPad .gangLesterOpt::-webkit-scrollbar-track,
+.gangWrap .gangPad .ballasPad .gangPlayerList::-webkit-scrollbar-track {
+    position: absolute;
+}
+ 
+.gangWrap .gangPad .ballasPad .gangBankInfoUse::-webkit-scrollbar-thumb,
+.gangWrap .gangPad .ballasPad .gangLesterOpt::-webkit-scrollbar-thumb,
+.gangWrap .gangPad .ballasPad .gangPlayerList::-webkit-scrollbar-thumb {
+    top: 2px;
+    background-color: #901bad;
+    background-repeat: repeat-y;
+    border-radius: 3px;
+}
+
+.gangWrap .gangPad .ballasPad .gangBankInfoUse .selectRow div,
+.gangWrap .gangPad .ballasPad .gangLesterOpt .selectRow div,
+.gangWrap .gangPad .ballasPad .gangPlayerList .selectRow div{
+    background-color: #911dae;
+}
+
+.gangWrap .gangPad .ballasPad .menuWrap .contentList .headerGangBank .titleTGBank,
+.gangWrap .gangPad .ballasPad .menuWrap .contentList .headerList div{
+    color: #901bad;
+}
+
+.gangWrap .gangPad .ballasPad{
+    background-image: url(../img/bandTablet/bgBallas.png);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.gangWrap .gangPad .ballasPad .menuWrap .mainPad .btnCar{
+    background-image: url(../img/bandTablet/ballas_carsGang.png);
+}
+.gangWrap .gangPad .ballasPad .menuWrap .mainPad .btnChat{
+    background-image: url(../img/bandTablet/ballas_chat.png);
+}
+
+.gangWrap .gangPad .ballasPad .menuWrap .mainPad .btnList{
+    background-image: url(../img/bandTablet/ballas_gangList.png);
+}
+
+.gangWrap .gangPad .ballasPad .menuWrap .mainPad .btnMap{
+    background-image: url(../img/bandTablet/ballas_gangMap.png);
+}
+
+.gangWrap .gangPad .ballasPad .menuWrap .mainPad .btnGBank{
+    background-image: url(../img/bandTablet/ballas_gangBank.png);
+}
+.gangWrap .gangPad .ballasPad .menuWrap .mainPad .btnLester{
+    background-image: url(../img/bandTablet/ballas_lester.png);
+}
+
+.gangWrap .gangPad .ballasPad .menuWrap .contentList{
+    background-color: #3c1e45;
+}
+.gangWrap .gangPad .ballasPad .menuWrap .gangMapInfo .mapBtn,
+.gangWrap .gangPad .ballasPad .menuWrap .footerBtn .footBtnP{
+    background-color: #901bad;
+}

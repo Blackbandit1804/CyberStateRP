@@ -1,0 +1,157 @@
+.chatRight {
+    color: #fff;
+    font-size: 2vh;
+    font-family: 'Chalet-LondonNineteenSixty';
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 30vh;
+    width: 60vh;
+}
+
+/*.chatRight hr {
+	opacity: 0.2;
+	border-color: #aaa;
+	width: 60%;
+	margin: 0 0 0 auto;
+}*/
+.chatRight input[type="text"] {
+    position: absolute;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: #fff;
+    height: 3.1vh;
+    padding: 1vh;
+    width: 56vh;
+    border-radius: 4px;
+}
+
+.chatRight input[type="text"]:focus {
+    outline: none;
+}
+
+.chatRight .chat-bottom {
+    margin-top: 2vh;
+    display: inline-flex;
+}
+
+.chatRight .chat-content {
+    transition: 1s;
+    height: calc(25 * 9px);
+    overflow-y: hidden;
+    text-align: left;
+    font-size: 16px;
+}
+
+.chatRight .chat-content div {
+    padding: 3px;
+    word-break: break-word;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
+    text-align: right;
+}
+
+.chatRight .chat-tags {
+    display: flex;
+    font-size: 1.2vh;
+    margin-left: 4vh;
+    margin-top: 3.4vh;
+}
+
+.chatRight .chat-tags div {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    margin-right: 0.2vh;
+    padding: 0.3vh 1vh;
+}
+
+.chatRight .chat-tags div:not(.active):hover {
+    background: #fff;
+    color: #000;
+    opacity: 0.7;
+}
+
+.chatRight .chat-tags div.active {
+    background: #fff;
+    color: #000;
+}
+
+.chatRight .chat-bottom .help {
+    background: none;
+    bottom: 2.95vh;
+    font-size: 1.5vh;
+    opacity: 0.5;
+    position: absolute;
+    right: 1.2vh;
+}
+
+.chatRight .chat-bottom .help:hover {
+    background: none;
+    box-shadow: 1px #fff;
+    color: #fff;
+    opacity: 1;
+}
+
+.chatRight .chat-tags .say {
+    /* color: #fff; */
+}
+
+.chatRight .chat-tags .shout {
+    /* color: #e4a600; */
+}
+
+.chatRight .chat-tags .whisper {
+    /* color: #c0c0c0; */
+}
+
+.chatRight .chat-tags .ooc {
+    /* color: #4bc0c4; */
+}
+
+.chatRight .chat-tags .me {
+    /* color: #f0d2f4; */
+}
+
+.chatRight .chat-tags .do {
+    /* color: #f0d2f4; */
+}
+
+.chatRight .chat-tags .try {
+    /* color: #f0d2f4; */
+}
+
+.chatRight .chat-tags .radio {
+    /* color: #4bc0c4; */
+}
+
+.chatRight .chat-tags .dep {
+    /* color: #f4d2d2; */
+}
+
+.chatRight .tag {
+    position: absolute;
+    right: 424px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 4px 0px 0px 4px;
+    color: #aaa;
+    font-size: 1.1vh;
+    /* width: 85px; */
+    width: 0;
+    /* text-align: right; */
+    text-transform: uppercase;
+    height: 3.1vh;
+}
+
+.chatRight .tag a {
+    position: relative;
+    top: -1.3vh;
+    padding-left: 7px;
+}
+
+.chatRight .tag a:after {
+    content: ':';
+}
+
+.chatRight .userId {
+    font-family: 'Chalet-ParisNineteenSixty';
+}

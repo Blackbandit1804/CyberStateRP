@@ -1,0 +1,90 @@
+@font-face {
+    font-family: NEWYORKSIXTY; /* Ð˜Ð¼Ñ ÑˆÑ€Ð¸Ñ„Ñ‚Ð° */
+    src: url(../fonts/Chalet/NEWYORKSIXTY.ttf); /* ÐŸÑƒÑ‚ÑŒ Ðº Ñ„Ð°Ð¹Ð»Ñƒ ÑÐ¾ ÑˆÑ€Ð¸Ñ„Ñ‚Ð¾Ð¼ */
+}
+@font-face {
+    font-family: LONDONSIXTY; /* Ð˜Ð¼Ñ ÑˆÑ€Ð¸Ñ„Ñ‚Ð° */
+    src: url(../fonts/Chalet/LONDONSIXTY.ttf); /* ÐŸÑƒÑ‚ÑŒ Ðº Ñ„Ð°Ð¹Ð»Ñƒ ÑÐ¾ ÑˆÑ€Ð¸Ñ„Ñ‚Ð¾Ð¼ */
+}
+
+
+#custom {
+    margin-left: 39px;
+    margin-top: 450px;
+}
+
+#custom .header {
+    font-family: NEWYORKSIXTY;
+    font-size: 14px;
+
+    width: 310px;
+    height: 35px;
+    background-color: #ffffff;
+
+    text-align: center;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+#custom .body {
+    margin-top: 5px;
+
+    width: 310px;
+    height: 200px;
+
+    background-image: -moz-linear-gradient( 90deg, rgba(0,0,0,0.10196) 0%, rgb(0,0,0) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgba(0,0,0,0.10196) 0%, rgb(0,0,0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgba(0,0,0,0.10196) 0%, rgb(0,0,0) 100%);
+}
+#custom .body .category {
+    font-family: LONDONSIXTY;
+    font-size: 13px;
+    color: white;
+
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+#custom .body .category .skill-box {
+    display: flex;
+    grid-template-rows: 1fr min-content;
+    grid-template-columns: 1fr min-content;
+    font-family: "OpenSansSemiBold";
+    font-size: 8pt;
+    margin-top: 5px;
+    align-items: stretch;
+}
+
+#custom .body .category .skill-box .progress {
+    background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) 50px, rgba(0, 0, 0, 0) 50px, rgba(0, 0, 0, 0) 55px);
+    width: 94%;
+    height: 8px;
+    grid-column: 1/3;
+}
+
+#custom .body .category .skill-box .progress div {
+    background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 50px, rgba(0, 0, 0, 0) 50px, rgba(0, 0, 0, 0) 55px);
+    height: 100%;
+}
+
+#player-menu #character-body .character-skills .progress div {
+    background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 50px, rgba(0, 0, 0, 0) 50px, rgba(0, 0, 0, 0) 55px);
+    height: 100%;
+}
+
+#custom .body .category .blocks div:not(:first-child){
+    margin-left: 5px;
+}
+.blocks_active {
+    display: flex;
+    align-items: stretch;
+}
+.blocks_active div {
+    margin-top: -8px;
+
+    width: 50px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 1);
+}
+#custom .body .category .blocks_active div:not(:first-child){
+    margin-left: 5px;
+}

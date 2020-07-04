@@ -1,0 +1,308 @@
+@font-face {
+    font-family: sansSemiBold;
+    src: url(../fonts/OpenSans/OPENSANS-SEMIBOLD.ttf);
+}
+
+@font-face {
+    font-family: SansBold;
+    src: url(../fonts/OpenSans/OPENSANS-BOLD.ttf);
+}
+
+.adminBlock{
+    /*border: 1px solid black;*/
+    width: 1060px;
+	height: 465px;
+	margin-top: calc(20vh);
+    margin-left: calc(20vw);
+    font-size: 13px;
+    position: absolute;
+}
+
+.floatLeft{
+    float: left;
+}
+
+.adminHead{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.9);
+    line-height: 40px;
+    margin-bottom: 5px;
+}
+
+.ticketType{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 420px;
+    margin-right: 2px;
+    font-size: 15px;
+    font-family: sansBold;
+}
+
+.ticketType .typeTik{
+    width: 352px;
+    height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+.typeTik div{
+    float: left;
+}
+
+.typeTik .newMsg{
+    width: 4px;
+    height: 40px;
+    float: left;
+    background-color: #06ca5a;
+}
+.typeTik .noMsg{
+    width: 4px;
+    height: 40px;
+    float: left;
+    background-color: transparent;
+}
+
+.ticketType .selectTickType{
+    background-color:  rgba(3, 98, 165, 0.8);
+    color: #fff;
+}
+.ticketType .selectTickType .countTick{
+    background-color: #fff;
+    color: rgba(3, 98, 165, 0.8);
+}
+.ticketType .deselect{
+    background-color: #fff;
+    color: #000;
+}
+.ticketType .deselect .countTick{
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+.typeTik .nameType{
+    width: 284px;
+    text-align: center;
+
+}
+.typeTik .countTick{
+    margin: 10px 12px;
+    width: 40px;
+    text-align: center;
+    border-radius: 10px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.ticketList{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 240px;
+    height: 420px;
+    margin-right: 2px;
+    font-size: 15px;
+    font-family: sansSemiBold;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.ticketMsg{
+    margin-top: 3px;
+    background: #fff;
+    height: 40px;
+    width: 240px;
+}
+.ticketMsg div{
+    float: left;
+}
+
+.ticketMsg .nubmerTick{
+    width: 130px;
+    text-align: center;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.ticketMsg .btnRead{
+    margin-top: 6px;
+    width: 100px;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 7px;
+    height: 28px;
+    background-color: #42a302;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ticketChat{
+    width: 463px;
+    height: 420px;
+    font-family: sansSemiBold;
+}
+
+.boxS{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 463px;
+    height: 286px;
+}
+
+.chatBox{
+    overflow-y: scroll;
+    height: 256px;
+}
+
+.ticketHead{
+    color: #fff;
+}
+.ticketHead div{
+    margin-top: 10px;
+    float: left;
+}
+.headNameTicket{
+    width: 308px;
+    padding-left: 14px;
+    font-size: 15px;
+}
+
+.headTimeTicket{
+    width: 130px;
+    font-size: 13px;
+    
+}
+
+.msgInBox{
+    margin: 10px;
+    font-size: 14px;
+}
+
+.msgInBox .author{
+    display: inline-block;
+    height: 27px;
+    line-height: 27px;
+    border-radius: 5px 5px 0 0;
+    padding: 0 10px;
+}
+
+.msgInBox .msg{
+    border-radius: 0 5px 5px 5px;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.chatBox .from{
+    color: #fff;
+}
+
+.chatBox .from .author{
+    background-color: #000;
+}
+
+.chatBox .from .msg{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.chatBox .to{
+    color: #000;
+}
+
+.chatBox .to .author{
+    background-color: #fff;
+}
+
+.chatBox .to .msg{
+    background-color: #ccc;
+}
+
+.responseBox{
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 2px;
+    height: 132px;
+    font-family: sansSemiBold;
+}
+
+.responseBox textarea{
+    margin: 10px;
+    width: 435px;
+    height: 65px;
+    font-family: sansSemiBold;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 13px;
+}
+
+.sendBtn{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 10px;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.closeTicket{
+    background-color: #cc6600;
+    color: #fff;
+    margin: 0 10px;
+    width: 133px;
+    text-align: center;
+    height: 24px;
+}
+
+.cancel{
+    background-color: #a11919;
+    color: #fff;
+    margin: 0 -5px;
+    text-align: center;
+    width: 106px;
+    height: 24px;
+}
+
+.responseBtn{
+    background-color: #fff;
+    color: #000;
+    margin-left: 40px;
+    width: 100px;
+    height: 24px;
+    text-align: center;
+}
+
+.chatBox::-webkit-scrollbar {
+    width: 7px;
+}
+ 
+.chatBox::-webkit-scrollbar-track {
+    background-color: transparent;
+    background-repeat: repeat-x;
+    background-attachment: fixed; 
+    position: absolute;
+    padding: 1px;
+}
+ 
+.chatBox::-webkit-scrollbar-thumb {
+    top: 2px;
+    background-color: #fff;
+    background-repeat: repeat-y;
+    border-radius: 3px;
+}
+
+.ticketList::-webkit-scrollbar {
+    width: 7px;
+}
+ 
+.ticketList::-webkit-scrollbar-track {
+    background-color: transparent;
+    background-repeat: repeat-x;
+    background-attachment: fixed; 
+    position: absolute;
+    padding: 1px;
+}
+ 
+.ticketList::-webkit-scrollbar-thumb {
+    top: 2px;
+    background-color: #fff;
+    background-repeat: repeat-y;
+    border-radius: 3px;
+}

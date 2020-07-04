@@ -1,0 +1,315 @@
+#houseMenu .container {
+	width: 852px;
+	padding-bottom: 30px;
+	background: rgba(28,9,37,0.9);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	font-family: 'Gotham Pro', sans-serif;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+#houseMenu .container .header {
+	height: 34px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #180a1f;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding-right: 6px;
+	padding-left: 20px;
+
+}
+
+#houseMenu .container .content #ownerMenu .images {
+	width: 195px;
+	height: 373px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	background: url(../img/bg_images.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: 100% 100%;
+	background-size: cover;
+}
+#houseMenu .container .header .houseText {
+	font-weight: 500;
+	color: #ffffff;
+	font-size: 14px;
+}
+#houseMenu .container .content {
+	width: 793px;
+	
+	margin: 0 auto;
+	margin-top: 17px;
+}
+#houseMenu .container .content #layoutPanel .contentHouse {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+#houseMenu .container .content #ownerMenu .contentHouse {
+	width: 477px;
+}
+#houseMenu .container .content #ownerMenu .contentHouse .alert {
+	width: 100%;
+	height: 47px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	padding: 0 13px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: bold;
+	font-size: 16px;
+	color: #ffffff;
+}
+#houseMenu .container .content #ownerMenu .contentHouse .alert .action {
+	background: rgba(0,0,0,0.2);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	height: 24px;
+	width: 94px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	font-weight: 400;
+	color: #ffffff;
+}
+.house_open {
+	background: #008009;
+}
+.house_closed {
+	background: #c40000;
+}
+#houseMenu .container .content #ownerMenu .contentHouse .actions {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 12px;
+}
+#houseMenu .container .content #ownerMenu .contentHouse .actions li {
+	width: 232px;
+	height: 37px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	background: #1a0c1f;
+	font-size: 14px;
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 12px;
+}
+#houseMenu .container .content #ownerMenu .contentHouse .actions li:nth-last-child(2),
+#houseMenu .container .content #ownerMenu .contentHouse .actions li:nth-last-child(1) {
+	margin-bottom: 0px;
+}
+#houseMenu .container .content #layoutPanel .contentHouse .houseAction {
+	width: 345px;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	background: rgb(88,6,139);
+	background: -moz-linear-gradient(152deg, rgba(88,6,139,1) 0%, rgba(207,1,216,1) 100%);
+	background: -webkit-linear-gradient(152deg, rgba(88,6,139,1) 0%, rgba(207,1,216,1) 100%);
+	background: linear-gradient(152deg, rgba(88,6,139,1) 0%, rgba(207,1,216,1) 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 18px 0px;
+
+}
+#houseMenu .container .content #layoutPanel .contentHouse .houseAction .images {
+	width: 310px;
+	height: 116px;
+	margin-bottom: 11px;
+}
+#houseMenu .container .content #layoutPanel .contentHouse .houseAction .buttonAction {
+	width: 310px;
+	height: 41px;
+	background: #1f0d26;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	font-size: 14px;
+	color: #ffffff;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+#houseMenu .container .content #layoutPanel .contentHouse .houseAction .buttonAction:nth-last-child(1) {
+	margin: 0;
+}
+#houseMenu .container .content #layoutPanel .contentHouse .houseStats {
+	width: 411px;
+}
+#houseMenu .container .content #layoutPanel .contentHouse .houseStats .headerHouse {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	font-weight: bold;
+	color: #ffffff;
+	font-size: 18px;
+}
+#houseMenu .container .content #layoutPanel .contentHouse .houseStats .headerHouse .break {
+	width: 49px;
+	height: 6px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	margin-top: 8px;
+	background: rgb(88,6,139);
+    background: -moz-linear-gradient(90deg, rgba(88,6,139,1) 0%, rgba(207,1,216,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(88,6,139,1) 0%, rgba(207,1,216,1) 100%);
+    background: linear-gradient(90deg, rgba(88,6,139,1) 0%, rgba(207,1,216,1) 100%);
+}
+#houseMenu .container .content #layoutPanel .contentHouse .houseStats .stats {
+	margin-top: 40px;
+	width: 100%;
+}
+#houseMenu .container .content #layoutPanel .contentHouse .houseStats .stats li {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+#houseMenu .container .content #layoutPanel .contentHouse .houseStats .stats li:nth-last-child(1) {
+	margin: 0;
+}
+#houseMenu .container .content #layoutPanel .contentHouse .houseStats .stats li .params {
+	font-size: 14px;
+	font-weight: 500;
+	color: #ffffff;
+}
+#houseMenu .container .content #layoutPanel .contentHouse .houseStats .stats li .value {
+	display: flex;
+	justify-content: flex-end;
+	color: #9d00ff;
+	font-size: 14px;
+	font-weight: 500;
+}
+#houseMenu .container .content #layoutPanel .footer {
+	width: 100%;
+	margin-top: 33px;
+	display: flex;
+	justify-content: space-between;
+}
+#houseMenu .container .content #layoutPanel .footer .costHouse {
+
+}
+#houseMenu .container .content #layoutPanel .footer .costHouse .label {
+	font-size: 14px;
+	font-weight: 500;
+	color: #ffffff;
+	margin-bottom: 11px;
+}
+#houseMenu .container .content #layoutPanel .footer .costHouse .value {
+	font-weight: bold;
+	font-size: 24px;
+	color: #a001e5;
+}
+#houseMenu .container .content #layoutPanel .footer .btn_buy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 500;
+	width: 171px;
+	height: 45px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	background: rgb(88,6,139);
+    background: -moz-linear-gradient(90deg, rgba(88,6,139,1) 0%, rgba(207,1,216,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(88,6,139,1) 0%, rgba(207,1,216,1) 100%);
+    background: linear-gradient(90deg, rgba(88,6,139,1) 0%, rgba(207,1,216,1) 100%);
+}
+
+#houseMenu .container .content #ownerMenu .contentHouse .upgradeBox {
+	width: 100%;
+	margin-top: 30px;
+}
+#houseMenu .container .content #ownerMenu .contentHouse .upgradeBox .headerHouse {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	font-weight: bold;
+	color: #ffffff;
+	font-size: 18px;
+}
+#houseMenu .container .content #ownerMenu .contentHouse .upgradeBox .headerHouse .break {
+	width: 49px;
+	height: 6px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	margin-top: 8px;
+	background: rgb(88,6,139);
+background: -moz-linear-gradient(90deg, rgba(88,6,139,1) 0%, rgba(207,1,216,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(88,6,139,1) 0%, rgba(207,1,216,1) 100%);
+background: linear-gradient(90deg, rgba(88,6,139,1) 0%, rgba(207,1,216,1) 100%);
+}
+#houseMenu .container .content #ownerMenu .contentHouse .upgradeBox .upgrade {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 24px;
+}
+#houseMenu .container .content #ownerMenu .contentHouse .upgradeBox .upgrade li {
+	width: 120px;
+	height: 99px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 12px;
+	font-weight: 500;
+	color: #ffffff;
+	text-align: center;
+	background: #1a0c1f;
+
+}
+#houseMenu .container .content #ownerMenu .contentHouse .upgradeBox .upgrade li img {
+	margin-bottom: 8px;
+}

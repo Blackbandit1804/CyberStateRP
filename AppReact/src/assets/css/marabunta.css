@@ -1,0 +1,75 @@
+.gangWrap .gangPad .marabPad .menuWrap .mainPad .padBtnRow .btn:hover{
+    border: 1px solid #1fdced;
+}
+
+.gangWrap .gangPad .marabPad .gangBankInfoUse::-webkit-scrollbar,
+.gangWrap .gangPad .marabPad .gangLesterOpt::-webkit-scrollbar,
+.gangWrap .gangPad .marabPad .gangPlayerList::-webkit-scrollbar {
+    width: 7px;
+    background-color: #2c5361;
+    border-radius: 3px;
+}
+ 
+.gangWrap .gangPad .marabPad .gangBankInfoUse::-webkit-scrollbar-track,
+.gangWrap .gangPad .marabPad .gangLesterOpt::-webkit-scrollbar-track,
+.gangWrap .gangPad .marabPad .gangPlayerList::-webkit-scrollbar-track {
+    position: absolute;
+}
+ 
+.gangWrap .gangPad .marabPad .gangBankInfoUse::-webkit-scrollbar-thumb,
+.gangWrap .gangPad .marabPad .gangLesterOpt::-webkit-scrollbar-thumb,
+.gangWrap .gangPad .marabPad .gangPlayerList::-webkit-scrollbar-thumb {
+    top: 2px;
+    background-color: #69b9d7;
+    background-repeat: repeat-y;
+    border-radius: 3px;
+}
+
+.gangWrap .gangPad .marabPad .gangBankInfoUse .selectRow div,
+.gangWrap .gangPad .marabPad .gangLesterOpt .selectRow div,
+.gangWrap .gangPad .marabPad .gangPlayerList .selectRow div{
+    background-color: #69b9d7;
+}
+
+.gangWrap .gangPad .marabPad .menuWrap .contentList .headerGangBank .titleTGBank,
+.gangWrap .gangPad .marabPad .menuWrap .contentList .headerList div{
+    color: #69b9d7;
+}
+
+.gangWrap .gangPad .marabPad{
+    background-image: url(../img/bandTablet/bgMara.png);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.gangWrap .gangPad .marabPad .menuWrap .mainPad .btnCar{
+    background-image: url(../img/bandTablet/mara_car.png);
+}
+.gangWrap .gangPad .marabPad .menuWrap .mainPad .btnChat{
+    background-image: url(../img/bandTablet/mara_chat.png);
+}
+
+.gangWrap .gangPad .marabPad .menuWrap .mainPad .btnList{
+    background-image: url(../img/bandTablet/mara_online.png);
+}
+
+.gangWrap .gangPad .marabPad .menuWrap .mainPad .btnMap{
+    background-image: url(../img/bandTablet/mara_map.png);
+}
+
+.gangWrap .gangPad .marabPad .menuWrap .mainPad .btnGBank{
+    background-image: url(../img/bandTablet/mara_bank.png);
+}
+.gangWrap .gangPad .marabPad .menuWrap .mainPad .btnLester{
+    background-image: url(../img/bandTablet/mara_lester.png);
+}
+
+.gangWrap .gangPad .marabPad .menuWrap .contentList{
+    background-color: #1d3943;
+}
+
+.gangWrap .gangPad .marabPad .menuWrap .gangMapInfo .mapBtn,
+.gangWrap .gangPad .marabPad .menuWrap .footerBtn .footBtnP{
+    background-color: #69b9d7;
+}

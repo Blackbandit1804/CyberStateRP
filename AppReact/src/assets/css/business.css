@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+#businessMenu {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#businessMenu .free .header,
+#businessMenu .occupied .header,
+#businessMenu .businessSettings .header {
+    width: 800px;
+    height: 40px;
+
+    background-color: rgba(0, 0, 0, .90);
+    border-top: 5px solid #06ca5a;
+
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
+#businessMenu .occupied .header {
+    border-top: 5px solid #ca0606;
+}
+#businessMenu .free .header #status.green,
+#businessMenu .occupied .header #status.green {
+    color: #06ca5a;
+}
+#businessMenu .free .header #status.red,
+#businessMenu .occupied .header #status.red {
+    color: #ca0606;
+}
+
+#businessMenu .free .body,
+#businessMenu .occupied .body,
+#businessMenu .businessSettings .body {
+    width: 800px;
+    height: 400px;
+
+    background-color: rgba(0, 0, 0, .60);
+    color: white;
+
+    margin-top: 5px;
+}
+#businessMenu .free .body .left, 
+#businessMenu .occupied .body .left {
+    float: left;
+    width: 47%;
+    margin-left: 17px;
+    margin-top: 17px;
+}
+#businessMenu .free .body .left .infoHeader,
+#businessMenu .occupied .body .left .infoHeader {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+#businessMenu .free .body .left .type,
+#businessMenu .occupied .body .left .type,
+#businessMenu .free .body .left .carter,
+#businessMenu .occupied .body .left .carter,
+#businessMenu .free .body .left .impozit,
+#businessMenu .occupied .body .left .impozit {
+    font-size: 18px;
+    font-weight: 400;
+}
+#businessMenu .free .body .left .type span,
+#businessMenu .occupied .body .left .type span,
+#businessMenu .free .body .left .carter span,
+#businessMenu .occupied .body .left .carter span,
+#businessMenu .free .body .left .impozit span,
+#businessMenu .occupied .body .left .impozit span {
+    font-weight: 600;
+}
+#businessMenu .free .body .left div span.green {
+    color: #06ca5a;
+}
+#businessMenu .occupied .body .left div span.red {
+    color: #ca0606;
+}
+#businessMenu .free .body .left .priceandBuy {
+    margin-top: 135px;
+}
+#businessMenu .free .body .left .priceandBuy h1 {
+    font-size: 30px;
+}
+#businessMenu .free .body .left .priceandBuy div.fix {
+    display: flex;
+}
+#businessMenu .free .body .left .priceandBuy div.fix button {
+    width: 250px;
+    height: 42px;
+
+    background-color: #06ca5a;
+    color: white;
+
+    border-style: none;
+    transition: .3s;
+}
+#businessMenu .free .body .left .priceandBuy div.fix button:hover {
+    background-color: #04ac4d;
+}
+#businessMenu .free .body .left .priceandBuy div.fix span.line {
+    border-left: 5px solid #06ca5a !important;
+    margin-right: 2px;
+}
+
+#businessMenu .free .body .right,
+#businessMenu .occupied .body .right {
+    float: right;
+    width: 48%;
+    margin-top: 17px;
+}
+#businessMenu .free .body .right button,
+#businessMenu .occupied .body .right button {
+    margin-top: 14px;
+    width: 97%;
+    height: 42px;
+    line-height: 42px;
+
+    border-style: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    background-color: white;
+}
+#businessMenu .free .body .right button:hover,
+#businessMenu .occupied .body .right button:hover {
+    background-color: rgb(201, 201, 201);
+}
+#businessMenu .free .body .right button img,
+#businessMenu .occupied .body .right button img {
+    vertical-align: middle;
+
+    position: relative;
+    left: -50px;
+}
+
+#businessMenu .occupied .body .left .priceandBuy {
+    text-align: center;
+}
+#businessMenu .occupied .body .left .priceandBuy img {
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+}
+#businessMenu .occupied .body .left .priceandBuy h1 {
+    color: #ca0606;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+/* Модернизация бизнесса */
+#businessMenu .businessSettings .body .container {
+    display: grid;
+    grid-template-columns: 33.333% 23.077% 43.593%;
+    /* grid-template-rows: 100px 100px; */
+    padding: 10px;
+}
+#businessMenu .businessSettings .body .container div h2 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+#businessMenu .businessSettings .body .container div button {
+    border-style: none;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    font-weight: 600;
+    font-size: 18px;
+
+    background-color: white;
+
+    height: 89px;
+}
+#businessMenu .businessSettings .body .container div button:focus {
+    outline: none;
+}
+#businessMenu .businessSettings .body .container div button:hover {
+    background-color: #EEE;
+}
+#businessMenu .businessSettings .body .container div button:not(:first-of-type) {
+    margin-top: 5px;
+}
+#businessMenu .businessSettings .body .container div button img {
+    margin-top: 4px;
+}
+
+#businessMenu .businessSettings .body .container div.buttons {
+    margin-left: 32px;
+    /* display: inherit; */
+}
+#businessMenu .businessSettings .body .container div.buttons button {
+    height: 42px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 42px;
+}
+#businessMenu .businessSettings .body .container div.buttons button img {
+    margin-top: 0;
+    vertical-align: middle;
+}
+
+/* Настройка */
+.border1 {
+    width: 5px;
+    height: 89px;
+    background-color: #06ca5a;
+    position: absolute;
+    left: 261px;
+    top: 114px;
+}
+.border2 {
+    width: 5px;
+    height: 89px;
+    background-color: #06ca5a;
+    position: absolute;
+    left: 261px;
+    top: 208px;
+}

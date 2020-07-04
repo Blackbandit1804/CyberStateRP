@@ -1,0 +1,630 @@
+@font-face {
+    font-family: NEWYORKSIXTY;
+    src: url(..//fonts/Chalet/NEWYORKSIXTY.ttf);
+}
+@font-face {
+    font-family: LONDONSIXTY;
+    src: url(../fonts/Chalet/LONDONSIXTY.ttf);
+}
+.newyorksixty {
+    font-family: NEWYORKSIXTY;
+}
+.londonsixty {
+    font-family: LONDONSIXTY;
+}
+:root {
+    --fbiTablet-baseColor: #7f7f7f;
+    --fbiTablet-buttonColor: linear-gradient(#b6b6b6, #5a5a5a);
+    --fbiTablet-buttonHoverColor: linear-gradient(#f0f0f0, #f0f0f0);
+
+    --fbiTablet-button2Color: linear-gradient(#727272, #363636);
+    --fbiTablet-buttonDangerColor: linear-gradient(#923939, #681e1e);
+}
+
+#container #fib-tablet .tablet-background .imurfather *:focus {
+    outline: none;
+}
+
+
+#container #fib-tablet .tablet-background {
+    background-image: url(../img/fibTablet/bg.png);
+    background-repeat: no-repeat;
+    width: 793px;
+    height: 518px;
+    /* width: 81.4vh;
+    height: 53.5vh; */
+    margin-top: 10%;
+    margin-left: 30%;
+}
+#container #fib-tablet .tablet-background .imurfather {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    top: 69px;
+    left: 47px;
+}
+
+/* Header */
+#container #fib-tablet .tablet-background .imurfather .header .FIB {
+    color: white;
+    text-align: right;
+    font-size: 30px;
+
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+#container #fib-tablet .tablet-background .imurfather .header .subtext {
+    color: var(--fbiTablet-baseColor);
+    text-align: right;
+    font-size: 18px;
+    /* font-weight: bold; */
+
+    padding-bottom: 0px;
+    position: absolute;
+    right: 166px;
+    top: 30px;
+}
+#container #fib-tablet .tablet-background .imurfather .header hr {
+    height: 7px;
+    border-style: solid;
+    background-color: var(--fbiTablet-baseColor);
+    position: relative;
+    margin-top: 26px;
+}
+#container #fib-tablet .tablet-background .imurfather .header img {
+    position: absolute;
+    top: 17px;
+    left: 55px;
+}
+#container #fib-tablet .tablet-background .imurfather .header .time {
+    color: white;
+    font-size: 18px;
+
+    position: absolute;
+    top: 35px;
+    left: 7px;
+}
+/* Page A */
+#container #fib-tablet .tablet-background .imurfather .pageA {
+    color: white;
+    left: 57px;
+    top: 130px;
+    position: absolute;
+}
+#container #fib-tablet .tablet-background .imurfather .pageA .buttons {
+    float: left;
+    width: 50%;
+}
+#container #fib-tablet .tablet-background .imurfather .pageA .buttons button {
+    width: 260px;
+    height: 30px;
+
+    background: var(--fbiTablet-buttonColor);
+
+    border-style: none;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+
+    font-family: NEWYORKSIXTY;
+    color: #3d3d3d;
+    font-size: 16px;
+
+    text-align: left;
+    padding-left: 17px;
+
+    transition-duration: 0.2s;
+}
+#container #fib-tablet .tablet-background .imurfather .pageA .buttons button:hover {
+    background: var(--fbiTablet-buttonHoverColor);
+    color: #3d3d3d;
+}
+#container #fib-tablet .tablet-background .imurfather .pageA .text {
+    float: right;
+    width: 44%;
+    font-family: LONDONSIXTY;
+    color: white;
+    position: absolute;
+    right: 56px;
+    top: -3px;
+    text-align: justify;
+}
+/* Page B*/
+#container #fib-tablet .tablet-background .imurfather .pageB {
+    /* margin-top: 69px; */
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .findUser,
+#container #fib-tablet .tablet-background .imurfather .pageD .findUser,
+#container #fib-tablet .tablet-background .imurfather .pageE .findUser {
+    margin: auto;
+    /* width: 50%; */
+    /* width: 60%; */
+    font-family: LONDONSIXTY;
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .findUser .title,
+#container #fib-tablet .tablet-background .imurfather .pageD .findUser .title,
+#container #fib-tablet .tablet-background .imurfather .pageE .findUser .title,
+#container #fib-tablet .tablet-background .imurfather .SpecialTitleForPoliceFindUserMMMMMM {
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .findUser .textInput,
+#container #fib-tablet .tablet-background .imurfather .pageD .findUser .textInput,
+#container #fib-tablet .tablet-background .imurfather .pageE .findUser .textInput,
+#container #fib-tablet .tablet-background .imurfather .SpecialInputForPoliceFindUserMMMMMM {
+    color: var(--fbiTablet-baseColor);
+    font-size: 24px;
+    text-transform: uppercase;
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .findUser .textInput input,
+#container #fib-tablet .tablet-background .imurfather .pageD .findUser .textInput input,
+#container #fib-tablet .tablet-background .imurfather .pageE .findUser .textInput input,
+#container #fib-tablet .tablet-background .imurfather .SpecialInputForPoliceFindUserMMMMMM input {
+    width: 230px;
+    height: 38px;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #f0f0f0;
+    border-radius: 2px;
+
+    font-family: LONDONSIXTY;
+    font-size: 18px;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: #f0f0f0;
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .findUser .textInput input:disabled {
+    background: red !important;
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .findUser .smallButtons,
+#container #fib-tablet .tablet-background .imurfather .pageD .findUser .smallButtons,
+#container #fib-tablet .tablet-background .imurfather .pageE .findUser .smallButtons,
+#container #fib-tablet .tablet-background .imurfather .SpecialButtonsForPoliceFindUserMMMMMM {
+    margin-top: 20px;
+    text-align: center;
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .findUser .smallButtons button,
+#container #fib-tablet .tablet-background .imurfather .pageD .findUser .smallButtons button,
+#container #fib-tablet .tablet-background .imurfather .pageE .findUser .smallButtons button,
+#container #fib-tablet .tablet-background .imurfather .pageF .buttons button,
+#container #fib-tablet .tablet-background .imurfather .SpecialButtonsForPoliceFindUserMMMMMM button {
+    font-family: LONDONSIXTY;
+    font-weight: bold;
+    font-size: 18px;
+
+    color: #474747;
+    background: var(--fbiTablet-buttonColor);
+    text-transform: uppercase;
+
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    border-style: none;
+
+    transition-duration: 0.2s;
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .step1 .findUser .smallButtons button {
+    width: 250px !important;
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .else {
+    font-family: LONDONSIXTY;
+    font-size: 18px;
+    color: #f0f0f0;
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .else img{
+    right: 3em;
+    top: 7em;
+    position: absolute;
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .else .info {
+    position: absolute;
+    left: 3em;
+    top: 6em;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    font-family: LONDONSIXTY;
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .else .info .header {
+    color: #d7ce3c;
+    font-size: 24px;
+    text-align: left;
+}
+/* Page C*/
+#container #fib-tablet .tablet-background .imurfather .pageC {
+    
+}
+#container #fib-tablet .tablet-background .imurfather .pageC {
+    /* height: 58%; 
+    top: 2em; 
+    position: relative; 
+    overflow: auto; */
+}
+#container #fib-tablet .tablet-background .imurfather .pageC table {
+    width: 90%;
+    margin: auto;
+    color: white;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    font-family: LONDONSIXTY;
+}
+#container #fib-tablet .tablet-background .imurfather .pageC table tr.header {
+    color: var(--fbiTablet-baseColor);
+    font-size: 24px;
+    font-weight: bold;
+}
+#container #fib-tablet .tablet-background .imurfather .pageC table tr.header th {
+    font-weight: 400 !important;
+}
+#container #fib-tablet .tablet-background .imurfather .pageC table tr.users {
+    font-size: 18px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageC table tr.users td{
+    border-bottom: 1px rgba(240, 240, 240, 0.1) solid;
+}
+/* Page D*/
+#container #fib-tablet .tablet-background .imurfather .pageD,
+#container #fib-tablet .tablet-background .imurfather .pageB {
+    font-family: LONDONSIXTY;
+}
+
+#container #fib-tablet .tablet-background .imurfather .pageD .findUser .smallButtons button {
+    color: #f0f0f0;
+    width: 230px !important;
+    background: var(--fbiTablet-buttonDangerColor);
+    font-weight: 400;
+}
+#container #fib-tablet .tablet-background .imurfather .pageD .header,
+#container #fib-tablet .tablet-background .imurfather .pageB .header {
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+#container #fib-tablet .tablet-background .imurfather .pageD .step0,
+#container #fib-tablet .tablet-background .imurfather .pageB .step0 {
+    text-align: center;
+}
+#container #fib-tablet .tablet-background .imurfather .pageD .step1,
+#container #fib-tablet .tablet-background .imurfather .pageB .step1 {
+    color: white;
+    text-align: center;
+}
+#container #fib-tablet .tablet-background .imurfather .pageD .step0 .buttons,
+#container #fib-tablet .tablet-background .imurfather .pageB .step0 .buttons {
+    width: 50%;
+    margin: auto;
+    margin-top: 62px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageB .step0 .buttons {
+    margin-top: 32px !important;
+}
+#container #fib-tablet .tablet-background .imurfather .pageD .step0 .buttons button,
+#container #fib-tablet .tablet-background .imurfather .pageB .step0 .buttons button {
+    color: #f0f0f0;
+    background: var(--fbiTablet-button2Color);
+    text-transform: uppercase;
+    width: 240px;
+    height: 32px;
+    border-radius: 2px;
+    border-style: none;
+    /* position: absolute; */
+    /* right: 17px; */
+    /* bottom: -64px; */
+    font-size: 18px;
+    transition-duration: 0.2s;
+}
+#container #fib-tablet .tablet-background .imurfather .pageD .step0 .footer {
+    color: white;
+    width: 49%;
+    margin: auto;
+    text-align: justify;
+    margin-top: 21px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageD .step2,
+#container #fib-tablet .tablet-background .imurfather .pageB .step2 {
+    color: #f0f0f0;
+    width: 50%;
+    margin: auto;
+}
+#container #fib-tablet .tablet-background .imurfather .pageD .step2 .help,
+#container #fib-tablet .tablet-background .imurfather .pageB .step2 .help {
+    font-size: 14px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageD .step2 .ID,
+#container #fib-tablet .tablet-background .imurfather .pageB .step2 .ID {
+    font-size: 24px;
+    color: var(--fbiTablet-baseColor);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageD .step2 .ID div,
+#container #fib-tablet .tablet-background .imurfather .pageB .step2 .ID div {
+    font-weight: bold;
+}
+#container #fib-tablet .tablet-background .imurfather .pageD .step2 input,
+#container #fib-tablet .tablet-background .imurfather .pageB .step2 input {
+    background-color: transparent;
+    border-radius: 2px;
+    width: 115px;
+    height: 38px;
+    color: var(--fbiTablet-baseColor);
+    border-style: solid;
+    border-color: white;
+    margin: auto;
+    display: block;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Page E*/
+#container #fib-tablet .tablet-background .imurfather .pageE { }
+#container #fib-tablet .tablet-background .imurfather .pageE .left {
+    float: left;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE .left .findUser .smallButtons {
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 13px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE .left .findUser .smallButtons button{
+    width: 200px !important;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE .right {
+    float: right;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE div.left .findUser .title {
+    text-align: right !important;
+    margin-right: 25px !important;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE .right img{
+    margin-right: 79px;
+    margin-top: 40px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE .right .info {
+    font-family: LONDONSIXTY;
+    color: #f0f0f0;
+    font-size: 14px;
+    margin-top: 5px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE .right .info .name,
+#container #fib-tablet .tablet-background .imurfather .pageE .right .info .stats {
+    color: var(--fbiTablet-baseColor);
+    text-transform: uppercase;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE .right .status {
+    font-family: NEWYORKSIXTY;
+    color: white;
+    text-transform: uppercase;
+
+    position: absolute;
+    width: 18.5%;
+    top: 14.69em;
+    right: 85px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE .right .status .clear {
+    color: #22972e;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE .right .status .badguy {
+    color: #a62929;
+}
+
+#container #fib-tablet .tablet-background .imurfather .pageE .else {
+    font-family: LONDONSIXTY;
+    color: #f0f0f0;
+    font-size: 14px;
+    margin-top: 50px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE .else .scanUser{
+    width: 55%;
+    margin: auto;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE .else .title {
+    text-align: center;
+}
+#container #fib-tablet .tablet-background .imurfather .pageE .else .textInput {
+    /* text-align: right; */
+}
+
+
+/* Page F*/
+#container #fib-tablet .tablet-background .imurfather .pageF {
+    font-family: LONDONSIXTY;
+    color: #f0f0f0;
+}
+#container #fib-tablet .tablet-background .imurfather .pageF .header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 50px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageF .buttons {
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+#container #fib-tablet .tablet-background .imurfather .pageF .buttons button {
+    width: 270px !important;
+    margin-top: 8px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageF .beDown {
+    color: #f0f0f0;
+    font-size: 14px;
+
+    text-align: justify;
+    width: 44%;
+    margin: auto;
+    margin-top: 25px;
+}
+/* Page G */
+#container #fib-tablet .tablet-background .imurfather .pageG .calls {
+    left: 2px;
+    top: 115px;
+    width: 25%;
+    position: absolute;
+
+    height: 70%;
+    overflow: auto;
+    float: left;
+}
+#container #fib-tablet .tablet-background .imurfather .pageG .calls .calls_overflow .call{
+    margin-bottom: 9px;
+    background-color: #1c1c1c;
+    border-radius: 5px;
+
+    margin-right: 3px;
+    color: white;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageG .calls .calls_overflow .call .color {
+    color: var(--fbiTablet-baseColor);
+    font-weight: 600 !important;
+}
+#container #fib-tablet .tablet-background .imurfather .pageG .calls .calls_overflow .call .getcall {
+    border: none;
+    padding: 0;
+    width: 100%;
+    color: white;
+
+    position: inherit;
+    text-align: center;
+    background: var(--fbiTablet-buttonColor);
+    border-radius: 0 0 5px 5px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+
+    transition-duration: 0.2s;
+}
+#container #fib-tablet .tablet-background .imurfather .pageG .map {
+    float: right;
+    /* background-image: url(../img/map.png); */
+    border-left: #1d1f3d;
+}
+#container #fib-tablet .tablet-background .imurfather .pageG .map img{
+    border-left: 5px solid var(--fbiTablet-baseColor);
+    position: absolute;
+    left: 178px;
+    top: 71px;
+    width: 517px;
+    height: 327px;
+}
+#container #fib-tablet .tablet-background .imurfather .pageG .calls .calls_overflow .call .getcall:hover {
+    background: var(--fbiTablet-buttonHoverColor);
+    color: #2b2e5c;
+}
+
+/* Scrollbar */
+#container #fib-tablet .tablet-background .imurfather div::-webkit-scrollbar {
+    width: 10px;
+    background-color: #3a3a3a;
+    border-radius: 3px;
+}
+   
+/* Handle */
+#container #fib-tablet .tablet-background .imurfather div::-webkit-scrollbar-thumb {
+    background: #808080;
+    border-radius: 3px;
+}
+
+/* All */
+#container #fib-tablet .tablet-background .imurfather .pageA .buttons_nav .back,
+#container #fib-tablet .tablet-background .imurfather .pageA .buttons_nav .exitbutton,
+
+#container #fib-tablet .tablet-background .imurfather .pageB .buttons_nav .back,
+#container #fib-tablet .tablet-background .imurfather .pageB .buttons_nav .exitbutton,
+
+#container #fib-tablet .tablet-background .imurfather .pageC .buttons_nav .back,
+#container #fib-tablet .tablet-background .imurfather .pageC .buttons_nav .exitbutton,
+
+#container #fib-tablet .tablet-background .imurfather .pageD .buttons_nav .back,
+#container #fib-tablet .tablet-background .imurfather .pageD .buttons_nav .exitbutton,
+
+#container #fib-tablet .tablet-background .imurfather .pageE .buttons_nav .back,
+#container #fib-tablet .tablet-background .imurfather .pageE .buttons_nav .exitbutton,
+
+#container #fib-tablet .tablet-background .imurfather .pageF .buttons_nav .back,
+#container #fib-tablet .tablet-background .imurfather .pageF .buttons_nav .exitbutton,
+
+#container #fib-tablet .tablet-background .imurfather .pageG .buttons_nav .back,
+#container #fib-tablet .tablet-background .imurfather .pageG .buttons_nav .exitbutton {
+    font-family: LONDONSIXTY;
+    color: #f0f0f0;
+    background: var(--fbiTablet-button2Color);
+    text-transform: uppercase;
+
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    border-style: none;
+
+    position: absolute;
+    right: 17px;
+    /* bottom: -64px; */
+    font-size: 18px;
+
+    transition-duration: 0.2s;
+}
+#container #fib-tablet .tablet-background .imurfather .pageA .buttons_nav .back:hover,
+#container #fib-tablet .tablet-background .imurfather .pageA .buttons_nav .exitbutton:hover,
+
+#container #fib-tablet .tablet-background .imurfather .pageB .buttons_nav .back:hover,
+#container #fib-tablet .tablet-background .imurfather .pageB .buttons_nav .exitbutton:hover,
+
+#container #fib-tablet .tablet-background .imurfather .pageC .buttons_nav .back:hover,
+#container #fib-tablet .tablet-background .imurfather .pageC .buttons_nav .exitbutton:hover,
+
+#container #fib-tablet .tablet-background .imurfather .pageD .buttons_nav .back:hover,
+#container #fib-tablet .tablet-background .imurfather .pageD .buttons_nav .exitbutton:hover,
+
+#container #fib-tablet .tablet-background .imurfather .pageE .buttons_nav .back:hover,
+#container #fib-tablet .tablet-background .imurfather .pageE .buttons_nav .exitbutton:hover,
+
+#container #fib-tablet .tablet-background .imurfather .pageF .buttons_nav .back:hover,
+#container #fib-tablet .tablet-background .imurfather .pageF .buttons_nav .exitbutton:hover,
+
+#container #fib-tablet .tablet-background .imurfather .pageG .buttons_nav .back:hover,
+#container #fib-tablet .tablet-background .imurfather .pageG .buttons_nav .exitbutton:hover,
+
+#container #fib-tablet .tablet-background .imurfather .pageB .findUser .smallButtons button:hover,
+#container #fib-tablet .tablet-background .imurfather .pageD .findUser .smallButtons button:hover,
+#container #fib-tablet .tablet-background .imurfather .pageE .findUser .smallButtons button:hover,
+#container #fib-tablet .tablet-background .imurfather .pageF .buttons button:hover,
+
+#container #fib-tablet .tablet-background .imurfather .pageD .step0 .buttons button:hover,
+#container #fib-tablet .tablet-background .imurfather .pageB .step0 .buttons button:hover {
+    background: var(--fbiTablet-buttonHoverColor);
+    color: #3d3d3d;
+    font-weight: bold;
+}
+
+#container #fib-tablet .tablet-background .imurfather .buttons_nav .back,
+#container #fib-tablet .tablet-background .imurfather .pageC .buttons_nav .back {
+    position: absolute;
+    /* right: 17px; */
+    left: 16px;
+    bottom: 16px;
+}
+#container #fib-tablet .tablet-background .imurfather .buttons_nav .exitbutton,
+#container #fib-tablet .tablet-background .imurfather .pageC .buttons_nav .back {
+    position: absolute;
+    right: 17px;
+    bottom: 16px;
+}

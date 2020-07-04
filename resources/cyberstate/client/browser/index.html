@@ -1,0 +1,1269 @@
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css" />
+    <link rel="stylesheet" type="text/css" href="css/safeZone.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/userInterface.css" />
+    <link rel="stylesheet" type="text/css" href="css/authenticationApp.css" />
+    <link rel="stylesheet" type="text/css" href="css/editCharacter.css" />
+    <link rel="stylesheet" type="text/css" href="css/characterInfo.css" />
+    <link rel="stylesheet" type="text/css" href="css/playersOnline.css" />
+    <link rel="stylesheet" type="text/css" href="css/bizLogs.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/console.css" />
+    <link rel="stylesheet" type="text/css" href="css/chatLeft.css" />
+    <link rel="stylesheet" type="text/css" href="css/chatRight.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/selectMenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/selectorCharacters.css" />
+    <link rel="stylesheet" type="text/css" href="css/infoTable.css" />
+    <link rel="stylesheet" type="text/css" href="css/modal.css" />
+    <link rel="stylesheet" type="text/css" href="css/prompt.css" />
+    <link rel="stylesheet" type="text/css" href="css/choiceMenu.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/vehProp.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/interactionMenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/customization.css" />
+    <link rel="stylesheet" type="text/css" href="css/taxiMenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/houseMenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/bandZones.css" />
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/browser.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/windows.js"></script>
+    <script src="js/houseMenu.js"></script>
+    <script src="js/selectMenu.js"></script>
+    <script src="js/infoTable.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/prompt.js"></script>
+    <script src="js/choiceMenu.js"></script>
+
+    <script src="js/console.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/hudcontrol.js"></script>
+
+    <script src="js/vehProp.js"></script>
+    <script src="js/bizLogs.js"></script>
+    <script src="js/userInterface.js"></script>
+    <script src="js/interactionMenu.js"></script>
+    <script src="js/enterAccount.js"></script>
+    <script src="js/bandZones.js"></script>
+    <script src="js/taxiMenu.js"></script>
+    <script src="js/bigmap.js"></script>
+    <style>
+        #borwser {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            alt.emit('View::init');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="safezone">
+        <div id="userInterface" v-show="render">
+            <div class="serverLogo">
+                <img src="img/userInterface/logo.png">
+            </div>
+            <div class="helpText" style="display: none;">
+                <a>
+                    Всем привет, вы наверное думаете, что это<br>
+                    такое?Это подсказка для ГТА 5 Cyber State<br>
+                    Play. Именно так <span class="button">F</span> она будет выглядеть!
+                </a>
+            </div>
+
+        </div>
+
+        <div id="chat" v-bind:class="[leftChat ? leftChatClass : rightChatClass]" v-bind:style="[chatStatus ? {'display': 'block'} : {'display': 'none'}]">
+            <div class="chat-content scroll">
+                <!-- Filling from chat.js -->
+            </div>
+            <div class="chat-bottom" style="display: none">
+                <!-- <div class="tag"><a>[сказать]</a></div> -->
+                <input type="text" placeholder="Сказать" />
+                <div class="help">?</div>
+            </div>
+            <div class="chat-tags" style="display: none">
+                <div class="say active">Say</div>
+                <div class="shout">Shout</div>
+                <div class="whisper">Whisper</div>
+                <div class="ooc">OOC</div>
+                <div class="me">Me</div>
+                <div class="do">Do</div>
+                <div class="try">Try</div>
+                <div class="radio">Radio</div>
+                <div class="dep">Dep</div>
+            </div>
+        </div>
+    </div>
+    <div id="container"></div>
+    <div id="interactionMenu"></div>
+    <div id="authenticationApp">
+        <div class="authentication-screen">
+            <div class="welcome" style="display: none;">
+                <div class="logo">
+                    <img src="img/authentication/welcome.png">
+                </div>
+            </div>
+            <div class="authentication card" style="display: none">
+                <div class="left-block">
+                    <div class="left-registration">
+                        <h2>Регистрация аккаунта</h2>
+                        <div class="reg-button">
+                            <button v-on:click="setSelector(0)">Войти</button>
+                        </div>
+                    </div>
+                    <div class="left-login" style="display:none;">
+                        <h2>Вход в аккаунт</h2>
+                        <div class="reg-button">
+                            <button v-on:click="setSelector(1)">Регистрация</button>
+                        </div>
+                    </div>
+                    <div class="left-lost" style="display:none;">
+                        <h2>Забыли пароль?</h2>
+                        <div class="reg-button">
+                            <button v-on:click="setSelector(0)">Войти</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-block">
+                    <div class="registration" style="display: none;">
+                        <p>
+                            Твоя история начинается здесь и сейчас! Зарегистрируйся, чтобы начать своё увлекательное путешествие. 
+                            Не забудь ввести промокод, чтобы получить вознаграждение, которое обязательно поможет тебе в самом начале твоей жизни в штате.
+                        </p>
+                        <div>
+                            <label for="reg-email">Введите ваш Email:</label>
+                            <input class="auth-input" id="reg-email" type="text" placeholder="Email" required="required" spellcheck="false">
+                        </div>
+                        <div>
+                            <label for="reg-login">Введите ваш логин:</label>
+                            <input class="auth-input" id="reg-login" type="text" placeholder="Логин" required="required" spellcheck="false">
+                        </div>
+                        <div>
+                            <label for="reg-password">Придумайте пароль:</label>
+                            <input class="auth-input" id="reg-password" type="password" placeholder="Пароль" required="required" spellcheck="false">
+                        </div>
+                        <div>
+                            <label for="reg-password2">Повторите пароль:</label>
+                            <input class="auth-input" id="reg-password2" type="password" placeholder="Пароль" required="required" spellcheck="false">
+                        </div>
+                        <div>
+                            <label for="promocode">Введите промокод:</label>
+                            <input class="auth-input" id="promocode" type="text" placeholder="Промокод" required="required" spellcheck="false">
+                        </div>
+                        <div class="reg-button-wrapper">
+                            <button class="button" onclick="regAccountHandler(-1)">Продолжить</button>
+                        </div>
+                    </div>
+
+                    <div class="login" style="display: none;">
+                        <p>
+                            Для того, чтобы зайти в свой аккаунт, введите свой Логин и Пароль, указанный при регистрации. 
+                            Учтите, что аккаунты форума и сервера не синхронизированы!
+                        </p>
+                        <div class="login-form">
+                            <div class="enter-info">
+                                <label for="login-email">Логин или Email</label>
+                                <input id="login-email" type="text" name="email" class="loginOrEmail" placeholder="Почта или логин" required="required" spellcheck="false">
+                                <label for="login-password">Пароль</label>
+                                <input id="login-password" type="password" name="email" class="password" placeholder="Пароль" required="required" spellcheck="false">
+                            </div>
+
+                            <div class="fast-enter">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="remember">Запомнить</span>
+                                <div class="cant-enter" v-on:click="setSelector(2)">Не удаётся войти?</div>
+                            </div>
+                        </div>
+                        <button onclick="authAccountHandler()">Авторизация</button>
+                    </div>
+
+                    <div class="recovery" style="display: none;">
+                        <div></div>
+                        <div class="recovery-block">
+                            <div class="recovery-form">
+                                <label for="recovery-login">Никнейм или Email</label>
+                                <input id="recovery-login" type="text" required="required" spellcheck="false">
+                                <p>На этой странице вы сможете отправить письмо на свою электронную почту - которая привязана к вашему игровому аккаунту на сервере GTA V Cyber State RP. После отправки вы получите инструкцию о ворсстановлении
+                                    доступа и пароля вашего аккаунта и игрового персонажа. Пожалуйста будьте внимательны при вводе своего электронного адреса.
+                                </p>
+                                <p class="recovery-status"></p>
+                                <button class="recovery-button" onclick="recoveryAccountHandler()">Прислать код</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="auth-modal recovery-modal" style="display: none;">
+            <h2>Восстановление</h2>
+            <div class="recovery-code-form">
+                <label for="recovery-code">Код, который вам пришел:</label>
+                <input id="recovery-code" type="text" placeholder="Код" required="required" spellcheck="false">
+            </div>
+            <div class="recovery-code-buttons">
+                <button onclick="recoveryCodeEntered()">Подтвердить</button>
+                <button class="cancel" v-on:click="hideRecoveryCodeScreen()">Отменить</button>
+            </div>
+        </div>
+        <div class="auth-modal email-confirm-modal" style="display: none;">
+            <h2>Подтверждение почты</h2>
+            <div class="email-confirm-form">
+                <label for="email-confirm-code">Код, который вам пришел:</label>
+                <input id="email-confirm-code" type="text" placeholder="Код" required="required" spellcheck="false">
+            </div>
+            <div class="email-confirm-buttons">
+                <button class="email-confirm-button">Подтвердить</button>
+                <button class="cancel" onclick="regAccountHandler()">Пропустить</button>
+            </div>
+        </div>
+        <div class="auth-modal forgot-password-modal" style="display: none;">
+            <h2>Придумайте пароль</h2>
+            <div class="forgot-password-form">
+                <label for="forgot-password">Введите новый пароль:</label>
+                <input id="forgot-password" type="password" placeholder="Пароль" required="required" spellcheck="false">
+                <label for="forgot-password2">Повторите новый пароль:</label>
+                <input id="forgot-password2" type="password" placeholder="Пароль" required="required" spellcheck="false">
+            </div>
+            <div class="forgot-password-buttons">
+                <button onclick="recoveryChangePassword()">Подтвердить</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/authenticationApp.js"></script>
+    <div id="selectorCharacters" style="display: none">
+        <div class="selector-header">
+            <h2>Выбор</h2>
+            <h3>персонажа</h3>
+        </div>
+        <div class="selector-server-name">
+            <span>CyberState RP #1</span>
+        </div>
+        <div class="selector-donate">
+            Баланс: <span class="donate">999999</span><img src="img/selectorCharacter/VC_ico.png">
+        </div>
+
+        <div class="user-blocks">
+            <div class="user-block busy">
+                <div class="user-block-header">
+                    <div class="user-level">
+                        <span>Уровень</span>
+                        <span class="user-level-counter level">10</span>
+                    </div>
+                    <div class="user-character-image">
+                        <img src="img/selectorCharacter/selector-user.png">
+                    </div>
+                    <div class="user-hours">
+                        <span>Часов в игре</span>
+                        <span class="user-hours-counter hours">212</span>
+                    </div>
+                </div>
+                <div class="user-block-body">
+                    <div class="user-block-item">
+                        <div class="user-block-item-left">
+                            Никнейм
+                        </div>
+                        <div class="user-block-item-right playerName">
+                            Dyrem
+                        </div>
+                    </div>
+                    <div class="user-block-item">
+                        <div class="user-block-item-left">
+                            Опыт
+                        </div>
+                        <div class="user-block-item-right exp">
+                            32/48
+                        </div>
+                    </div>
+                    <div class="user-block-item">
+                        <div class="user-block-item-left">
+                            Дата создания
+                        </div>
+                        <div class="user-block-item-right regDate">
+                            01.01.2019
+                        </div>
+                    </div>
+                    <div class="user-block-item">
+                        <div class="user-block-item-left">
+                            Фракция
+                        </div>
+                        <div class="user-block-item-right faction">
+                            Бог
+                        </div>
+                    </div>
+                    <div class="user-block-item">
+                        <div class="user-block-item-left">
+                            Денег на руках
+                        </div>
+                        <div class="user-block-item-right money">
+                            100.000$
+                        </div>
+                    </div>
+                    <div class="user-block-item">
+                        <div class="user-block-item-left">
+                            Денег на счету
+                        </div>
+                        <div class="user-block-item-right bank">
+                            $1.000.000.000
+                        </div>
+                    </div>
+                </div>
+                <div class="user-block-buttons">
+                    <button class="auth-btn">Выбрать персонажа</button>
+                    <button class="delete-button">Удалить персонажа?</button>
+                </div>
+            </div>
+
+            <div class="user-block slot">
+                <div class="user-block-header">
+                    <div class="user-level">
+                    </div>
+                    <div class="user-character-image">
+                        <img src="img/selectorCharacter/selector-free.png">
+                    </div>
+                    <div class="user-hours">
+                    </div>
+                </div>
+                <div class="user-block-body">
+                    <p>Вы хотите начать жизнь на Cyber State, то почему бы не создать персонажа?</p>
+                </div>
+                <div class="user-block-buttons">
+                    <button class="open-btn" onclick="alt.emit(`events.emitServer`, `initNewCharacter`)">Добавить персонажа</button>
+                </div>
+            </div>
+
+            <div class="user-block free-slot">
+                <div class="user-block-header">
+                    <div class="user-level">
+                    </div>
+                    <div class="user-character-image">
+                        <img src="img/selectorCharacter/selector-free.png">
+                    </div>
+                    <div class="user-hours">
+                    </div>
+                </div>
+                <div class="user-block-body">
+                    <p>Если вам надоело играть на вашем персонаже, и вы хотите начать новую жизнь на Cyber State, то почему бы не создать второго персонажа и не начать жизнь с чистого листа?</p>
+                </div>
+                <div class="user-block-buttons">
+                    <button class="open-btn">Открыть слот</button>
+                </div>
+            </div>
+
+            <div class="user-block donate-slot">
+                <!-- Donate slot -->
+                <div class="user-block-header">
+                    <div class="user-level">
+                    </div>
+                    <div class="user-character-image">
+                        <img src="img/selectorCharacter/selector-donate.png">
+                    </div>
+                    <div class="user-hours">
+                    </div>
+                </div>
+
+                <div class="user-block-body">
+                    <h4>Это VIP слот</h4>
+                    <p>Вам не хватает двух персонажей? Тогда этот слот именно для вас. Разблокируйте его прямо сейчас!</p>
+                </div>
+
+                <div class="user-block-buttons">
+                    <button class="open-btn">Купить VIP слот</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="window" style="display: none">
+        <div class="window-header">
+            <div class="window-header__title"></div>
+            <div class="window-header__counter"></div>
+        </div>
+        <div class="window-main"></div>
+    </div>
+
+    <div class="selectMenu" style="display: none">
+        <div class="header">
+            <table>
+                <tr>
+                    <td class="name">Заголовок</td>
+                    <td align="right" class="count">1 / 19</td>
+                </tr>
+            </table>
+        </div>
+        <div class="family-preview" style="display: none">
+            <img src="img/customization/parent/female_0.png">
+            <img src="img/customization/parent/male_0.png">
+        </div>
+        <div class="body">
+            <div class="opacity">
+            </div>
+            <div class="content">
+                <table class="items">
+                    <!-- Filling from selectMenu.js -->
+                </table>
+            </div>
+        </div>
+        <div class="hand-navigation">
+            <img src="img/customization/navigation.png">
+            <img src="img/customization/navigation.png">
+        </div>
+        <div class="promptHelp">
+            <span class="text">Тест тест тест...</span>
+            <img src="img/customization/info-icon-white.png">
+        </div>
+    </div>
+    <div class="infoTable" style="display: none">
+        <div class="body">
+            <div class="opacity">
+            </div>
+            <div class="content">
+                <p class="header">Заголовок</p>
+                <table class="items">
+                    <!-- Filling from infoTable.js -->
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal" style="display: none">
+        <div class="body">
+            <div class="opacity">
+            </div>
+            <div class="content">
+                <span class="close" onclick="modalAPI.hide()">x</span>
+                <p class="header">Новый персонаж</p>
+                <div class="text">
+                    Для завершения создания персонажа остался последний шаг.<br />
+                    Придумайте имя в формате "Имя Фамилия".<br />
+
+
+                    <br /><br />
+
+                    <span>Введите имя:</span>
+                    <input type="text" placeholder="Имя персонажа" />
+                    <br /><br />
+                    <center><button>Создать</button></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hint" id="prompt" style="display: none">
+        <div class="hint-header">
+            <div class="hint-header__icon"></div>
+            <div class="hint-header__title"></div>
+        </div>
+        <div class="hint-main">
+            <p class="hint-main__info"></p>
+        </div>
+    </div>
+    <div id="notification" style="display: none">
+        <div class="title">
+          <span>Предложение</span>
+        </div>
+        <div class="body">
+          <span class="text">Вы хотите уволится с работы ?</span>
+          <div class="body__buttons">
+            <button class="success">Принять</button>
+            <button class="danger">Закрыть (<span>5с</span>)</button>
+          </div>
+        </div>
+    </div>
+
+    <div class="characterInfo" style="display: none">
+        <div class="body">
+            <div class="opacity">
+            </div>
+            <div class="content">
+                <p class="header">О персонаже</p>
+                <table class="items">
+                    <!-- Dublicate of infoTables['character_info'] -->
+                    <tr>
+                        <td>Имя</td>
+                        <td align="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>Транспорт</td>
+                        <td align="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>Место жительства</td>
+                        <td align="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>Бизнес</td>
+                        <td align="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>Организация</td>
+                        <td align="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>Работа</td>
+                        <td align="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>Семейное положение</td>
+                        <td align="right">-</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="bizLogs" style="display: none">
+        <div class="body">
+            <div class="opacity">
+            </div>
+            <div class="content scroll">
+                <span class="close" onclick="hideWindow('.bizLogs')">x</span>
+                <table>
+                    <thead>
+                        <td>Наименование</td>
+                        <td>Цена</td>
+                        <td>Товар</td>
+                        <td>Чек</td>
+                        <td>Дата</td>
+                    </thead>
+                    <tbody>
+                        <!-- Filling from playersOnline.js -->
+                        <tr>
+                            <td>Carter Slader купил "Водка"</td>
+                            <td>100$</td>
+                            <td>1111</td>
+                            <td>9999</td>
+                            <td>02.12.18 1:37</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <center>
+                    <button class="btn-agree" onclick="bizLogsPrev()">Назад</button>
+                    <button class="btn-agree" onclick="bizLogsNext()">Далее</button>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="customizationMenu" style="display: none">
+        <div class="menu-header">
+            <img src="img/customization/header.png">
+            <h3>
+                <span><a>НАСЛЕДИЕ</a></span>
+                <span class="right">{{ selectedItem + 1 }} / {{ maxItem }}</span>
+            </h3>
+        </div>
+        <div class="family-preview">
+            <img src="img/customization/parent/female_0.png">
+            <img src="img/customization/parent/male_0.png">
+        </div>
+
+        <ul class="character-settings"></ul>
+
+        <div class="hand-navigation">
+            <img v-on:click="navigationTo(0)" src="img/customization/navigation.png">
+            <img v-on:click="navigationTo(1)" src="img/customization/navigation.png">
+        </div>
+
+        <div class="help-text">
+            <a>Измените внешний вид.</a>
+            <img src="img/customization/info-icon.png">
+        </div>
+
+        <div class="additional-settings">
+            <div class="contrast-slider">
+                <p>
+                    Насыщенность
+                    <a>0%</a>
+                    <a>100%</a>
+                </p>
+
+                <div class="contrast-slider-progres"></div>
+                <div class="contrast-slider-progres"></div>
+            </div>
+
+            <div class="color-selector">
+
+                <div class="color-selector_">
+                    <p>
+                        Цвет ({{ selectedColor + 1 }} из {{ maxColor }})
+                        <a v-on:click="colorsTo(0)">
+                            <</a> <a v-on:click="colorsTo(1)">>
+                        </a>
+                    </p>
+
+                    <div class="color-selector-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="taxiMenu" style="display: none">
+        <div class="header">Downtown Cab Company</div>
+        <div class="body">
+            <div class="title-wrap" style="display: ">
+                <div class="title" style="display: none">Таксист</div>
+            </div>
+            <div class="welcome" style="display: ">
+                <p>Войти в систему таксокомпании?</p>
+                <button class="auth-btn" onclick="authTaxi()">ВХОД</button>
+            </div>
+            <div class="auth" style="display: none">
+                <input class="login" type="text" placeholder="Логин" readonly />
+                <input class="password" type="password" placeholder="Пароль" readonly /><br />
+                <button class="auth-btn">ВОЙТИ</button>
+            </div>
+            <div class="wait" style="display: none">
+                <p>Подождите...</p>
+            </div>
+            <div class="main" style="display: none">
+                <div class="menu">
+                    <div class="title-menu">Меню</div>
+                    <div class="item selected" data-modal="stats">Статистика</div>
+                    <div class="item" data-modal="taxi_order">Мои заказы</div>
+                    <div class="item" data-modal="free_orders">Свободные</div>
+                </div>
+                <div class="content">
+                    <table class="stats" style="display: ">
+                        <tr>
+                            <td>
+                                <div class="icon i-orders"><img src="img/ok.png" /></div>
+                            </td>
+                            <td>Выполнено за сегодня</td>
+                            <td class="orders">492</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="icon i-dollar"><img src="img/dollar.png" /></div>
+                            </td>
+                            <td>Доход за сегодня</td>
+                            <td class="pay">9K</td>
+                        </tr>
+                    </table>
+                    <div class="taxi_order" style="display: none">
+                        <hr />
+                        <h1>Мои заказы</h1>
+                        <p><b class="state">Выполняется</b> ЗАКАЗ №<b class="orderId">113</b></p>
+                        <br /><br />
+
+                        <div class="info">
+                            <b>Клиент:</b>
+                            <p class="name">Rock Star</p>
+                            <b>Район, улица:</b>
+                            <p class="street">East Galileo Ave</p>
+                            <b>Расстояние:</b>
+                            <p class="distance">121547.0 M</p>
+                            <b>Сумма поездки:</b>
+                            <p class="price">5112$</p>
+                            <b>Время поездки:</b>
+                            <p class="time">4:53:31</p>
+                        </div>
+                    </div>
+                    <div class="free_orders" style="display: none">
+                        <hr />
+                        <h1>Свободные</h1>
+                        <b>ЗАКАЗЫ</b>
+
+                        <div class="orders scroll" style="height: 28vh">
+                            <p class="wrap-delete-order"><span class="delete-order">Удалить заказ</span></p>
+                            <table class="order">
+                                <tr>
+                                    <td>Имя клиента</td>
+                                    <td class="name">Carter Slade</td>
+                                </tr>
+                                <tr>
+                                    <td>Растояние</td>
+                                    <td class="distance">1500.0m</td>
+                                </tr>
+                                <tr>
+                                    <td class="accept"><button>Принять</button></td>
+                                    <td class="call"><button>Звонок</button></td>
+                                </tr>
+                            </table>
+
+                            <p class="wrap-delete-order"><span class="delete-order">Удалить заказ</span></p>
+                            <table class="order">
+                                <tr>
+                                    <td>Имя клиента</td>
+                                    <td class="name">Carter Slade</td>
+                                </tr>
+                                <tr>
+                                    <td>Растояние</td>
+                                    <td class="distance">1500.0m</td>
+                                </tr>
+                                <tr>
+                                    <td class="accept"><button>Принять</button></td>
+                                    <td class="call"><button>Звонок</button></td>
+                                </tr>
+                            </table>
+
+                            <p class="wrap-delete-order"><span class="delete-order">Удалить заказ</span></p>
+                            <table class="order">
+                                <tr>
+                                    <td>Имя клиента</td>
+                                    <td class="name">Carter Slade</td>
+                                </tr>
+                                <tr>
+                                    <td>Растояние</td>
+                                    <td class="distance">1500.0m</td>
+                                </tr>
+                                <tr>
+                                    <td class="accept"><button>Принять</button></td>
+                                    <td class="call"><button>Звонок</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="console" style="display: none">
+        <div class="console-content scroll">
+            <div class="log">
+                <p>Добро пожаловать в консоль (<u>beta v2.0</u>) администрации сервера Cyber State RP!<br />
+                    help - список команд<br />
+                    help level - список команд по уровню<br />
+                    help name - описание команды<br />
+                    ~ - открыть/закрыть консоль<br />
+                    ENTER - быстрое закрытие консоли после ввода
+                </p>
+            </div>
+        </div>
+        <div class="console-admin">
+            <div class="admin-open">Admin<span class="count"></span></div>
+            <div class="selector" style="display: none">
+                <span class="select-chat">Чат<span class="count"></span></span>
+                <span class="select-report active">Репорт<span class="count"></span></span>
+                <!-- <span class="select-anticheat">Анти-чит<span class="count"></span></span> -->
+            </div>
+            <div class="console-chat" style="display: none">
+                <div class="chat-content scroll">
+                    <!-- <div class="chat"><p>[10 lvl] Carter Slade [999]: Hello, World!</p></div> -->
+                </div>
+                <div class="chat-bottom">
+                    <input type="text" placeholder="message..." />
+                </div>
+            </div>
+            <div class="console-report" style="display: none">
+                <div class="report-list">
+                    <input type="text" placeholder="nickname" readonly />
+                    <div class="content scroll">
+                        <div class="empty">Можно отдохнуть</div>
+                    </div>
+                    <div class="report_menu" style="display: none">
+                        <div class="menuitem">Пункт 1</div>
+                        <div class="menuitem">Пункт 2</div>
+                        <div class="menuitem">Пункт 3</div>
+                        <div class="menuitem">Пункт 4</div>
+                    </div>
+                </div>
+                <div class="report-dialog">
+                    <div class="selector">
+                        <span class="select-all active">Все</span>
+                        <span class="select-claim">Жалобы</span>
+                        <span class="select-help">Вопросы</span>
+                        <span class="select-my">Мои</span>
+                        <span class="select-busy">Занятые</span>
+                    </div>
+                    <div class="dialog-messages scroll">
+                        <div class="empty">Откройте тикет</div>
+                    </div>
+                    <input type="text" placeholder="message" />
+                </div>
+            </div>
+        </div>
+        <div class="console-bottom">
+            <input type="text" placeholder="type command..." />
+        </div>
+    </div>
+
+    <div id="houseMenu" style="display: none">
+        <div class="container">
+            <div class="header">
+                <div class="houseText">
+                    Панель управления дома №{{ houseId }}
+                </div>
+                <img src="images/close.png" alt="">
+            </div>
+            <div class="content">
+                <div id="ownerMenu" style="display: none">
+                    <!--<div class="images"></div>-->
+                    <div class="contentHouse">
+                        <div class="alert house_open">
+                            Дом {{ houseLockState }} 
+                            <div class="action" v-on:click="lockUnlockHouse">{{ houseLockAction }}</div>
+                        </div>
+                        <ul class="actions">
+                            <li v-on:click="invitePlayer">Пригласить игрока</li>
+                            <li v-on:click="sellHouseToGov">Продать государству</li>
+                            <li v-on:click="sellHouseToPlayer">Продать игроку</li>
+                            <li>Ежедневный налог</li>
+                            <li v-on:click="exitMenu">Выйти из меню дома</li>
+                        </ul>
+                        <div class="upgradeBox">
+                            <div class="headerHouse">
+                                <div class="text">Информация о доме</div>	
+                                <div class="break"></div>
+                            </div>
+                            <ul class="upgrade">
+                                <li>
+                                    <img src="images/webcam.png" alt="">
+                                    Видео наблюдение
+                                </li>
+                                <li>
+                                    <img src="images/lock.png" alt="">
+                                    Защита <br> замка
+                                </li>
+                                <li>
+                                    <img src="images/hand-with-smartphone-and-wireless-internet.png" alt="">
+                                    Сигнализация
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="layoutPanel" style="display: none">
+                    <div class="contentHouse">
+                        <div class="houseAction">
+                            <div class="images">
+                                <img src="images/images_house.png" alt="">
+                            </div>
+                            <div class="buttonAction" v-on:click="inspectHouse">Войти в дом [ {{ houseLock }} ]</div>
+                            <div class="buttonAction" v-on:click="exitMenu">Выйти из карточки дома</div>
+                            
+                        </div>
+                        <div class="houseStats">
+                            <div class="headerHouse">
+                                <div class="text">Информация о доме</div>	
+                                <div class="break"></div>
+                            </div>
+                            <ul class="stats">
+                                <li>
+                                    <div class="params">Адрес</div>
+                                    <div class="value">{{ houseAddress }}</div>
+                                </li>
+                                <li>
+                                    <div class="params">Класс дома</div>
+                                    <div class="value">{{ houseClass }}</div>
+                                </li>
+                                <li>
+                                    <div class="params">Площадь</div>
+                                    <div class="value">{{ houseSquare }}</div>
+                                </li>
+                                <li>
+                                    <div class="params">Количество комнат</div>
+                                    <div class="value">{{ houseRooms }}</div>
+                                </li>
+                                <li v-if="houseOwner">
+                                    <div class="params">Владелец</div>
+                                    <div class="value">{{ houseOwner }}</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="costHouse">
+                            <div class="label">
+                                Цена дома:
+                            </div>
+                            <div class="value">
+                                $ {{ housePrice }}
+                            </div>
+                        </div>
+                        <div class="btn_buy" v-if="!houseOwner" v-on:click="buyHouse">
+                            Купить
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script async src="js/build.js" type="text/javascript"></script>
+
+    <div id="bandZones" style="display: none">
+        <div class="btn scaleBtn" onclick="bandZonesAPI.scaleOnClick()"></div>
+        <div class="btn captureBtn" onclick="bandZonesAPI.captureOnClick()"></div>
+        <div class="player"></div>
+        <div class="region">
+            <svg class="zone-0" xmlns="http://www.w3.org/2000/svg" width="75.156" height="95" viewBox="0 0 75.156 95">
+                <path d="M337,785s17.8-45.988,20-58c1.363-7.458,1-24,1-24h54s0.389,23.287,0,30-3.181,16.225-10,31c-8.075,17.494-20,34-20,34Z" transform="translate(-337 -703)" />
+            </svg>
+            <svg class="zone-1" xmlns="http://www.w3.org/2000/svg" width="66" height="63" viewBox="0 0 66 63">
+                <path d="M316,827s3.623-6.522,7-14c3.615-8,7-16,7-16l7-12,45,13-29,50Z" transform="translate(-316 -785)" />
+            </svg>
+            <svg class="zone-2" xmlns="http://www.w3.org/2000/svg" width="83" height="85" viewBox="0 0 83 85">
+                <path d="M270,873s14.52-11.521,27-24a227.632,227.632,0,0,0,19-22l37,21a190.821,190.821,0,0,0-12,20c-6.032,11.8-11,25-11,25l-3,19Z" transform="translate(-270 -827)" />
+            </svg>
+            <svg class="zone-3" xmlns="http://www.w3.org/2000/svg" width="160" height="124" viewBox="0 0 160 124">
+                <path d="M337,956l-35,20s-13.27,4.461-25,9c-10.574,4.09-20.582,8.259-23,9-5.1,1.561-18,3-18,3l-59-90a368.79,368.79,0,0,0,45-12c17.422-6.089,48-22,48-22l57,39s-0.329,12.755,2,23A85.2,85.2,0,0,0,337,956Z" transform="translate(-177 -873)" />
+            </svg>
+            <svg class="zone-4" xmlns="http://www.w3.org/2000/svg" width="126" height="90.281" viewBox="0 0 126 90.281">
+                <path d="M236,997a286.492,286.492,0,0,1-55-3c-19.645-2.913-31-11-31-11a35.1,35.1,0,0,1-10-8c-5.7-6.583-11.417-16.979-17-27-9.263-16.626-13-35-13-35l67-6Z" transform="translate(-110 -907)" />
+            </svg>
+        </div>
+        <div class="region">
+            <svg class="zone-5" xmlns="http://www.w3.org/2000/svg" width="84.719" height="61.312" viewBox="0 0 84.719 61.312">
+                <path d="M680.86,570.716s-0.1-7.646,3.252-10.84c2.487-2.374,9.216-.542,9.216-0.542a106.518,106.518,0,0,0,19.515-1.084c7.47-1.206,26.02-7.046,26.02-7.046l22.767,61.245-84.709.085Z" transform="translate(-676.906 -551.219)" />
+            </svg>
+            <svg class="zone-6" xmlns="http://www.w3.org/2000/svg" width="97.031" height="49.875" viewBox="0 0 97.031 49.875">
+                <path d="M761.63,612.449s2.065,5.946,3.795,12.466c1.792,6.754,3.253,14.091,3.253,14.091a109.788,109.788,0,0,1,.542,12.466c-0.138,6.449-.542,10.84-0.542,10.84H672.186l4.735-49.778Z" transform="translate(-672.188 -612.438)" />
+            </svg>
+            <svg class="zone-7" xmlns="http://www.w3.org/2000/svg" width="107.344" height="68.281" viewBox="0 0 107.344 68.281">
+                <path d="M768.678,662.312s-2,9.945-4.337,17.344a38.513,38.513,0,0,1-7.047,13.007s-10.218,14.686-26.562,22.222c-18.206,8.393-61.256,15.718-61.256,15.718l-8.131-31.978s3.761,0.437,5.963-1.626c2.134-2,2.168-5.42,2.168-5.42l2.71-29.267h96.492Z"
+                    transform="translate(-661.344 -662.313)" />
+            </svg>
+            <svg class="zone-8" xmlns="http://www.w3.org/2000/svg" width="106.25" height="58.531" viewBox="0 0 106.25 58.531">
+                <path d="M669.476,730.6L563.227,748.488V723.557s3.558-7.3,3.8-10.3c1.474-18.632,2.71-18.97,2.71-18.97l8.674-4.336,82.939,8.672Z" transform="translate(-563.219 -689.969)" />
+            </svg>
+            <svg class="zone-9" xmlns="http://www.w3.org/2000/svg" width="69.376" height="96.469" viewBox="0 0 69.376 96.469">
+                <path d="M979.458,240.622s3.106-4.484,5.512-8.65a49.809,49.809,0,0,0,3.158-6.523c0.434-1.24,0-15.172,0-15.172-0.3-12.43,2.867-15.043,3.252-16.256s5.832-8.152,10.3-14.63c4.93-7.167,10.1-13.384,9.21-19.508-1.05-7.218-9.76-15.714-9.76-15.714-1.2.633-12.46,8.67-12.46,8.67-13.046,9.923-18.313,17.349-25.469,26.01s-12.715,29.926-14.631,35.763-6.967,24.406-6.967,24.406Z"
+                    transform="translate(-941.594 -144.156)" />
+            </svg>
+            <svg class="zone-10" xmlns="http://www.w3.org/2000/svg" width="89.438" height="55.281" viewBox="0 0 89.438 55.281">
+                <path d="M979.458,240.622s-5.313,5.658-4.877,17.339c0,0,1.5,14.889,2.8,19.538,0.5,1.8,1.1,9.395-.632,16.767l-86.7-3.251s24.6-14.675,28.72-17.881a62.913,62.913,0,0,0,14.165-15.689c8.435-13.26,8.053-18.449,8.053-18.449Z" transform="translate(-890.031 -239)" />
+            </svg>
+            <svg class="zone-11" xmlns="http://www.w3.org/2000/svg" width="100.25" height="23.844" viewBox="0 0 100.25 23.844">
+                <path d="M976.749,294.266l-10.838,20.592L876.5,301.311s3.8-3.548,7.644-6.468a55.74,55.74,0,0,1,5.9-3.828Z" transform="translate(-876.5 -291)" />
+            </svg>
+            <svg class="zone-12" xmlns="http://www.w3.org/2000/svg" width="126.75" height="40.156" viewBox="0 0 126.75 40.156">
+                <path d="M965.911,314.858a13.426,13.426,0,0,1-4.877,6.5c-3.544,2.292-10.7,2.373-13.548,5.96s-3.173,14.134-3.173,14.134H839.149l13.5-12.508L876.5,301.311Z" transform="translate(-839.156 -301.313)" />
+            </svg>
+            <svg class="zone-13" xmlns="http://www.w3.org/2000/svg" width="120.344" height="47.125" viewBox="0 0 120.344 47.125">
+                <path d="M885.226,388.607H778.435s-6.078-7.6-8.673-11.382a90.382,90.382,0,0,1-4.879-8.13,30.846,30.846,0,0,1,7.589-2.71c3.089-.678,5.739-0.439,8.674-0.542a12.17,12.17,0,0,0,5.963-1.626c16.029-7.988,13.349-7.8,22.8-8.99,0.753-.094,6.025,3.477,6.639,3.009,11.341-8.655,22.6-16.782,22.6-16.782h46.077v47.153Z"
+                    transform="translate(-764.875 -341.469)" />
+            </svg>
+            <svg class="zone-14" xmlns="http://www.w3.org/2000/svg" width="59.187" height="47.125" viewBox="0 0 59.187 47.125">
+                <path d="M944.313,341.454s1.109,11.7-4.336,20.595c-4.322,7.064-4.921,9.184-4.955,10.788s6.039,15.77,6.039,15.77H885.226V341.454h59.087Z" transform="translate(-885.219 -341.469)" />
+            </svg>
+            <svg class="zone-15" xmlns="http://www.w3.org/2000/svg" width="81.843" height="45.469" viewBox="0 0 81.843 45.469">
+                <path d="M860.29,433.592l-56.407.476s-4.578-13.02-7.586-18.965-16.366-24.377-17.862-26.5H860.29v44.985Z" transform="translate(-778.438 -388.594)" />
+            </svg>
+            <svg class="zone-16" xmlns="http://www.w3.org/2000/svg" width="83.344" height="45" viewBox="0 0 83.344 45">
+                <path d="M941.061,388.607s5.441,10.878.464,19.452c0,0-8.246,10.483-9.754,12.463a73.589,73.589,0,0,1-5.419,6.5c-1.947,2-7.587,5.419-7.587,5.419l-58.475,1.149V388.607h80.771Z" transform="translate(-860.281 -388.594)" />
+            </svg>
+            <svg class="zone-17" xmlns="http://www.w3.org/2000/svg" width="60.156" height="37.937" viewBox="0 0 60.156 37.937">
+                <path d="M864.627,471.531L811.47,469.29s-1.531-22.462-7.015-35.156l59.088-.542Z" transform="translate(-804.469 -433.594)" />
+            </svg>
+            <svg class="zone-18" xmlns="http://www.w3.org/2000/svg" width="54.75" height="41.125" viewBox="0 0 54.75 41.125">
+                <path d="M918.293,432.508a27.626,27.626,0,0,0-3.252,6.5c-0.925,2.8-2.757,8.041-3.32,9.145a70.146,70.146,0,0,0-3.793,12.463c-0.565,3.818,5.961,13,5.961,13l-49.262-2.094-1.084-37.939Z" transform="translate(-863.531 -432.5)" />
+            </svg>
+            <svg class="zone-19" xmlns="http://www.w3.org/2000/svg" width="62.906" height="45.375" viewBox="0 0 62.906 45.375">
+                <path d="M859.152,514.653l-57.436-1.472a87.463,87.463,0,0,0,8.7-22.138c2.244-10.1,1.052-21.753,1.052-21.753l53.157,2.241Z" transform="translate(-801.719 -469.281)" />
+            </svg>
+            <svg class="zone-20" xmlns="http://www.w3.org/2000/svg" width="63.219" height="44.344" viewBox="0 0 63.219 44.344">
+                <path d="M913.889,473.625s8,9.094,8.128,10.837,0.732,5.508,0,7.044-4.218,9.068-8.67,14.631a38.308,38.308,0,0,0-5.961,9.753l-48.234-1.237,5.2-43.125Z" transform="translate(-859.156 -471.531)" />
+            </svg>
+            <svg class="zone-21" xmlns="http://www.w3.org/2000/svg" width="76.968" height="83.469" viewBox="0 0 76.968 83.469">
+                <path d="M831.56,597.815l55.234-12.565s14.645-22.295,18.424-28.72,3.343-12.08,3.252-15.172S906.5,529.511,906.3,527.27s1.084-11.38,1.084-11.38l-67.695-1.541Z" transform="translate(-831.563 -514.344)" />
+            </svg>
+            <svg class="zone-22" xmlns="http://www.w3.org/2000/svg" width="92.469" height="98.062" viewBox="0 0 92.469 98.062">
+                <path d="M801.716,513.181a69.806,69.806,0,0,1-9.187,10.923c-5.1,4.721-11.078,7.847-11.947,8.584-1.729,1.466-8.44,5.01-13.006,7.045s-20.749,7.7-20.592,8.128,10.5,29.623,11.38,31.97,11.922,31.428,11.922,31.428l31.251-6.977,29.668-6.623,8.217-83.511Z"
+                    transform="translate(-746.969 -513.188)" />
+            </svg>
+            <svg class="zone-23" xmlns="http://www.w3.org/2000/svg" width="124.657" height="52.031" viewBox="0 0 124.657 52.031">
+                <path d="M770.286,611.259l6.5,26.01L894.922,622.1s-2.537-7.819-4.877-10.837-3.851-3.972-4.877-11.379a34.387,34.387,0,0,1,1.626-14.63Z" transform="translate(-770.281 -585.25)" />
+            </svg>
+            <svg class="zone-24" xmlns="http://www.w3.org/2000/svg" width="124.625" height="46.062" viewBox="0 0 124.625 46.062">
+                <path d="M776.789,637.269c1.9,12.593,0,29.261,0,29.261l102.96,1.625s16.52-12.508,19.508-15.172c3.484-3.106,1.715-7.744,1.626-8.128s-5.961-22.759-5.961-22.759Z" transform="translate(-776.781 -622.094)" />
+            </svg>
+            <svg class="zone-25" xmlns="http://www.w3.org/2000/svg" width="222" height="61" viewBox="0 0 222 61">
+                <path d="M4615,7163s19.69-16.09,26-61l190,3a15.417,15.417,0,0,0-5,12c0.17,8.19,11,33,11,33Z" transform="translate(-4615 -7102)" />
+            </svg>
+            <svg class="zone-26" xmlns="http://www.w3.org/2000/svg" width="125.031" height="42.407" viewBox="0 0 125.031 42.407">
+                <path d="M883.542,692.539l3.794,10.3s0.808,3.911,0,6.5a7.923,7.923,0,0,1-5.419,5.419c-2.779.833-20.26,3.728-23.3,4.877s-9.825,5.91-14.089,9.753-9.239,6.124-17.883,5.419a42.413,42.413,0,0,1-14.631-3.793s-8.83-2.327-10.3-2.168-15.173,2.168-15.173,2.168L762.7,699.584ZM746.984,547.861"
+                    transform="translate(-762.688 -692.531)" />
+            </svg>
+            <svg class="zone-27" xmlns="http://www.w3.org/2000/svg" width="68.281" height="44" viewBox="0 0 68.281 44">
+                <path d="M786.543,731.012s-14.822,4.029-17.341,4.877-20.1,4.835-23.3,5.96a42.7,42.7,0,0,1-7.045,1.626c-0.906.2-4.746,0.353-7.044-1.084s-13.548-13.547-13.548-13.547l13.548-4.876s10.686-5.1,14.089-8.128,16.8-16.256,16.8-16.256ZM746.984,547.861"
+                    transform="translate(-718.25 -699.594)" />
+            </svg>
+        </div>
+        <div class="region">
+            <svg class="zone-28" xmlns="http://www.w3.org/2000/svg" width="37.938" height="59.625" viewBox="0 0 37.938 59.625">
+                <path d="M185.393,260.155c-14.434,2.165-21.81,21.363-22.767,30.352s-1.627,10.3-1.627,10.3v17.343h37.946V258.529S188.822,259.641,185.393,260.155Z" transform="translate(-161 -258.531)" />
+            </svg>
+            <svg class="zone-29" xmlns="http://www.w3.org/2000/svg" width="63.437" height="62.313" viewBox="0 0 63.437 62.313">
+                <path d="M198.945,258.529v59.619h15.179l2.71,1.084S247.525,300,251.528,298.1s10.842-2.71,10.842-2.71V256.9s-20.135.56-25.479,0.542C232.146,257.429,198.945,258.529,198.945,258.529Z" transform="translate(-198.938 -256.906)" />
+            </svg>
+            <svg class="zone-30" xmlns="http://www.w3.org/2000/svg" width="64.5" height="39.032" viewBox="0 0 64.5 39.032">
+                <path d="M317.12,256.9H262.37v38.482l64.508,0.542Z" transform="translate(-262.375 -256.906)" />
+            </svg>
+            <svg class="zone-31" xmlns="http://www.w3.org/2000/svg" width="119.781" height="69.907" viewBox="0 0 119.781 69.907">
+                <path d="M436.921,253.651s-79.247.5-84.023,0.542c-11.935.093-35.778,2.71-35.778,2.71l9.758,39.024h11.384l13.009,9.213,13.553,6.5,18.43,11.924,35.778-43.9,17.889-21.68v-4.336Z" transform="translate(-317.125 -253.656)" />
+            </svg>
+            <svg class="zone-32" xmlns="http://www.w3.org/2000/svg" width="66.688" height="65.563" viewBox="0 0 66.688 65.563">
+                <path d="M485.709,299.721c0.127-5.612-3.438-10-7.047-13.55a21.044,21.044,0,0,1-5.137-9.832s-0.746-22.689-.284-22.688h-36.32v4.336l-17.889,21.68s27.66,23.507,40.115,33.6a50.134,50.134,0,0,0,5.962,4.336,18.726,18.726,0,0,0,5.421,1.084l15.179,0.542S485.619,303.651,485.709,299.721Z"
+                    transform="translate(-419.031 -253.656)" />
+            </svg>
+        </div>
+        <div class="region">
+            <svg class="zone-33" xmlns="http://www.w3.org/2000/svg" width="107.469" height="100.813" viewBox="0 0 107.469 100.813">
+                <path d="M235.265,499.173c-4.036-7.011-12.243-13.161-15.649-15.726s-7.453-5.9-8.123-7.042-3.791-8.668-3.791-8.668-9.494,2.992-14.081,3.251-14.812-1.893-16.248-2.167a17.928,17.928,0,0,0-9.748.541c-5.333,1.584-9.282,2.768-14.081,6.5s-6.4,7.753-13,11.918-7.156,10.2-6.651,14.644a90.486,90.486,0,0,0,2.86,12.984c0.255,0.432,4.068,9.98,5.958,13,1.929,3.084,5.914,8.895,16.789,16.251a175.623,175.623,0,0,0,20.038,11.376s18.321,12.066,26,12.46a36.2,36.2,0,0,0,21.122-5.417s13.431-5.913,11.915-5.959a22.975,22.975,0,0,1-1.748-8.591c0.429-7.261,4.488-14.17,4.4-25.51C241.108,509.2,239.452,507.193,235.265,499.173Z"
+                    transform="translate(-133.75 -467.75)" />
+            </svg>
+            <svg class="zone-34" xmlns="http://www.w3.org/2000/svg" width="68.281" height="67.187" viewBox="0 0 68.281 67.187">
+                <path d="M295.979,537.619a15.9,15.9,0,0,0-5.416-11.376c-5.54-4.815-17.671-8.476-22.746-9.751s-11.715-3.394-16.789-7.584-23.352-18.949-23.352-18.949a90.193,90.193,0,0,0,5.963,7.588c4.988,5.8,6.881,13.708,7.047,26.557,0.189,14.6-6.916,21.649-2.168,33.062,0,0,12.076-4.044,17.384-6s16.7-5.965,19.5-7.043S291.58,538.389,295.979,537.619Z"
+                    transform="translate(-227.688 -489.969)" />
+            </svg>
+        </div>
+        <div class="region">
+            <svg class="zone-35" xmlns="http://www.w3.org/2000/svg" width="77.531" height="62.312" viewBox="0 0 77.531 62.312">
+                <path d="M419.574,291.591L388.133,327.9l30.9,26.016,46.62-27.1-12.469-7.588Z" transform="translate(-388.125 -291.594)" />
+            </svg>
+            <svg class="zone-36" xmlns="http://www.w3.org/2000/svg" width="63.437" height="62.875" viewBox="0 0 63.437 62.875">
+                <path d="M419.574,353.378l42.283,36.313,4.337-7.588,4.4-13.326,2.644-3.476,7.589-9.213a51.5,51.5,0,0,1,0-14.634c1.491-9.538,2.168-14.092,2.168-14.092l-17.346-.542Z" transform="translate(-419.563 -326.813)" />
+            </svg>
+            <svg class="zone-37" xmlns="http://www.w3.org/2000/svg" width="86.719" height="76.531" viewBox="0 0 86.719 76.531">
+                <path d="M420.116,353.378l-44.451,26.015-0.542,7.046L427.7,429.92l34.153-40.229Z" transform="translate(-375.125 -353.375)" />
+            </svg>
+            <svg class="zone-38" xmlns="http://www.w3.org/2000/svg" width="104" height="90.094" viewBox="0 0 104 90.094">
+                <path d="M375.69,379.28l-52.065,30.464L394.1,469.363l33.54-39.389-51.971-43.535Z" transform="translate(-323.625 -379.281)" />
+            </svg>
+            <svg class="zone-39" xmlns="http://www.w3.org/2000/svg" width="119.406" height="89.438" viewBox="0 0 119.406 89.438">
+                <path d="M323.625,409.744l-9.215,5.42-39.573,16.8c-0.1.038,0.375,1.028,4.337,4.336,2.741,2.288,6.755,4.952,11.384,9.214,3.565,3.283,7.239,8.19,11.926,12.466a229.266,229.266,0,0,0,30.9,23.3c4.771,3.009,17.66,8.78,21.683,10.3a59.44,59.44,0,0,1,13.552,7.588l25.639-30.08Z"
+                    transform="translate(-274.844 -409.75)" />
+            </svg>
+            <svg class="zone-40" xmlns="http://www.w3.org/2000/svg" width="158.281" height="105.156" viewBox="0 0 158.281 105.156">
+                <path d="M274.3,431.966l-27.1,11.382c-2.807,4.982-32.033,22.011-36.862,23.305,0,0,.711,10.362,15.721,17.886,1.85,0.927,13.988,11.669,22.767,18.97,1.536,1.277,6.874,6.729,10.3,7.588,3.059,0.766,10.606,3.087,17.347,5.42a112.612,112.612,0,0,1,13.01,5.419c6.906,3.151,9.757,15.176,9.757,15.176h46.077a27.812,27.812,0,0,1,4.879-15.176c6.436-9.111,18.431-22.763,18.431-22.763a41.26,41.26,0,0,0-5.421-4.336c-0.806-.484-16.111-5.187-31.983-15.176A206.482,206.482,0,0,1,301.4,456.9c-4.044-3.746-7.216-8.409-10.842-11.382C280.707,437.438,274.528,431.7,274.3,431.966Z"
+                    transform="translate(-210.344 -431.969)" />
+            </svg>
+        </div>
+        <div class="region">
+            <svg class="zone-41" xmlns="http://www.w3.org/2000/svg" width="97.562" height="138.188" viewBox="0 0 97.562 138.188">
+                <path d="M228.76,324.11L210.9,327.374h-7.046l-0.543,18.98s-2.27,11.3-7.046,20.064-13.008,22.776-13.008,22.776L173.5,405.463l-10.84,18.979s-5.254,9.285-5.421,14.642,0.4,15.523,4.879,22.776c0,0,11.474-3.324,17.886-1.627s15.222,4.583,28.726-2.169S236.914,441.8,236.914,441.8l8.13-9.762-16.826-14.7V383.187L254.78,351.21s-25.58-19.662-26.02-21.68C227.643,324.406,228.76,324.11,228.76,324.11Z"
+                    transform="translate(-157.219 -324.125)" />
+            </svg>
+            <svg class="zone-42" xmlns="http://www.w3.org/2000/svg" width="124.125" height="81.844" viewBox="0 0 124.125 81.844">
+                <path d="M254.238,351.752l-26.02,30.893v34.687l16.263,14.634,16.824-3.185,46.07-19.523,9.757-5.965,35.224-20.648-39.03-32.519L288.39,380.477Z" transform="translate(-228.219 -350.125)" />
+            </svg>
+            <svg class="zone-43" xmlns="http://www.w3.org/2000/svg" width="113.375" height="47.156" viewBox="0 0 113.375 47.156">
+                <path d="M335.551,305.682l-76.957-.542-29.81,18.98a4.45,4.45,0,0,0-1.108,2.158,13.979,13.979,0,0,0,.542,3.794l26.02,22.222s13.456-16.924,18.973-19.512a39.531,39.531,0,0,1,5.963-1.084l19.515-1.084s3.661,0.393,5.421,1.626c4.016,2.812,14.6,11.909,14.6,11.909s9.045-10.9,13.027-15.738c4.156-5.054,8.915-9.107,9.231-12.61C341.717,307.471,335.551,305.682,335.551,305.682Z"
+                    transform="translate(-227.656 -305.125)" />
+            </svg>
+            <svg class="zone-44" xmlns="http://www.w3.org/2000/svg" width="64.375" height="49.844" viewBox="0 0 64.375 49.844">
+                <path d="M254.385,351.991l34,28.486,30.356-36.313-15.72-13.008a32.525,32.525,0,0,0-7.047-.542c-5.3.151-13.01,0.542-13.01,0.542l-8.132.542-4.336,2.168Z" transform="translate(-254.375 -330.625)" />
+            </svg>
+            <svg class="zone-45" xmlns="http://www.w3.org/2000/svg" width="86.563" height="75.875" viewBox="0 0 86.563 75.875">
+                <path d="M400.059,354.488V350.15l-21.68-18.438L354.53,316.528l-17.268-9.713c5.43,3.075,3.168,11.333,3.168,11.333l-26.921,32.407,38.853,32.132Z" transform="translate(-313.5 -306.813)" />
+            </svg>
+        </div>
+        <div class="region">
+            <svg class="zone-46" xmlns="http://www.w3.org/2000/svg" width="105.218" height="111.625" viewBox="0 0 105.218 111.625">
+                <path d="M489.5,355s-2.064-5.705-1.626-10.3c0.487-5.109,3.093-8.962,2.711-15.718l85.654,0.542,0,5.42,16.805,42.275-4.879,55.283-5.963,8.13-66.676-5.42s0.183-3.543.542-8.672c0.75-10.72,2.655-28.8,1.626-38.481-0.855-8.043-3.253-11.924-3.253-11.924a44.039,44.039,0,0,0-4.878-5.42C503.172,364.973,489.5,355,489.5,355ZM261.285,519.769"
+                    transform="translate(-487.813 -329)" />
+            </svg>
+            <svg class="zone-47" xmlns="http://www.w3.org/2000/svg" width="53.094" height="69.375" viewBox="0 0 53.094 69.375">
+                <path d="M468.362,394.027s4.233-11.45,9.216-22.222a18.528,18.528,0,0,1,5.962-7.046l7.59-8.671,18.431,14.091s7.424,5.536,8.131,13.008c0.06,0.635.542,8.672,0.542,8.672s-0.936,19.651-1.084,29.809c-0.047,3.2-1.084,3.794-1.084,3.794a52.457,52.457,0,0,1-9.758-1.626,31.748,31.748,0,0,1-9.215-4.336c-5.205-3.28-15.151-12.458-19.515-16.259-1.585-1.38-6.5-5.962-6.5-5.962l-5.963,7.046ZM261.285,519.769"
+                    transform="translate(-465.125 -356.094)" />
+            </svg>
+            <svg class="zone-48" xmlns="http://www.w3.org/2000/svg" width="79.688" height="95.938" viewBox="0 0 79.688 95.938">
+                <path d="M485.709,493.211l-11.926-23.848-37.4-31.977,34.694-40.107c0-.222,5.016,4.377,14.639,12.631,3.524,3.022,6.252,6,10.3,8.506,3.214,1.989,6.41,3.622,8.674,4.878,1.662,0.923,11.384,2.168,11.384,2.168s-0.1,6.17-.542,13.55c-0.585,9.635-1.707,21.308-2.169,23.848a21.466,21.466,0,0,1-3.794,9.755c-2.32,3.588-7.674,10.443-10.3,13.55S485.709,493.211,485.709,493.211ZM261.285,519.769"
+                    transform="translate(-436.375 -397.281)" />
+            </svg>
+            <svg class="zone-49" xmlns="http://www.w3.org/2000/svg" width="139.313" height="110.031" viewBox="0 0 139.313 110.031">
+                <path d="M564.311,545.242l-63.4-6.587c-0.029.034-8.289-.687-12.494,0.083-12.395,2.271-18.222,2.024-17.926,1.671l-27.609-28.228s7.338-2.791,15.721-6.5c12.27-5.436,27.1-12.466,27.1-12.466l13.552-7.046,10.3-14.092a37.392,37.392,0,0,0,3.252-10.839c1.29-11.693,2.884-26.167,2.711-26.016,0,0,5.15.108,13.01,0.542,6.762,0.373,15.624,1.566,23.851,2.168,15.373,1.124,29.815,2.71,29.815,2.71s-2.618,28.136-4.879,34.687c0,0-6.637,28.211-7.589,33.6C569.732,508.929,564.7,538.18,564.311,545.242ZM261.285,519.769"
+                    transform="translate(-442.875 -435.219)" />
+            </svg>
+            <svg class="zone-50" xmlns="http://www.w3.org/2000/svg" width="81.875" height="74.813" viewBox="0 0 81.875 74.813">
+                <path d="M485.709,493.211S467.6,501.9,454.268,507.845a100.7,100.7,0,0,1-11.384,4.336,149.083,149.083,0,0,0-14.094-14.092c-19.278-16.47-24.936-21.68-24.936-21.68l32.525-39.023,37.4,31.435ZM261.285,519.769" transform="translate(-403.844 -437.375)" />
+            </svg>
+            <svg class="zone-51" xmlns="http://www.w3.org/2000/svg" width="113.343" height="107.844" viewBox="0 0 113.343 107.844">
+                <path d="M470.53,539.822l-7.047,10.3L444.51,572.342c0.38,0.309-7.689,8.023-10.3,9.213-1.992.909-2.723,2.585-8.626,2.609,0,0-5.252,2.086-22.273-13.99-13.779-13.015-18.914-17.433-18.914-17.433s-6.423-9.7-17.883-13.545l-9.28-1.542a12.755,12.755,0,0,1,1.626-7.588c2.185-3.649,44.993-53.657,44.993-53.657a102.377,102.377,0,0,0,10.782,9.413,224.909,224.909,0,0,1,21.2,18.771c5.712,5.878,13.692,14.206,19.515,20.053C464.862,534.2,470.53,539.822,470.53,539.822ZM261.285,519.769"
+                    transform="translate(-357.188 -476.406)" />
+            </svg>
+        </div>
+        <div class="region">
+            <svg class="zone-52" xmlns="http://www.w3.org/2000/svg" width="136.313" height="78.063" viewBox="0 0 136.313 78.063">
+                <path d="M426.916,611.365s3.29-16,8.921-18.428c0,0,4.567-7.04,5.421-7.046,0.938-.006,13.636-13.857,13.869-14.634,0.169-.56,12.151-14.091,12.151-14.091s4.809-4.992,9.215-7.046,8.765-4.083,14.1-4.336,27.257,2.523,30.356,2.71,18.591,1.829,21.684,2.168c3.292,0.361,20.155,2.538,20.6,2.71l-5.963,70.459Z"
+                    transform="translate(-426.906 -545.781)" />
+            </svg>
+            <svg class="zone-53" xmlns="http://www.w3.org/2000/svg" width="139.344" height="93.25" viewBox="0 0 139.344 93.25">
+                <path d="M551.744,694.956s-7.86,3.125-11.284,4.211c-10.39,3.3-54.2,4.58-67.429,3.252s-41.958.632-52.625,2.168c0,0-2.805-7.819-1.628-12.466,2.4-9.464,6.416-10.409,7.6-24.389,0.7-8.326.81-56.669,0.716-56.373l130.716,12.472Z" transform="translate(-418.469 -611.344)" />
+            </svg>
+            <svg class="zone-54" xmlns="http://www.w3.org/2000/svg" width="67.313" height="57.438" viewBox="0 0 67.313 57.438">
+                <path d="M558.791,606.752l4.436-53.38,62.882,5.42-4.429,52.027Z" transform="translate(-558.781 -553.375)" />
+            </svg>
+            <svg class="zone-55" xmlns="http://www.w3.org/2000/svg" width="70.25" height="88.563" viewBox="0 0 70.25 88.563">
+                <path d="M615.267,686.159l-36.444-3.794-27.372,12.713,7.439-88.591,62.79,4.332Z" transform="translate(-551.438 -606.5)" />
+            </svg>
+            <svg class="zone-56" xmlns="http://www.w3.org/2000/svg" width="53.093" height="63.438" viewBox="0 0 53.093 63.438">
+                <path d="M673.765,563.669c0.344,2.71-2.713,32.52-2.713,32.52l-2.66,26.016-47.7-3.252,5.421-60.161s8.593,0.979,18.431,1.084c8.518,0.09,18.539-.706,23.852-0.542C671.6,559.433,673.694,563.116,673.765,563.669Z" transform="translate(-620.688 -558.781)" />
+            </svg>
+            <svg class="zone-57" xmlns="http://www.w3.org/2000/svg" width="53.125" height="72.093" viewBox="0 0 53.125 72.093">
+                <path d="M668.392,622.205l-6.563,68.832-46.562-4.878,5.421-67.206Z" transform="translate(-615.281 -618.938)" />
+            </svg>
+            <svg class="zone-58" xmlns="http://www.w3.org/2000/svg" width="64.531" height="117.593" viewBox="0 0 64.531 117.593">
+                <path d="M571.358,554.456l1.085-8.13s2.181-25.656,3.125-29.268,1.931-12.928,3.255-16.259c1.589-6.237,3.164-11.674,3.8-14.634s2.836-12.562,3.255-15.718,2.071-10.671,2.17-13.55,1.782-14.94,2.17-15.717l5.425,0.542,40.226,4.336-8.674,104.6-0.542,8.13Z"
+                    transform="translate(-571.344 -441.188)" />
+            </svg>
+        </div>
+        <div class="region">
+            <svg class="zone-59" xmlns="http://www.w3.org/2000/svg" width="66.656" height="60.563" viewBox="0 0 66.656 60.563">
+                <path d="M121.96,617.327L56.377,571.8s11.183-12.93,25.474-14.633,41.193,2.71,41.193,2.71Z" transform="translate(-56.375 -556.75)" />
+            </svg>
+            <svg class="zone-60" xmlns="http://www.w3.org/2000/svg" width="60.156" height="70.469" viewBox="0 0 60.156 70.469">
+                <path d="M121.96,617.327l1.084-57.451s25.253,1.89,30.895,2.709,28.184,7.046,28.184,7.046l-1.626,35.23-9.756,13.55,0.542,1.626h3.794v7.588h-6.5v2.71H140.389Z" transform="translate(-121.969 -559.875)" />
+            </svg>
+            <svg class="zone-61" xmlns="http://www.w3.org/2000/svg" width="49.313" height="49.875" viewBox="0 0 49.313 49.875">
+                <path d="M182.123,569.631s11.641,2.182,18.429,4.878,18.97-.542,18.97-0.542l10.3,45.528h-27.1L180.5,604.861Z" transform="translate(-180.5 -569.625)" />
+            </svg>
+            <svg class="zone-62" xmlns="http://www.w3.org/2000/svg" width="50.938" height="74.813" viewBox="0 0 50.938 74.813">
+                <path d="M219.522,573.967s16.747-7.758,24.39-10.84,26.559-9.213,26.559-9.213V619.5H235.782v9.214H229.82V619.5Z" transform="translate(-219.531 -553.906)" />
+            </svg>
+            <svg class="zone-63" xmlns="http://www.w3.org/2000/svg" width="47.187" height="79.687" viewBox="0 0 47.187 79.687">
+                <path d="M270.471,553.914s12.223-4.262,15.176-5.42,11.383-3.252,11.383-3.252l2.167-.542h18.465l-0.036,63.955s-3.889,9.4-4.336,10.3-36.857.542-36.857,0.542v4.878h-5.962V553.914Z" transform="translate(-270.469 -544.688)" />
+            </svg>
+            <svg class="zone-64" xmlns="http://www.w3.org/2000/svg" width="64.5" height="81.843" viewBox="0 0 64.5 81.843">
+                <path d="M317.662,544.7s30.212,0.407,41.7.542c12.214,0.143,22.764,15.176,22.764,15.176l-3.252,61.787s-7.1-2.067-10.84,4.336c0,0-27.862-2.945-37.4-3.252,0,0-11.427-13.448-13.008-14.634Z" transform="translate(-317.625 -544.688)" />
+            </svg>
+            <svg class="zone-65" xmlns="http://www.w3.org/2000/svg" width="44.5" height="67.219" viewBox="0 0 44.5 67.219">
+                <path d="M382.125,560.418s8.029,7.1,9.756,8.671,10.055,9.754,11.925,11.382a115.288,115.288,0,0,0,11.382,8.13c1.923,0.973,4.872,1.746,6.5,2.71s1.8,4.023,1.626,5.42-2.544,9.928-2.71,10.84-1.084,5.42-1.084,5.42l-0.542,7.046s-34.415,7.321-35.231,7.588-4.878-5.42-4.878-5.42Z"
+                    transform="translate(-378.875 -560.406)" />
+            </svg>
+        </div>
+        <div class="region">
+            <svg class="zone-66" xmlns="http://www.w3.org/2000/svg" width="46.718" height="57.875" viewBox="0 0 46.718 57.875">
+                <path d="M717.722,417.874l-28.159,10.682L705.1,470.615l1.892,5.12L736.282,464.5Z" transform="translate(-689.563 -417.875)" />
+            </svg>
+            <svg class="zone-67" xmlns="http://www.w3.org/2000/svg" width="42.438" height="61.812" viewBox="0 0 42.438 61.812">
+                <path d="M799.2,443.348l-1.628-5.962-6.51-16.26-1.628-3.794L786.179,413,773.7,395.653l-5.023-7.046L756.752,396.2l17.889,54.2Z" transform="translate(-756.75 -388.594)" />
+            </svg>
+            <svg class="zone-68" xmlns="http://www.w3.org/2000/svg" width="57.437" height="68.843" viewBox="0 0 57.437 68.843">
+                <path d="M756.752,396.2l-14.94,9.345-24.633,11.792,18.973,47.7s20.745-8.274,29.273-11.382c4.416-1.61,9.216-3.252,9.216-3.252Z" transform="translate(-717.188 -396.188)" />
+            </svg>
+            <svg class="zone-69" xmlns="http://www.w3.org/2000/svg" width="97.438" height="101.375" viewBox="0 0 97.438 101.375">
+                <path d="M732.471,544.7l15.19-5.42a153.674,153.674,0,0,0,18.561-6.863c8.92-3.971,18.931-9.552,24.84-16.442,18.884-22.023,13.982-60.375,8.138-72.627-6.44-1.157-86.949,29.906-92.207,32.387Z" transform="translate(-707 -443.313)" />
+            </svg>
+            <svg class="zone-70" xmlns="http://www.w3.org/2000/svg" width="66.969" height="61.437" viewBox="0 0 66.969 61.437">
+                <path d="M642.956,446.6s-1.345,17.3-2.943,37.86a42.674,42.674,0,0,0,.19,4.957s3.154,0.737,11.926.542c4.9-.109,13.618-0.709,19.515-2.168,17.033-4.213,35.333-12.1,35.333-12.1l-1.959-5.3c-8.394-22.719-15.455-41.833-15.455-41.833l-27.134,9.372H642.956V446.6Z"
+                    transform="translate(-640 -428.563)" />
+            </svg>
+            <svg class="zone-71" xmlns="http://www.w3.org/2000/svg" width="97.688" height="76.968" viewBox="0 0 97.688 76.968">
+                <path d="M640.2,488.875l-2.76,28.643-2.661,34.228a24.614,24.614,0,0,0,7.048.542C652.692,551.946,669,551.2,669,551.2l4.665-.279s10.044-.636,11.067-0.8c0,0,15.836,1.763,22.243,1.084,0,0,8.094.818,25.5-6.5l-25.049-69.375s-6.644,3-18.973,7.046c-4.956,1.627-15.46,5.2-18.973,5.962C660.514,490.28,640.2,488.875,640.2,488.875Z"
+                    transform="translate(-634.781 -475.313)" />
+            </svg>
+            <svg class="zone-72" xmlns="http://www.w3.org/2000/svg" width="79.844" height="93.75" viewBox="0 0 79.844 93.75">
+                <path d="M755.8,368.553L742.778,329.53h-53.92l16.4,93.764,34.693-15.717,28.731-18.428Z" transform="translate(-688.844 -329.531)" />
+            </svg>
+            <svg class="zone-73" xmlns="http://www.w3.org/2000/svg" width="62.281" height="109.469" viewBox="0 0 62.281 109.469">
+                <path d="M688.858,329.53H647.169l-4.213,108.4,18.931,1.084,43.367-15.718Z" transform="translate(-642.969 -329.531)" />
+            </svg>
+            <svg class="zone-74" xmlns="http://www.w3.org/2000/svg" width="58.437" height="108.407" viewBox="0 0 58.437 108.407">
+                <path d="M647.169,329.53H588.705l0.542,3.794,15.733,40.649,0.543,5.42-2.713,23.848-1.627,17.343-0.543,8.672-0.542,4.336,42.858,4.336Z" transform="translate(-588.719 -329.531)" />
+            </svg>
+        </div>
+        <div class="region">
+            <svg class="zone-75" xmlns="http://www.w3.org/2000/svg" width="84.031" height="89.438" viewBox="0 0 84.031 89.438">
+                <path d="M587.621,320.316h78.6l-0.542-37.939V264.491s4.933-15.709,5.963-16.8c0,0-3.35-3.576-6.432-6.721a42.385,42.385,0,0,0-4.95-4.66l6.127-5.422-78.768,1.628v87.8Z" transform="translate(-587.625 -230.875)" />
+            </svg>
+            <svg class="zone-76" xmlns="http://www.w3.org/2000/svg" width="108.75" height="88.875" viewBox="0 0 108.75 88.875">
+                <path d="M491.155,320.316h95.987l-0.02-87.831-3.3.029q-2.715.021-5.457,0.006c-10.861-.053-21.959-0.466-32.489-0.548-36.422-.287-67.218-0.542-67.218-0.542s-0.08,3.517-.151,8.574c-0.022,1.531-.043,3.2-0.061,4.959-0.027,2.736-.047,5.68-0.05,8.626-0.01,9.632.16,19.286,0.831,21.742a28.225,28.225,0,0,0,1.626,4.336c0.687,1.141,7.582,10.08,8.1,11.382,0,0,1.337.813,1.652,6.5C490.917,303.036,491.155,320.316,491.155,320.316Z"
+                    transform="translate(-478.406 -231.438)" />
+            </svg>
+            <svg class="zone-77" xmlns="http://www.w3.org/2000/svg" width="99.906" height="63.438" viewBox="0 0 99.906 63.438">
+                <path d="M572.434,169.17s-14.241,1-21.133,1.557c-38.533,3.126-73.181,7.046-73.181,7.046s0.069,3.08.13,9.078c0.158,15.419.412,44.579,0.412,44.579l99.362,1.171s-2.18-24.741-3.818-43.32C573.222,178.112,572.434,169.17,572.434,169.17Z"
+                    transform="translate(-478.125 -169.156)" />
+            </svg>
+            <svg class="zone-78" xmlns="http://www.w3.org/2000/svg" width="99.218" height="68.906" viewBox="0 0 99.218 68.906">
+                <path d="M666.389,230.886s3.887-3.757,5.255-5.418c0,0-8.371-11.971-8.13-23.848,0,0-1.593-15.759-2.71-20.054-0.441-1.695-1.765-6.4-3.22-11.527-0.629-2.215-1.66-6.358-1.66-6.358a45.957,45.957,0,0,1-7.667,1.263c-11.213.664-38.079,1.833-66.426,3.615-3.121.2-9.4,0.611-9.4,0.611s0.183,8.575,1.093,18.9c1.651,18.734,4.5,44.53,4.5,44.53s6.364-.01,9.517-0.023c14.128-.061,27.788-0.243,39.652-0.606C650.229,231.266,666.389,230.886,666.389,230.886Z"
+                    transform="translate(-572.438 -163.688)" />
+            </svg>
+            <svg class="zone-79" xmlns="http://www.w3.org/2000/svg" width="77.532" height="49.875" viewBox="0 0 77.532 49.875">
+                <path d="M655.924,164.223s-3.149-11.022-3.25-11.382c-0.234-.828-4.112-15.884-5.42-19.511s-5.962-14.634-5.962-14.634l-62.886,2.168a2.074,2.074,0,0,1,1.084,1.626c0.149,2.185-.235,7.126,0,11.924,0.232,4.772,1.3,10.071,1.626,15.175,0.639,10.052.542,18.97,0.542,18.97l71.555-3.794Z"
+                    transform="translate(-578.406 -118.688)" />
+            </svg>
+            <svg class="zone-80" xmlns="http://www.w3.org/2000/svg" width="103.656" height="56.906" viewBox="0 0 103.656 56.906">
+                <path d="M579.49,120.864l-100.9.364-0.469,56.545s26.951-3.2,53.336-5.271l50.2-3.943a64.4,64.4,0,0,0,0-7.588c-0.3-5.537-.766-16.317-1.626-21.68C579.356,135.079,579.49,120.864,579.49,120.864Z" transform="translate(-478.125 -120.875)" />
+            </svg>
+            <svg class="zone-81" xmlns="http://www.w3.org/2000/svg" width="71" height="71.531" viewBox="0 0 71 71.531">
+                <path d="M641.292,118.7s-2.752-4.839-5.888-10.284c-4.068-7.063-9.143-15.565-11.463-17.9-5.7-5.734-12.641-14.658-20.59-20.054,0,0-14.53-10.627-23.651-16.418a59.447,59.447,0,0,0-9.426-4.177v71.543s6.235-.108,9.282-0.175C613.646,120.478,641.292,118.7,641.292,118.7Z"
+                    transform="translate(-570.281 -49.875)" />
+            </svg>
+            <svg class="zone-82" xmlns="http://www.w3.org/2000/svg" width="43.375" height="83.719" viewBox="0 0 43.375 83.719">
+                <path d="M570.274,49.863s-6.976-1.636-8.116-2.168-6.756-.586-9.756-2.168-25.475-7.588-25.475-7.588l-0.019,83.716,43.366-.249V49.863Z" transform="translate(-526.906 -37.938)" />
+            </svg>
+            <svg class="zone-83" xmlns="http://www.w3.org/2000/svg" width="48.344" height="104.844" viewBox="0 0 48.344 104.844">
+                <path d="M526.927,37.939s-6.421-2.079-9.755-4.336-7.891-4.227-10.841-6.5-11.594-6.707-13.575-10.3l-9.189.542-3.794,34.688-1.111,60.161-0.073,9.036,48.319,0.427Z" transform="translate(-478.594 -16.813)" />
+            </svg>
+            <svg class="zone-84" xmlns="http://www.w3.org/2000/svg" width="52.563" height="38.469" viewBox="0 0 52.563 38.469">
+                <path d="M483.567,17.343s-21.66-2.828-24.933-3.252-7.588-.542-7.588-0.542A123.433,123.433,0,0,0,430.992,47.7s-0.635,4.22,8.13,4.336h40.651Z" transform="translate(-431 -13.563)" />
+            </svg>
+        </div>
+    </div>
+    <div id="battle_progress" style="display: none">
+        <div class="time">14:59</div>
+        <div class="row">
+            <div class="left TheFamilies">
+                <div class="icon">
+                    <div class="gang"></div>
+                </div>
+                <div class="progress">
+                    <div class="fill" style="width: 72%"></div>
+                    <div class="count">72</div>
+                </div>
+            </div>
+            <div class="left TheFamilies">
+                <div class="icon">
+                    <div class="gang"></div>
+                </div>
+                <div class="progress">
+                    <div class="fill" style="width: 72%"></div>
+                    <div class="count">72</div>
+                </div>
+            </div>
+            <div class="right TheBallas">
+                <div class="icon">
+                    <div class="gang"></div>
+                </div>
+                <div class="progress">
+                    <div class="fill" style="width: 38%"></div>
+                    <div class="count">38</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left TheVagos">
+                <div class="icon">
+                    <div class="gang"></div>
+                </div>
+                <div class="progress">
+                    <div class="fill" style="width: 72%"></div>
+                    <div class="count">72</div>
+                </div>
+            </div>
+            <div class="right MarabuntaGrande">
+                <div class="icon">
+                    <div class="gang"></div>
+                </div>
+                <div class="progress">
+                    <div class="fill" style="width: 38%"></div>
+                    <div class="count">38</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

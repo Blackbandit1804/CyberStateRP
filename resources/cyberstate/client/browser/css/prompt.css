@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "GothamPro";
+    src: url("../fonts/GothamPro/GothamPro.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal; }
+  @font-face {
+    font-family: "GothamPro";
+    src: url("../fonts/GothamPro/GothamPro-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal; }
+  @font-face {
+    font-family: "GothamPro";
+    src: url("../fonts/GothamPro/GothamPro-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal; }
+  @font-face {
+    font-family: "GothamPro";
+    src: url("../fonts/GothamPro/GothamPro-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal; }
+
+.hint {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 425px;
+  position: absolute; 
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 190px;
+  color: white;
+  font-family: GothamPro; }
+.hint-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left top, right top, from(#9c00ff), color-stop(60%, #e300eb));
+  background: linear-gradient(90deg, #9c00ff 0%, #e300eb 60%);
+  padding: 15px;
+  border-radius: 10px 10px 0 0; }
+.hint-header__icon {
+  width: 24px;
+  height: 24px;
+  background: url(../img/info.png) no-repeat; }
+.hint-header__title {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0 8px;
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px); }
+.hint-main {
+  height: 143px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(29, 3, 42, 0)), color-stop(60%, rgba(29, 3, 42, 0.6)));
+  background: linear-gradient(0deg, rgba(29, 3, 42, 0) 0%, rgba(29, 3, 42, 0.6) 60%);
+  padding: 10px 20px; }
+.hint-main__info {
+  font-weight: 400;
+  font-size: 14px; }
+.hint-main__info-button {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 5px 10px;
+  margin: 0 15px 10px 15px;
+  border-radius: 5px;
+  background-color: #1a0c1f; }

@@ -1,0 +1,311 @@
+
+
+@font-face {
+    font-family: London;
+    src: url(../fonts/Chalet/LONDONSIXTY.ttf);
+   }
+@font-face {
+    font-family: NewYork;
+    src: url(../fonts/Chalet/NEWYORKSIXTY.ttf);
+   }
+@font-face {
+    font-family: Paris;
+    src: url(../fonts/Chalet/PARISSIXTY.ttf);
+   }
+
+
+ul{
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#carsBlock {
+    width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0;
+    color: white;
+    position: relative;
+}
+
+.carsBlock{
+    text-transform: uppercase;
+    width: 30.55556vh;
+    height: 28.61111vh;
+    margin-top: 11.11111vh;
+    margin-left: 1.85185vh;
+}
+
+.infoBlock{
+    width: 28.7037vh;
+    height: 30.55556vh;
+    margin-top: 1.38889vh;
+    margin-left: 1.85185vh;
+    display:none;
+}
+
+.headBlock{
+    text-transform: uppercase;
+    background-color: #fff;
+    color: #000;
+    width: 28.7037vh;
+    height: 3.24074vh;
+    margin-left: 0.46296vh;
+    line-height: 3.24074vh;
+    text-align: center;
+    font-family: NewYork;
+}
+
+.selectCar{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 24.81481vh;
+    margin-top: 0.46296vh;
+}
+
+.listCars{
+    margin:0 auto;
+    background-image: url('../img/autoSaloon/bgSelectCars.png');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-position-y: 80px;
+    width: 28.7037vh;
+}
+
+.catalogItem img,.catalogItem div{
+    float: left;
+}
+.modelCar{
+    width: 21.11111vh;
+    margin-left: 0.18519vh;
+    height: 3.7037vh;
+    line-height: 3.7037vh;
+    font-size: 1.85185vh;
+    padding-left: 1.85185vh;
+}
+.catalogItem img{
+    width: 1.85185vh;
+    height: 1.85185vh;
+    padding: 0.92593vh 1.85185vh;
+    margin-left: 0.18519vh;
+    margin-left: 0;
+}
+.selectedCar img{
+    background-color: #fff;
+    color: #000;
+}
+.selectedCar div{
+    background-color: #fff;
+    color: #000;
+}
+
+.baseCar{
+    background-image: url('../img/autoSaloon/bgSelectCars.png');
+    background-repeat: repeat-x;
+    width: 25vh;
+    height: 18.51852vh;
+    margin-left: 0.46296vh;
+    margin-top: 0.46296vh;
+    margin-bottom: 0.46296vh;
+    padding: 0.64815vh 1.85185vh;
+}
+
+.fullOptCar{
+    background-image: url('../img/autoSaloon/bgSelectCars.png');
+    background-repeat: repeat-x;
+    width: 25vh;
+    height: 18.51852vh;
+    margin-left: 0.46296vh;
+    margin-top: 0.46296vh;
+    margin-bottom: 0.46296vh;
+    padding: 0.64815vh 1.85185vh;
+    font-family: "London";
+    line-height: 1.2963vh;
+    font-size: 1.2963vh;
+    display:none;
+}
+.fullOptCar p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.fullOptCar b{
+    font-family: "NewYork";
+}
+
+.baseCar p{
+    margin: 7px 0;
+    font-family: "Open Sans";
+}
+
+.paramVal{
+    width: 4.62963vh;
+    height: 0.74074vh;
+    margin-right: 0.37037vh;
+    float: left;
+}
+
+.valTrue{
+    background-color: #fff;
+}
+
+.valFalse{
+    background-color: #666666;
+}
+
+.optionBlock{
+    top: 0;
+    right: 1.85185vh;
+    width: 28.61111vh;
+    position: absolute;
+    display:none;
+}
+
+.optionBlock .headBlock{
+    margin-left: 0;
+}
+
+.btnBlock{
+    background-image: url('../img/autoSaloon/bgBtnBlack.png');
+    width: 28.61111vh;
+    height: 3.24074vh;
+    margin-top: 0.46296vh; 
+}
+.btnBlock .border{
+    background-color: #fff;
+    width: 0.37037vh;
+    height: 3.24074vh;
+    float: left;
+}
+
+.btnBlock .textBtn{
+    width: 28.61111vh;
+    height: 3.24074vh;
+    text-transform: uppercase;
+    line-height: 3.24074vh;
+    text-align: center;
+    font-family: NewYork;
+}
+
+.buyCarOptions{
+    background-image: url('../img/autoSaloon/bgSelectCars.png');
+    background-repeat: repeat-x;
+    height: 18.51852vh;
+    margin-top: 0.46296vh;
+    margin-bottom: 0.46296vh;
+    padding-top: 1.85185vh;
+}
+.optionCar{
+    background: rgba(0,0,0, 0.25);
+    margin: 5px 0;
+    height: 3.24074vh;
+    line-height: 3.24074vh;
+    font-family: London;
+    padding-left: 2.31481vh;
+}
+.btnOption{
+    border: 0.09259vh solid #fff;
+    padding: 0.09259vh;
+    height: 1.85185vh;
+    width: 4.53704vh;
+    float: right;
+    margin-top: 0.46296vh;
+    margin-right: 2.31481vh;
+}
+.btnOption div{
+    margin: 1px;
+}
+
+.btnOption .on{
+    float: right;
+    width: 2.22222vh;
+    height: 1.66667vh;
+    background-color: #fff;
+}
+
+.btnOption .off{
+    float: left;
+    width: 2.22222vh;
+    height: 1.66667vh;
+    background-color: #fff;
+}
+
+.summInfo{
+    line-height: 2.31481vh;
+    font-family: London;
+}
+.summInfo p{
+    text-align: center;
+    font-size: 1.85185vh;
+}
+.btnBuyCar{
+    background-color: #fff;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    width: 11.11111vh;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.selectColorBlock{
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 0.46296vh;
+    background-image: url('../img/autoSaloon/bgColorSelect.png');  
+    height: 20.37037vh;
+    padding: 0.46296vh 0.46296vh;
+    display:none;
+}
+
+.selectColorBlock::-webkit-scrollbar-track{
+    background-image: url('../img/autoSaloon/bgColorSelect.png');
+    background-repeat: repeat;
+}
+
+.selectColorBlock .selectColor{
+    border: 0.09259vh dashed #fff;
+}
+
+.selectColorBlock .color{
+    border: 0.09259vh solid #1f1f1f;
+}
+
+.selectColorBlock div{
+    width:2.96296vh;
+    height:2.96296vh;
+    float: left;
+    margin: 1px;
+}
+
+
+
+#selectCar::-webkit-scrollbar {
+    width: 0.92593vh;
+}
+ 
+#selectCar::-webkit-scrollbar-track {
+    background-image: url(../img/autoSaloon/bgSelectCars.png);
+    background-repeat: repeat-x;
+    background-attachment: fixed; 
+    position: absolute;
+    padding: 0.09259vh;
+}
+ 
+#selectCar::-webkit-scrollbar-thumb {
+    top: 0.18519vh;
+    background-image: url(../img/autoSaloon/scrBg.png);
+    background-repeat: repeat-y;
+}
+
+/*
+::-webkit-scrollbar
+::-webkit-scrollbar-button
+::-webkit-scrollbar-track
+::-webkit-scrollbar-track-piece 
+::-webkit-scrollbar-thumb
+::-webkit-scrollbar-corner
+::-webkit-resizer.
+*/

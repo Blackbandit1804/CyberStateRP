@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+.busMenu {
+    background-image: url(../img/bgtaxi.png);
+    background-repeat: no-repeat;
+    background-size: 50.55555555555556vh auto;
+    font-family: 'Open Sans', sans-serif;
+    width: 50.55555555555556vh;
+    height: 40.74074074074074vh;
+    position: relative;
+}
+/* Вход - 1 */
+.busMenu .logIn .text, 
+.busMenu .logIn button {
+    font-weight: 600;
+    text-transform: uppercase;
+
+    font-size: 1.666666666666667vh;
+    text-align: center;
+}
+.busMenu .logIn .text {
+    color: #373737;
+}
+.busMenu .logIn button {
+    margin: auto;
+    margin-top: 2.222222222222222vh;
+    display: block;
+    
+    width: 16.66666666666667vh;
+    height: 3.981481481481481vh;
+
+    background-color: rgb(68, 93, 155);
+
+    border: 0;
+    transition: 1s;
+    border-radius: 0.462962962962963vh;
+
+    background-image: -webkit-linear-gradient( 90deg, rgb(68, 93, 155) 0%, rgb(79,141,218) 100%);
+    color: white;
+    font-weight: 300;
+}
+.busMenu .logIn.center {
+    top: 53.59% !important;
+}
+.busMenu .logIn button:hover {}
+.active {
+    background-color: white !important;
+    outline: black;
+    outline-width: 0.1851851851851852vh;
+    outline-style: solid;
+}
+button:focus,
+.busMenu .logInAnim .logIn input {
+    /* outline: none; */
+}
+/* Анимация входа - 2*/
+.busMenu .logInAnim {
+    animation-name: example;
+    animation-duration: 0.9s;
+}
+@keyframes example {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.busMenu .logInAnim .header,
+.busMenu .header {
+    margin-top: 5.555555555555556vh;
+    display: inline-block;
+    
+    width: 100%;
+    height: 4.166666666666667vh;
+
+    background-color: #445d9b;
+
+    font-weight: 700;
+    font-size: 1.666666666666667vh;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+
+    line-height: 4.166666666666667vh;
+}
+.busMenu .logInAnim .logIn input {
+    border-color: #445d9b;
+    border-style: solid;
+    border-width: 0.2777777777777778vh;
+    border-radius: 0.462962962962963vh;
+
+    width: 18.51851851851852vh;
+    /* height: 43px; */
+    height: 3.333333333333333vh;
+
+    background-color: #e8e8e8;
+    color: #4f4f4f;
+
+    font-weight: 700;
+    font-size: 1.296296296296296vh;
+    text-align: center;
+
+    margin: auto;
+}
+.busMenu .logInAnim .logIn input:nth-child(2) {
+    margin-top: 0.9259259259259259vh;
+}
+.busMenu .logInAnim .logIn input[type="password"]
+{
+    font-size: 1.851851851851852vh;
+}
+.busMenu .logInAnim .logIn.center button {
+    color: white;
+    font-weight: 400;
+}
+/* Загрузка - 3 */
+.busMenu .center.text {
+    animation-name: example;
+    animation-duration: 0.3s;
+
+    font-weight: 700;
+    font-size: 2.222222222222222vh;
+    text-transform: uppercase;
+    color: #4e4e4e;
+
+    top: 56.2% !important;
+}
+/* Меню - 4 */
+.busMenu .main {
+    animation-name: example;
+    animation-duration: 0.3s;
+
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 5.555555555555556vh;
+}
+.busMenu .main .menu {
+    float: left;
+
+    background: #2e3345;
+    color: #fff;
+    height: 35.203704vh;
+    /* width: 13vh; */
+    width: 12.40740740740741vh;
+
+    font-size: 1.666666666666667vh;
+
+    margin-right: 0.9259259259259259vh;
+}
+.busMenu .main .menu .title-menu {
+    /* margin-top: 60px; */
+    
+    width: 100%;
+    height: 4.074074074074074vh;
+
+    /* background-color: #c29d48; */
+
+    font-weight: 700;
+    font-size: 1.666666666666667vh;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+
+    line-height: 4.166666666666667vh;
+    margin-bottom: 1.851851851851852vh;
+
+    border-bottom-width: 0.0925925925925926vh;
+    border-bottom-color: #dadada;
+    border-bottom-style: solid;
+}
+.busMenu .main .menu a {
+    margin: 0 auto;
+    display: table;
+    margin-top: 0.1851851851851852vh;
+}
+.busMenu .main .menu .item {
+    width: 10.759259vh;
+    height: 2.5vh;
+
+    border-radius: 0.1851851851851852vh;
+
+    font-size: 1.481481481481481vh;
+    font-weight: 400;
+
+    padding-left: 1.111111111111111vh;
+}
+.busMenu .main .menu .item.last {
+    margin-top: 17.77777777777778vh;
+}
+.busMenu .main .menu .item.selected {
+    background: #445d9b;
+    color: #283044;
+    font-weight: 600 !important;
+}
+
+.busMenu .main .content {
+    /* float: right; */
+    font-weight: 400;
+    /* width: 26.8em; */
+    /* width: 34em; */ /* LAST */
+    width: 50.64814814814815vh;
+}
+.busMenu .main .content div {
+    color: #2e3345;
+}
+.busMenu .main .content hr {
+    background: #445d9b;
+    border: none;
+    height: 0.5555555555555556vh;
+    margin: 1vh 0;
+    width: 32%;
+    border-radius: 2.777777777777778vh;
+
+    margin: 0;
+    margin-top: 1.481481481481481vh;
+}
+.busMenu .main .content .headerfix {
+    font-size: 2.777777777777778vh;
+    color: #445d9b;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: 0;
+    background-color: transparent !important;
+}
+.busMenu .main .content .info_about .bold,
+.busMenu .main .content .info .bold {
+    font-weight: 700;
+}
+
+.busMenu .main .content table {
+    margin-top: 0.7407407407407407vh;
+    color: #2e3345;
+    font-weight: 700;
+}
+.busMenu .main .content table tr td {
+    font-size: 1.481481481481481vh;
+    width: 1.388888888888889vh;
+    line-height: 1.481481481481481vh;
+    padding-bottom: 1vh;
+    /* text-transform: uppercase; */
+}
+.busMenu .main .content table tr td.orders,
+.busMenu .main .content table tr td.pay,
+.busMenu .main .content table tr td.rating {
+    font-size: 3.444444vh !important;
+    display: unset;
+    /* margin-left: 50px; */
+    /* margin-left: 4em; */
+    margin-left: 0.7407407407407407vh;
+}
+.busMenu .main .content table tr td.pay {
+
+}
+.busMenu .main .content table tr:nth-child(2) {
+    line-height: 6.481481481481481vh;
+}
+
+.busMenu .main .content .scroll {
+    height: 26.2962962962963vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.busMenu .main .content .scroll table.order {
+    background: #d09e3f;
+    border-radius: 0.462962962962963vh;
+    color: #283044;
+    font-size: 1.6vh;
+    /* margin-bottom: 2vh; */
+
+    /* width: 66%; */
+    width: 98%;
+
+    padding-top: 0.6481481481481481vh;
+    padding-bottom: 0.9259259259259259vh;
+    margin-top: 1.481481481481481vh;
+}
+.busMenu .main .content table.order tr td {
+    font-size: 1.296296296296296vh;
+}
+.busMenu .main .content table.order tr td.name,
+.busMenu .main .content table.order tr td.distance {
+    font-weight: 600;
+    text-align: right;
+    padding-right: 0.462962962962963;
+}
+.busMenu .main .content table.order tr.centertext{
+    text-align: center;
+}
+.busMenu .main .content table.order tr td button,
+.busMenu .main .content div div button.buttonOk,
+.busMenu .main .content div .fix button {
+    background-color: #2e3345;
+    color: white;
+    border: 0;
+    width: 10.18518518518519vh;
+    height: 2.777777777777778vh;
+    border-radius: 2.314814814814815vh;
+}
+.busMenu .main .content table.order tr td button{ 
+    /* width: 9em; */
+    border-radius: 0.462962962962963vh;
+    width: 14.81481481481481vh;
+    height: 2.777777777777778vh;
+    text-transform: uppercase;
+}
+.busMenu .main .content div div button.buttonOk {
+    margin: auto;
+    display: block;
+}
+.busMenu .main .content div .fix .text{
+    text-align: center;
+}
+.busMenu .main .content div .fix button {
+    margin: auto; 
+    display: block;
+    margin-top: 1.481481481481481vh;
+    outline: none;
+}
+.busMenu .main .content div .jobBusinfo {
+    margin-top: 1.666666666666667vh;
+}
+.busMenu .main .content div .jobBusinfo .bold {
+    font-weight: bold;
+}
+.busMenu .main .content div .jobBusinfo .small {
+    font-weight: 400;
+    padding-left: 16.2037037037037vh;
+}
+
+
+/* */
+.center1 {
+    margin-top: 26.7vh;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.center.fix {
+    top: 33% !important;
+    left: 12% !important;
+}

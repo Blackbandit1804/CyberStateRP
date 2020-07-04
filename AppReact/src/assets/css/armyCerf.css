@@ -1,0 +1,74 @@
+#documentArmy {
+	background-image: url(../img/armyCerf/bg.png);
+	background-repeat: no-repeat;
+    background-position: center;
+    --webkit-background-size: 100% 100%;
+	height: 538px;
+	width: 550px;
+	font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 82px;
+    justify-content: center;
+}
+#documentArmy .content {
+	height: 431px;
+	width: 500px;
+}
+#documentArmy .content .header {
+	display: flex;
+	width: 100%;
+	height: 245px;
+	margin-bottom: 37px;
+}
+#documentArmy .content .header .imagesPers {
+	height: 100%;
+	width: 190px;
+	margin-right: 20px;
+}
+#documentArmy .content .header .info {
+	width: 290px;
+}
+#documentArmy .content .header .info .fractionName {
+	font-weight: bold;
+	font-size: 14px;
+	color: #000000;
+	margin-top: 17px;
+}
+#documentArmy .content .header .info .headInfo,
+#documentArmy .content .stats {
+	width: 100%;
+	display: flex;
+	margin-top: 30px;
+}
+#documentArmy .content .header .info .headInfo li,
+#documentArmy .content .stats li {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+
+}
+#documentArmy .content .header .info .headInfo li .label,
+#documentArmy .content .stats li .label {
+	font-weight: bold;
+	font-size: 12px;
+	color: #000000;
+	margin-bottom: 7px;
+}
+#documentArmy .content .header .info .headInfo li .value,
+#documentArmy .content .stats li .value {
+	font-weight: bold;
+	font-size: 14px;
+	color: #000000;
+	text-transform: uppercase;
+}
+#documentArmy .footer {
+	margin-top: 34px;
+	height: 78px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}

@@ -1,0 +1,965 @@
+#bandZones {
+    background: url('../img/bandZones/bg.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: contain;
+    border: 1px solid #000;
+    height: 768px;
+    position: absolute;
+    right: 5vh;
+    top: 15vh;
+    width: 1024px;
+}
+
+#bandZones svg {
+    fill: #104add;
+    fill-rule: evenodd;
+    opacity: 0.45;
+    position: absolute;
+}
+
+#bandZones .btn {
+    border: none;
+    color: #fff;
+    height: 5%;
+    opacity: 0.9;
+    outline: none;
+    width: 5%;
+}
+
+#bandZones .player {
+    background: url('../img/bandZones/player.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: contain;
+    height: 20px;
+    position: absolute;
+    width: 20px;
+    z-index: 500;
+}
+
+
+#bandZones .scaleBtn {
+    background: #196;
+}
+
+#bandZones .scaleBtn:hover {
+    background: #085;
+}
+
+#bandZones .captureBtn {
+    background: #fb0;
+}
+
+#bandZones .captureBtn:hover {
+    background: #ea0;
+}
+
+.zone-0 {
+    left: 154px;
+    top: 327px;
+    width: 42px;
+    height: 53px;
+    z-index: 123;
+}
+
+.zone-1 {
+    left: 143px;
+    top: 372px;
+    width: 36px;
+    height: 35px;
+    z-index: 122;
+}
+
+.zone-2 {
+    left: 118px;
+    top: 395px;
+    width: 46px;
+    height: 47px;
+    z-index: 121;
+}
+
+.zone-3 {
+    left: 67px;
+    top: 420px;
+    width: 88px;
+    height: 68px;
+    z-index: 120;
+}
+
+.zone-4 {
+    left: 31px;
+    top: 438px;
+    width: 69px;
+    height: 50px;
+    z-index: 119;
+}
+
+.zone-5 {
+    left: 676px;
+    top: 551px;
+    width: 86px;
+    height: 62px;
+    z-index: 115;
+}
+
+.zone-6 {
+    left: 672px;
+    top: 612px;
+    width: 98px;
+    height: 51px;
+    z-index: 114;
+}
+
+.zone-7 {
+    left: 661px;
+    top: 662px;
+    width: 108px;
+    height: 69px;
+    z-index: 113;
+}
+
+.zone-8 {
+    left: 563px;
+    top: 689px;
+    width: 107px;
+    height: 60px;
+    z-index: 112;
+}
+
+.zone-9 {
+    left: 941px;
+    top: 144px;
+    width: 70px;
+    height: 97px;
+    z-index: 108;
+}
+
+.zone-10 {
+    left: 890px;
+    top: 239px;
+    width: 90px;
+    height: 56px;
+    z-index: 107;
+}
+
+.zone-11 {
+    left: 876px;
+    top: 291px;
+    width: 101px;
+    height: 24px;
+    z-index: 106;
+}
+
+.zone-12 {
+    left: 839px;
+    top: 301px;
+    width: 127px;
+    height: 41px;
+    z-index: 105;
+}
+
+.zone-13 {
+    left: 764px;
+    top: 341px;
+    width: 122px;
+    height: 48px;
+    z-index: 104;
+}
+
+.zone-14 {
+    left: 885px;
+    top: 341px;
+    width: 60px;
+    height: 48px;
+    z-index: 103;
+}
+
+.zone-15 {
+    left: 778px;
+    top: 388px;
+    width: 83px;
+    height: 47px;
+    z-index: 102;
+}
+
+.zone-16 {
+    left: 860px;
+    top: 388px;
+    width: 84px;
+    height: 46px;
+    z-index: 101;
+}
+
+.zone-17 {
+    left: 804px;
+    top: 433px;
+    width: 61px;
+    height: 39px;
+    z-index: 100;
+}
+
+.zone-18 {
+    left: 863px;
+    top: 432px;
+    width: 56px;
+    height: 42px;
+    z-index: 99;
+}
+
+.zone-19 {
+    left: 801px;
+    top: 469px;
+    width: 64px;
+    height: 46px;
+    z-index: 98;
+}
+
+.zone-20 {
+    left: 859px;
+    top: 471px;
+    width: 64px;
+    height: 45px;
+    z-index: 97;
+}
+
+.zone-21 {
+    left: 831px;
+    top: 514px;
+    width: 78px;
+    height: 84px;
+    z-index: 96;
+}
+
+.zone-22 {
+    left: 746px;
+    top: 513px;
+    width: 94px;
+    height: 99px;
+    z-index: 95;
+}
+
+.zone-23 {
+    left: 770px;
+    top: 585px;
+    width: 125px;
+    height: 53px;
+    z-index: 94;
+}
+
+.zone-24 {
+    left: 776px;
+    top: 622px;
+    width: 126px;
+    height: 47px;
+    z-index: 93;
+}
+
+.zone-25 {
+    left: 762px;
+    top: 666px;
+    width: 122px;
+    height: 34px;
+    z-index: 92;
+}
+
+.zone-26 {
+    left: 762px;
+    top: 692px;
+    width: 126px;
+    height: 43px;
+    z-index: 91;
+}
+
+.zone-27 {
+    left: 718px;
+    top: 699px;
+    width: 69px;
+    height: 45px;
+    z-index: 90;
+}
+
+.zone-28 {
+    left: 161px;
+    top: 258px;
+    width: 38px;
+    height: 61px;
+    z-index: 86;
+}
+
+.zone-29 {
+    left: 198px;
+    top: 256px;
+    width: 65px;
+    height: 64px;
+    z-index: 85;
+}
+
+.zone-30 {
+    left: 262px;
+    top: 256px;
+    width: 65px;
+    height: 40px;
+    z-index: 84;
+}
+
+.zone-31 {
+    left: 317px;
+    top: 253px;
+    width: 120px;
+    height: 71px;
+    z-index: 83;
+}
+
+.zone-32 {
+    left: 419px;
+    top: 253px;
+    width: 67px;
+    height: 67px;
+    z-index: 82;
+}
+
+.zone-33 {
+    left: 133px;
+    top: 467px;
+    width: 109px;
+    height: 102px;
+    z-index: 78;
+}
+
+.zone-34 {
+    left: 227px;
+    top: 489px;
+    width: 69px;
+    height: 69px;
+    z-index: 77;
+}
+
+.zone-35 {
+    left: 388px;
+    top: 291px;
+    width: 78px;
+    height: 63px;
+    z-index: 73;
+}
+
+.zone-36 {
+    left: 419px;
+    top: 326px;
+    width: 64px;
+    height: 64px;
+    z-index: 72;
+}
+
+.zone-37 {
+    left: 375px;
+    top: 353px;
+    width: 87px;
+    height: 77px;
+    z-index: 71;
+}
+
+.zone-38 {
+    left: 323px;
+    top: 379px;
+    width: 105px;
+    height: 91px;
+    z-index: 70;
+}
+
+.zone-39 {
+    left: 274px;
+    top: 409px;
+    width: 121px;
+    height: 91px;
+    z-index: 69;
+}
+
+.zone-40 {
+    left: 210px;
+    top: 431px;
+    width: 159px;
+    height: 107px;
+    z-index: 68;
+}
+
+.zone-41 {
+    left: 157px;
+    top: 324px;
+    width: 98px;
+    height: 139px;
+    z-index: 64;
+}
+
+.zone-42 {
+    left: 228px;
+    top: 350px;
+    width: 125px;
+    height: 82px;
+    z-index: 63;
+}
+
+.zone-43 {
+    left: 227px;
+    top: 305px;
+    width: 115px;
+    height: 48px;
+    z-index: 62;
+}
+
+.zone-44 {
+    left: 254px;
+    top: 330px;
+    width: 65px;
+    height: 51px;
+    z-index: 61;
+}
+
+.zone-45 {
+    left: 313px;
+    top: 306px;
+    width: 88px;
+    height: 77px;
+    z-index: 60;
+}
+
+.zone-46 {
+    left: 487px;
+    top: 329px;
+    width: 107px;
+    height: 112px;
+    z-index: 56;
+}
+
+.zone-47 {
+    left: 465px;
+    top: 356px;
+    width: 54px;
+    height: 70px;
+    z-index: 55;
+}
+
+.zone-48 {
+    left: 436px;
+    top: 397px;
+    width: 81px;
+    height: 97px;
+    z-index: 54;
+}
+
+.zone-49 {
+    left: 442px;
+    top: 435px;
+    width: 141px;
+    height: 111px;
+    z-index: 53;
+}
+
+.zone-50 {
+    left: 403px;
+    top: 437px;
+    width: 83px;
+    height: 76px;
+    z-index: 52;
+}
+
+.zone-51 {
+    left: 357px;
+    top: 476px;
+    width: 114px;
+    height: 109px;
+    z-index: 51;
+}
+
+.zone-52 {
+    left: 426px;
+    top: 545px;
+    width: 138px;
+    height: 79px;
+    z-index: 47;
+}
+
+.zone-53 {
+    left: 418px;
+    top: 611px;
+    width: 140px;
+    height: 94px;
+    z-index: 46;
+}
+
+.zone-54 {
+    left: 558px;
+    top: 553px;
+    width: 69px;
+    height: 58px;
+    z-index: 45;
+}
+
+.zone-55 {
+    left: 551px;
+    top: 606px;
+    width: 71px;
+    height: 90px;
+    z-index: 44;
+}
+
+.zone-56 {
+    left: 620px;
+    top: 558px;
+    width: 54px;
+    height: 65px;
+    z-index: 43;
+}
+
+.zone-57 {
+    left: 615px;
+    top: 618px;
+    width: 54px;
+    height: 74px;
+    z-index: 42;
+}
+
+.zone-58 {
+    left: 571px;
+    top: 441px;
+    width: 65px;
+    height: 118px;
+    z-index: 41;
+}
+
+.zone-59 {
+    left: 56px;
+    top: 556px;
+    width: 68px;
+    height: 62px;
+    z-index: 37;
+}
+
+.zone-60 {
+    left: 121px;
+    top: 559px;
+    width: 62px;
+    height: 72px;
+    z-index: 36;
+}
+
+.zone-61 {
+    left: 180px;
+    top: 569px;
+    width: 50px;
+    height: 51px;
+    z-index: 35;
+}
+
+.zone-62 {
+    left: 219px;
+    top: 553px;
+    width: 52px;
+    height: 76px;
+    z-index: 34;
+}
+
+.zone-63 {
+    left: 270px;
+    top: 544px;
+    width: 48px;
+    height: 81px;
+    z-index: 33;
+}
+
+.zone-64 {
+    left: 317px;
+    top: 544px;
+    width: 66px;
+    height: 83px;
+    z-index: 32;
+}
+
+.zone-65 {
+    left: 378px;
+    top: 560px;
+    width: 46px;
+    height: 68px;
+    z-index: 31;
+}
+
+.zone-66 {
+    left: 689px;
+    top: 417px;
+    width: 48px;
+    height: 59px;
+    z-index: 27;
+}
+
+.zone-67 {
+    left: 756px;
+    top: 388px;
+    width: 44px;
+    height: 63px;
+    z-index: 26;
+}
+
+.zone-68 {
+    left: 717px;
+    top: 396px;
+    width: 58px;
+    height: 70px;
+    z-index: 25;
+}
+
+.zone-69 {
+    left: 707px;
+    top: 443px;
+    width: 98px;
+    height: 102px;
+    z-index: 24;
+}
+
+.zone-70 {
+    left: 640px;
+    top: 428px;
+    width: 67px;
+    height: 62px;
+    z-index: 23;
+}
+
+.zone-71 {
+    left: 634px;
+    top: 475px;
+    width: 99px;
+    height: 78px;
+    z-index: 22;
+}
+
+.zone-72 {
+    left: 688px;
+    top: 329px;
+    width: 81px;
+    height: 95px;
+    z-index: 21;
+}
+
+.zone-73 {
+    left: 642px;
+    top: 329px;
+    width: 64px;
+    height: 110px;
+    z-index: 20;
+}
+
+.zone-74 {
+    left: 588px;
+    top: 329px;
+    width: 60px;
+    height: 109px;
+    z-index: 19;
+}
+
+.zone-75 {
+    left: 587px;
+    top: 230px;
+    width: 85px;
+    height: 91px;
+    z-index: 15;
+}
+
+.zone-76 {
+    left: 478px;
+    top: 231px;
+    width: 110px;
+    height: 90px;
+    z-index: 14;
+}
+
+.zone-77 {
+    left: 478px;
+    top: 169px;
+    width: 101px;
+    height: 64px;
+    z-index: 13;
+}
+
+.zone-78 {
+    left: 572px;
+    top: 163px;
+    width: 100px;
+    height: 70px;
+    z-index: 12;
+}
+
+.zone-79 {
+    left: 578px;
+    top: 118px;
+    width: 78px;
+    height: 51px;
+    z-index: 11;
+}
+
+.zone-80 {
+    left: 478px;
+    top: 120px;
+    width: 104px;
+    height: 58px;
+    z-index: 10;
+}
+
+.zone-81 {
+    left: 570px;
+    top: 49px;
+    width: 72px;
+    height: 73px;
+    z-index: 9;
+}
+
+.zone-82 {
+    left: 526px;
+    top: 37px;
+    width: 45px;
+    height: 85px;
+    z-index: 8;
+}
+
+.zone-83 {
+    left: 478px;
+    top: 16px;
+    width: 49px;
+    height: 106px;
+    z-index: 7;
+}
+
+.zone-84 {
+    left: 431px;
+    top: 13px;
+    width: 53px;
+    height: 40px;
+    z-index: 6;
+}
+
+#battle_progress {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -250px;
+    height: 40px;
+    width: 500px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+#battle_progress .time {
+    /* color: #fff; */
+    width: 60px;
+    text-align: center;
+    font-size: 18px;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#battle_progress .progress,
+#battle_progress .icon {
+    position: absolute;
+}
+
+#battle_progress .icon {
+    width: 30px;
+    height: 30px;
+    bottom: 5px;
+}
+
+#battle_progress .icon:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#battle_progress .icon .gang {
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    position: relative;
+}
+
+#battle_progress .progress {
+    width: 180px;
+    height: 30px;
+    position: absolute;
+    bottom: 5px;
+}
+
+#battle_progress .progress:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 2px;
+}
+
+#battle_progress .progress .fill {
+    height: 26px;
+    width: 100px;
+    position: absolute;
+    z-index: 5;
+    top: 2px;
+    transition: width 1s;
+}
+
+#battle_progress .progress .count {
+    line-height: 30px;
+    padding: 0 15px;
+    z-index: 10;
+    position: relative;
+}
+
+#battle_progress .left,
+#battle_progress .right {
+    position: absolute;
+    height: 40px;
+    width: 220px;
+}
+
+#battle_progress .left {
+    text-align: right;
+    left: 0;
+}
+
+#battle_progress .left .icon {
+    right: 5px;
+}
+
+#battle_progress .left .progress {
+    left: 0;
+}
+
+#battle_progress .left .progress:before {
+    left: -4px;
+}
+
+#battle_progress .left .progress .fill {
+    right: 2px;
+}
+
+#battle_progress .right {
+    text-align: left;
+    right: 0;
+}
+
+#battle_progress .right .icon {
+    left: 5px;
+}
+
+#battle_progress .right .progress {
+    right: 0;
+}
+
+#battle_progress .right .progress:before {
+    right: -4px;
+}
+
+#battle_progress .right .progress .fill {
+    left: 2px;
+}
+
+#battle_progress .TheFamilies .icon:before {
+    background: #005100;
+}
+
+#battle_progress .TheFamilies .icon .gang {
+    background-image: url('../img/bandZones/TheFamilies.png');
+}
+
+#battle_progress .TheFamilies .progress:before {
+    background: #005100;
+}
+
+#battle_progress .TheFamilies.left .progress .fill {
+    background: linear-gradient(-45deg, #005100, #00d100);
+}
+
+#battle_progress .TheFamilies.right .progress .fill {
+    background: linear-gradient(45deg, #005100, #00d100);
+}
+
+#battle_progress .TheBallas .icon:before {
+    background: #440077;
+}
+
+#battle_progress .TheBallas .icon .gang {
+    background-image: url('../img/bandZones/TheBallas.png');
+}
+
+#battle_progress .TheBallas .progress:before {
+    background: #440077;
+}
+
+#battle_progress .TheBallas.left .progress .fill {
+    background: linear-gradient(-45deg, #440077, #8d00f7);
+}
+
+#battle_progress .TheBallas.right .progress .fill {
+    background: linear-gradient(45deg, #440077, #8d00f7);
+}
+
+#battle_progress .TheVagos .icon:before {
+    background: #77770e;
+}
+
+#battle_progress .TheVagos .icon .gang {
+    background-image: url('../img/bandZones/TheVagos.png');
+}
+
+#battle_progress .TheVagos .progress:before {
+    background: #77770e;
+}
+
+#battle_progress .TheVagos.left .progress .fill {
+    background: linear-gradient(-45deg, #77770e, #e5e520);
+}
+
+#battle_progress .TheVagos.right .progress .fill {
+    background: linear-gradient(45deg, #77770e, #e5e520);
+}
+
+#battle_progress .MarabuntaGrande .icon:before {
+    background: #1a3c56;
+}
+
+#battle_progress .MarabuntaGrande .icon .gang {
+    background-image: url('../img/bandZones/MarabuntaGrande.png');
+}
+
+#battle_progress .MarabuntaGrande .progress:before {
+    background: #1a3c56;
+}
+
+#battle_progress .MarabuntaGrande.left .progress .fill {
+    background: linear-gradient(-45deg, #1a3c56, #3880b8);
+}
+
+#battle_progress .MarabuntaGrande.right .progress .fill {
+    background: linear-gradient(45deg, #1a3c56, #3880b8);
+}
+
+#battle_progress .row {
+    height: 40px;
+}
+
+/*# sourceMappingURL=battle_progress.css.map */

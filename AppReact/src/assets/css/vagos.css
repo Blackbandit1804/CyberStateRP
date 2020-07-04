@@ -1,0 +1,75 @@
+.gangWrap .gangPad .vagosPad .menuWrap .mainPad .padBtnRow .btn:hover{
+    border: 1px solid #ede11f;
+}
+
+.gangWrap .gangPad .vagosPad .gangBankInfoUse::-webkit-scrollbar,
+.gangWrap .gangPad .vagosPad .gangLesterOpt::-webkit-scrollbar,
+.gangWrap .gangPad .vagosPad .gangPlayerList::-webkit-scrollbar {
+    width: 7px;
+    background-color: #625022;
+    border-radius: 3px;
+}
+ 
+.gangWrap .gangPad .vagosPad .gangBankInfoUse::-webkit-scrollbar-track,
+.gangWrap .gangPad .vagosPad .gangLesterOpt::-webkit-scrollbar-track,
+.gangWrap .gangPad .vagosPad .gangPlayerList::-webkit-scrollbar-track {
+    position: absolute;
+}
+ 
+.gangWrap .gangPad .vagosPad .gangBankInfoUse::-webkit-scrollbar-thumb,
+.gangWrap .gangPad .vagosPad .gangLesterOpt::-webkit-scrollbar-thumb,
+.gangWrap .gangPad .vagosPad .gangPlayerList::-webkit-scrollbar-thumb {
+    top: 2px;
+    background-color: #e0ac31;
+    background-repeat: repeat-y;
+    border-radius: 3px;
+}
+
+.gangWrap .gangPad .vagosPad .gangBankInfoUse .selectRow div,
+.gangWrap .gangPad .vagosPad .gangLesterOpt .selectRow div,
+.gangWrap .gangPad .vagosPad .gangPlayerList .selectRow div{
+    background-color: #e0ac31;
+}
+
+.gangWrap .gangPad .vagosPad .menuWrap .contentList .headerGangBank .titleTGBank,
+.gangWrap .gangPad .vagosPad .menuWrap .contentList .headerList div{
+    color: #e0ac30;
+}
+
+.gangWrap .gangPad .vagosPad{
+    background-image: url(../img/bandTablet/bgVagos.png);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.gangWrap .gangPad .vagosPad .menuWrap .mainPad .btnCar{
+    background-image: url(../img/bandTablet/vag_car.png);
+}
+.gangWrap .gangPad .vagosPad .menuWrap .mainPad .btnChat{
+    background-image: url(../img/bandTablet/vag_chat.png);
+}
+
+.gangWrap .gangPad .vagosPad .menuWrap .mainPad .btnList{
+    background-image: url(../img/bandTablet/vag_online.png);
+}
+
+.gangWrap .gangPad .vagosPad .menuWrap .mainPad .btnMap{
+    background-image: url(../img/bandTablet/vag_map.png);
+}
+
+.gangWrap .gangPad .vagosPad .menuWrap .mainPad .btnGBank{
+    background-image: url(../img/bandTablet/vag_bank.png);
+}
+.gangWrap .gangPad .vagosPad .menuWrap .mainPad .btnLester{
+    background-image: url(../img/bandTablet/vag_lester.png);
+}
+
+.gangWrap .gangPad .vagosPad .menuWrap .contentList{
+    background-color: #44391f;
+}
+
+.gangWrap .gangPad .vagosPad .menuWrap .gangMapInfo .mapBtn,
+.gangWrap .gangPad .vagosPad .menuWrap .footerBtn .footBtnP{
+    background-color: #e0ac31;
+}

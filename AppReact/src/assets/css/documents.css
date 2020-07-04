@@ -1,0 +1,172 @@
+#documents *, #documents ::after, #documents ::before {
+    box-sizing: border-box;
+}
+
+#documents {
+	position: absolute;
+	width: 1010px;
+    height: 520px;
+    background: url(../img/documents/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: 100% 100%;
+	background-size: 100%;
+	font-family: 'Gotham Pro';
+    display: flex;
+    justify-content: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+}
+#documents .content {
+	width: 887px;
+	height: 100%;
+	position: relative;
+}
+
+#documents .content .simcard {
+	position: absolute;
+	top: 14px;
+	left: 17px;
+	height: 491px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#documents .content .simcard img:nth-child(1) {
+	margin-bottom: 10px;
+}
+#documents .menu {
+	width: calc(1010px - 887px);
+	height: 100%;
+	border-radius: 10px;
+	padding: 14px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+#documents .menu li {
+	width: 95px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.30);
+	border-radius:10px;
+	cursor: pointer;
+	height: 95px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-ms-border-radius:10px;
+	-o-border-radius:10px;
+	margin-bottom: 15px;
+}
+#documents .content .labelPage {
+	width: 384px;
+	height: 52px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background: #ffb400;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#documents .content .passportBox {
+	width: 620px;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+#documents .content .passportBox .numberPass {
+	width: 100%;
+	text-align: center;
+	font-size: 27px;
+	font-weight: bold;
+	color: #ffb400;
+	letter-spacing: 8px;
+	margin-bottom: 50px;
+}
+#documents .content .passportBox .infoBox {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+#documents .content .passportBox .infoBox .images {
+	width: 213px;
+	height: 246px;
+	background: #fff;
+	padding: 13px 12px;
+}
+#documents .content .passportBox .infoBox .stats {
+	margin-left: 25px;
+	width: 380px;
+	margin-top: 12px;
+}
+#documents .content .passportBox .infoBox .stats li {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 16px;
+
+}
+#documents .content .passportBox .infoBox .stats li .params {
+	font-weight: bold;
+	font-size: 16px;
+	color: #303030;
+}
+#documents .content .passportBox .infoBox .stats li .value {
+	font-weight: bold;
+	font-size: 16px;
+	color: #ffb400;
+}
+#documents .content .licensesBox {
+	width: 662px;
+	margin: 0 auto;
+	margin-top: 105px;
+}
+#documents .content .licensesBox .licensesList {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#documents .content .licensesBox .licensesList li {
+	width: 191px;
+	height: 62px;
+	background: #3a72d8;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	margin-bottom: 40px;
+	display: flex;
+	align-items: center;
+	
+}
+#documents .content .licensesBox .licensesList .disabled {
+	opacity: 0.7;
+}
+#documents .content .licensesBox .licensesList li .icon {
+	width: 74px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#documents .content .licensesBox .licensesList li .name {
+	width: 117px;
+	padding-right: 4px;
+	height: 100%;
+	font-size: 14px;
+	display: flex;
+	font-weight: bold;
+	color: #ffffff;
+	text-transform: uppercase;
+	align-items: center;
+}

@@ -1,0 +1,625 @@
+.newyorksixty {
+    font-family: NEWYORKSIXTY;
+}
+.londonsixty {
+    font-family: LONDONSIXTY;
+}
+:root {
+    --sheriffTablet-baseColor: #6f644a;
+    --sheriffTablet-buttonColor: linear-gradient(#968660, #665b41); 
+    --sheriffTablet-buttonHoverColor: linear-gradient(#f0f0f0, #f0f0f0);
+
+    --sheriffTablet-button2Color: linear-gradient(#a79765, #665b37);
+    --sheriffTablet-buttonDangerColor: linear-gradient(#923939, #681e1e);
+    --sheriffTablet-buttonBGNumberColor: #423d30;
+    
+    --sheriffTablet-textColor: #e0d3b4;
+    --sheriffTablet-textColorHover: #6f644a;
+}
+
+#sheriff-tablet .tablet-background .imurfather *:focus {
+    outline: none;
+}
+
+#sheriff-tablet .tablet-background {
+    background-image: url(../img/sheriffTablet/bg.png);
+    background-repeat: no-repeat;
+    width: 793px;
+    height: 518px;
+    /* width: 81.4vh;
+    height: 53.5vh; */
+    margin-top: 10%;
+    margin-left: 30%;
+}
+#sheriff-tablet .tablet-background .imurfather {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    top: 69px;
+    left: 47px;
+}
+
+/* Header */
+#sheriff-tablet .tablet-background .imurfather .header .FIB {
+    color: white;
+    text-align: right;
+    font-size: 30px;
+
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+#sheriff-tablet .tablet-background .imurfather .header .subtext {
+    color: var(--sheriffTablet-baseColor);
+    text-align: right;
+    font-size: 18px;
+    /* font-weight: bold; */
+
+    padding-bottom: 0px;
+    position: absolute;
+    right: 166px;
+    top: 30px;
+}
+#sheriff-tablet .tablet-background .imurfather .header hr {
+    height: 7px;
+    border-style: solid;
+    background-color: var(--sheriffTablet-baseColor);
+    position: relative;
+    margin-top: 26px;
+}
+#sheriff-tablet .tablet-background .imurfather .header img {
+    position: absolute;
+    top: 17px;
+    left: 55px;
+}
+#sheriff-tablet .tablet-background .imurfather .header .time {
+    color: white;
+    font-size: 18px;
+
+    position: absolute;
+    top: 35px;
+    left: 7px;
+}
+/* Page A */
+#sheriff-tablet .tablet-background .imurfather div .pageA {
+    color: white;
+    left: 57px;
+    top: 130px;
+    position: absolute;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageA .buttons {
+    float: left;
+    width: 50%;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageA .buttons button {
+    width: 260px;
+    height: 30px;
+
+    background: var(--sheriffTablet-buttonColor);
+
+    border-style: none;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+
+    font-family: NEWYORKSIXTY;
+    color: #e0d3b4;
+    font-size: 16px;
+
+    text-align: left;
+    padding-left: 17px;
+
+    transition-duration: 0.2s;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageA .buttons button:hover {
+    background: var(--sheriffTablet-buttonHoverColor);
+    color: #e0d3b4;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageA .text {
+    float: right;
+    width: 44%;
+    font-family: LONDONSIXTY;
+    color: white;
+    position: absolute;
+    right: 56px;
+    top: -3px;
+    text-align: justify;
+}
+/* Page B*/
+#sheriff-tablet .tablet-background .imurfather div .pageB {
+    /* margin-top: 69px; */
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .findUser,
+#sheriff-tablet .tablet-background .imurfather div .pageD .findUser,
+#sheriff-tablet .tablet-background .imurfather div .pageE .findUser {
+    margin: auto;
+    /* width: 50%; */
+    /* width: 60%; */
+    font-family: LONDONSIXTY;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .findUser .title,
+#sheriff-tablet .tablet-background .imurfather div .pageD .findUser .title,
+#sheriff-tablet .tablet-background .imurfather div .pageE .findUser .title,
+#sheriff-tablet .tablet-background .imurfather div .SpecialTitleForPoliceFindUserMMMMMM {
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .findUser .textInput,
+#sheriff-tablet .tablet-background .imurfather div .pageD .findUser .textInput,
+#sheriff-tablet .tablet-background .imurfather div .pageE .findUser .textInput,
+#sheriff-tablet .tablet-background .imurfather div .SpecialInputForPoliceFindUserMMMMMM {
+    color: var(--sheriffTablet-baseColor);
+    font-size: 24px;
+    text-transform: uppercase;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .findUser .textInput input,
+#sheriff-tablet .tablet-background .imurfather div .pageD .findUser .textInput input,
+#sheriff-tablet .tablet-background .imurfather div .pageE .findUser .textInput input,
+#sheriff-tablet .tablet-background .imurfather div .SpecialInputForPoliceFindUserMMMMMM input {
+    width: 230px;
+    height: 38px;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #f0f0f0;
+    border-radius: 2px;
+
+    font-family: LONDONSIXTY;
+    font-size: 18px;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: #f0f0f0;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .findUser .textInput input:disabled {
+    background: red !important;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .findUser .smallButtons,
+#sheriff-tablet .tablet-background .imurfather div .pageD .findUser .smallButtons,
+#sheriff-tablet .tablet-background .imurfather div .pageE .findUser .smallButtons,
+#sheriff-tablet .tablet-background .imurfather div .SpecialButtonsForPoliceFindUserMMMMMM {
+    margin-top: 20px;
+    text-align: center;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .findUser .smallButtons button,
+#sheriff-tablet .tablet-background .imurfather div .pageD .findUser .smallButtons button,
+#sheriff-tablet .tablet-background .imurfather div .pageE .findUser .smallButtons button,
+#sheriff-tablet .tablet-background .imurfather div .pageF .buttons button,
+#sheriff-tablet .tablet-background .imurfather div .SpecialButtonsForPoliceFindUserMMMMMM button {
+    font-family: LONDONSIXTY;
+    font-weight: bold;
+    font-size: 18px;
+
+    color: #474747;
+    background: var(--sheriffTablet-buttonColor);
+    text-transform: uppercase;
+
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    border-style: none;
+
+    transition-duration: 0.2s;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .step1 .findUser .smallButtons button {
+    width: 250px !important;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .else {
+    font-family: LONDONSIXTY;
+    font-size: 18px;
+    color: #f0f0f0;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .else img{
+    right: 3em;
+    top: 7em;
+    position: absolute;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .else .info {
+    position: absolute;
+    left: 3em;
+    top: 6em;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    font-family: LONDONSIXTY;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .else .info .header {
+    color: #d7ce3c;
+    font-size: 24px;
+    text-align: left;
+}
+/* Page C*/
+#sheriff-tablet .tablet-background .imurfather div .pageC {
+    
+}
+#sheriff-tablet .tablet-background .imurfather div .pageC {
+    /* height: 58%; 
+    top: 2em; 
+    position: relative; 
+    overflow: auto; */
+}
+#sheriff-tablet .tablet-background .imurfather div .pageC table {
+    width: 90%;
+    margin: auto;
+    color: white;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    font-family: LONDONSIXTY;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageC table tr.header {
+    color: var(--sheriffTablet-baseColor);
+    font-size: 24px;
+    font-weight: bold;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageC table tr.header th {
+    font-weight: 400 !important;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageC table tr.users {
+    font-size: 18px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageC table tr.users td{
+    border-bottom: 1px rgba(240, 240, 240, 0.1) solid;
+}
+/* Page D*/
+#sheriff-tablet .tablet-background .imurfather div .pageD,
+#sheriff-tablet .tablet-background .imurfather div .pageB {
+    font-family: LONDONSIXTY;
+}
+
+#sheriff-tablet .tablet-background .imurfather div .pageD .findUser .smallButtons button {
+    color: #f0f0f0;
+    width: 230px !important;
+    background: var(--sheriffTablet-buttonDangerColor);
+    font-weight: 400;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageD .header,
+#sheriff-tablet .tablet-background .imurfather div .pageB .header {
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageD .step0,
+#sheriff-tablet .tablet-background .imurfather div .pageB .step0 {
+    text-align: center;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageD .step1,
+#sheriff-tablet .tablet-background .imurfather div .pageB .step1 {
+    color: white;
+    text-align: center;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageD .step0 .buttons,
+#sheriff-tablet .tablet-background .imurfather div .pageB .step0 .buttons {
+    width: 50%;
+    margin: auto;
+    margin-top: 62px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageB .step0 .buttons {
+    margin-top: 32px !important;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageD .step0 .buttons button,
+#sheriff-tablet .tablet-background .imurfather div .pageB .step0 .buttons button {
+    color: #f0f0f0;
+    background: var(--sheriffTablet-button2Color);
+    text-transform: uppercase;
+    width: 240px;
+    height: 32px;
+    border-radius: 2px;
+    border-style: none;
+    /* position: absolute; */
+    /* right: 17px; */
+    /* bottom: -64px; */
+    font-size: 18px;
+    transition-duration: 0.2s;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageD .step0 .footer {
+    color: white;
+    width: 49%;
+    margin: auto;
+    text-align: justify;
+    margin-top: 21px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageD .step2,
+#sheriff-tablet .tablet-background .imurfather div .pageB .step2 {
+    color: #f0f0f0;
+    width: 50%;
+    margin: auto;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageD .step2 .help,
+#sheriff-tablet .tablet-background .imurfather div .pageB .step2 .help {
+    font-size: 14px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageD .step2 .ID,
+#sheriff-tablet .tablet-background .imurfather div .pageB .step2 .ID {
+    font-size: 24px;
+    color: var(--sheriffTablet-baseColor);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageD .step2 .ID div,
+#sheriff-tablet .tablet-background .imurfather div .pageB .step2 .ID div {
+    font-weight: bold;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageD .step2 input,
+#sheriff-tablet .tablet-background .imurfather div .pageB .step2 input {
+    background-color: transparent;
+    border-radius: 2px;
+    width: 115px;
+    height: 38px;
+    color: var(--sheriffTablet-baseColor);
+    border-style: solid;
+    border-color: white;
+    margin: auto;
+    display: block;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Page E*/
+#sheriff-tablet .tablet-background .imurfather div .pageE { }
+#sheriff-tablet .tablet-background .imurfather div .pageE .left {
+    float: left;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE .left .findUser .smallButtons {
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 13px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE .left .findUser .smallButtons button{
+    width: 200px !important;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE .right {
+    float: right;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE div.left .findUser .title {
+    text-align: right !important;
+    margin-right: 25px !important;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE .right img{
+    margin-right: 79px;
+    margin-top: 40px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE .right .info {
+    font-family: LONDONSIXTY;
+    color: #f0f0f0;
+    font-size: 14px;
+    margin-top: 5px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE .right .info .name,
+#sheriff-tablet .tablet-background .imurfather div .pageE .right .info .stats {
+    color: var(--sheriffTablet-baseColor);
+    text-transform: uppercase;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE .right .status {
+    font-family: NEWYORKSIXTY;
+    color: white;
+    text-transform: uppercase;
+
+    position: absolute;
+    width: 18.5%;
+    top: 14.69em;
+    right: 85px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE .right .status .clear {
+    color: #22972e;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE .right .status .badguy {
+    color: #a62929;
+}
+
+#sheriff-tablet .tablet-background .imurfather div .pageE .else {
+    font-family: LONDONSIXTY;
+    color: #f0f0f0;
+    font-size: 14px;
+    margin-top: 50px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE .else .scanUser{
+    width: 55%;
+    margin: auto;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE .else .title {
+    text-align: center;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageE .else .textInput {
+    /* text-align: right; */
+}
+
+
+/* Page F*/
+#sheriff-tablet .tablet-background .imurfather div .pageF {
+    font-family: LONDONSIXTY;
+    color: #f0f0f0;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageF .header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 50px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageF .buttons {
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageF .buttons button {
+    width: 270px !important;
+    margin-top: 8px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageF .beDown {
+    color: #f0f0f0;
+    font-size: 14px;
+
+    text-align: justify;
+    width: 44%;
+    margin: auto;
+    margin-top: 25px;
+}
+/* Page G */
+#sheriff-tablet .tablet-background .imurfather div .pageG .calls {
+    left: 2px;
+    top: 115px;
+    width: 25%;
+    position: absolute;
+
+    height: 70%;
+    overflow: auto;
+    float: left;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageG .calls .calls_overflow .call{
+    margin-bottom: 9px;
+    background-color: rgb(24, 39, 66);
+    border-radius: 5px;
+
+    margin-right: 3px;
+    color: white;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageG .calls .calls_overflow .call .color {
+    color: var(--sheriffTablet-baseColor);
+    font-weight: 600 !important;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageG .calls .calls_overflow .call .getcall {
+    border: none;
+    padding: 0;
+    width: 100%;
+    color: white;
+
+    position: inherit;
+    text-align: center;
+    background: var(--sheriffTablet-buttonColor);
+    border-radius: 0 0 5px 5px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+
+    transition-duration: 0.2s;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageG .map {
+    float: right;
+    /* background-image: url(../img/map.png); */
+    border-left: #1d1f3d;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageG .map img{
+    border-left: 5px solid var(--sheriffTablet-baseColor);
+    position: absolute;
+    left: 178px;
+    top: 71px;
+    width: 517px;
+    height: 327px;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageG .calls .calls_overflow .call .getcall:hover {
+    background: var(--sheriffTablet-buttonHoverColor);
+    color: #2b2e5c;
+}
+
+/* Scrollbar */
+#sheriff-tablet .tablet-background .imurfather div::-webkit-scrollbar {
+    width: 10px;
+    background-color: #182742;
+    border-radius: 3px;
+}
+   
+/* Handle */
+#sheriff-tablet .tablet-background .imurfather div::-webkit-scrollbar-thumb {
+    background: #dbcf23;
+    border-radius: 3px;
+}
+
+/* All */
+#sheriff-tablet .tablet-background .imurfather div .pageA .buttons_nav .back,
+#sheriff-tablet .tablet-background .imurfather div .pageA .buttons_nav .exitbutton,
+
+#sheriff-tablet .tablet-background .imurfather div .pageB .buttons_nav .back,
+#sheriff-tablet .tablet-background .imurfather div .pageB .buttons_nav .exitbutton,
+
+#sheriff-tablet .tablet-background .imurfather div .pageC .buttons_nav .back,
+#sheriff-tablet .tablet-background .imurfather div .pageC .buttons_nav .exitbutton,
+
+#sheriff-tablet .tablet-background .imurfather div .pageD .buttons_nav .back,
+#sheriff-tablet .tablet-background .imurfather div .pageD .buttons_nav .exitbutton,
+
+#sheriff-tablet .tablet-background .imurfather div .pageE .buttons_nav .back,
+#sheriff-tablet .tablet-background .imurfather div .pageE .buttons_nav .exitbutton,
+
+#sheriff-tablet .tablet-background .imurfather div .pageF .buttons_nav .back,
+#sheriff-tablet .tablet-background .imurfather div .pageF .buttons_nav .exitbutton,
+
+#sheriff-tablet .tablet-background .imurfather div .pageG .buttons_nav .back,
+#sheriff-tablet .tablet-background .imurfather div .pageG .buttons_nav .exitbutton {
+    font-family: LONDONSIXTY;
+    color: #f0f0f0;
+    background: var(--sheriffTablet-button2Color);
+    text-transform: uppercase;
+
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    border-style: none;
+
+    position: absolute;
+    right: 17px;
+    /* bottom: -64px; */
+    font-size: 18px;
+
+    transition-duration: 0.2s;
+}
+#sheriff-tablet .tablet-background .imurfather div .pageA .buttons_nav .back:hover,
+#sheriff-tablet .tablet-background .imurfather div .pageA .buttons_nav .exitbutton:hover,
+
+#sheriff-tablet .tablet-background .imurfather div .pageB .buttons_nav .back:hover,
+#sheriff-tablet .tablet-background .imurfather div .pageB .buttons_nav .exitbutton:hover,
+
+#sheriff-tablet .tablet-background .imurfather div .pageC .buttons_nav .back:hover,
+#sheriff-tablet .tablet-background .imurfather div .pageC .buttons_nav .exitbutton:hover,
+
+#sheriff-tablet .tablet-background .imurfather div .pageD .buttons_nav .back:hover,
+#sheriff-tablet .tablet-background .imurfather div .pageD .buttons_nav .exitbutton:hover,
+
+#sheriff-tablet .tablet-background .imurfather div .pageE .buttons_nav .back:hover,
+#sheriff-tablet .tablet-background .imurfather div .pageE .buttons_nav .exitbutton:hover,
+
+#sheriff-tablet .tablet-background .imurfather div .pageF .buttons_nav .back:hover,
+#sheriff-tablet .tablet-background .imurfather div .pageF .buttons_nav .exitbutton:hover,
+
+#sheriff-tablet .tablet-background .imurfather div .pageG .buttons_nav .back:hover,
+#sheriff-tablet .tablet-background .imurfather div .pageG .buttons_nav .exitbutton:hover,
+
+#sheriff-tablet .tablet-background .imurfather div .pageB .findUser .smallButtons button:hover,
+#sheriff-tablet .tablet-background .imurfather div .pageD .findUser .smallButtons button:hover,
+#sheriff-tablet .tablet-background .imurfather div .pageE .findUser .smallButtons button:hover,
+#sheriff-tablet .tablet-background .imurfather div .pageF .buttons button:hover,
+
+#sheriff-tablet .tablet-background .imurfather div .pageD .step0 .buttons button:hover,
+#sheriff-tablet .tablet-background .imurfather div .pageB .step0 .buttons button:hover {
+    background: var(--sheriffTablet-buttonHoverColor);
+    color: #e0d3b4;
+    font-weight: bold;
+}
+
+#sheriff-tablet .tablet-background .imurfather div .buttons_nav .back,
+#sheriff-tablet .tablet-background .imurfather div .pageC .buttons_nav .back {
+    position: absolute;
+    /* right: 17px; */
+    left: 16px;
+    bottom: 16px;
+}
+#sheriff-tablet .tablet-background .imurfather div .buttons_nav .exitbutton,
+#sheriff-tablet .tablet-background .imurfather div .pageC .buttons_nav .back {
+    position: absolute;
+    right: 17px;
+    bottom: 16px;
+}

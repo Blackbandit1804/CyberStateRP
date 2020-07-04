@@ -1,0 +1,71 @@
+#notification {
+    position: absolute;
+    width: 500px;
+    min-height: 250px;
+    left: 50%;
+    top: 100px;
+    letter-spacing: 0.02em;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, rgba(29, 3, 42, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    color: #fff;
+    font-family: 'Gotham Pro';
+   }
+   #notification *{margin: 0;padding: 0;box-sizing: border-box;}
+   
+   #notification .title {
+    background: #1d032a;
+    height: 41px;
+    width: 100%;
+    border-bottom: 6px solid #3a9104;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   #notification .title span {
+    font-weight: 700;
+    text-transform: uppercase;
+   }
+   
+   #notification .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 35px;
+    font-weight: 600;
+   }
+   
+   #notification .body>span {
+    font-size: 16px;
+   }
+   
+   #notification .body__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+   }
+   
+   #notification .body__buttons button {
+    height: 43px;
+    width: 193px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+   }
+   
+   #notification .body__buttons button.success {
+    border: none;
+    background: linear-gradient(to right, #388e04 0%, #56c20e 100%);
+   }
+   
+   #notification .body__buttons button.danger {
+    background: none;
+    border: 2px solid #eb0909;
+   }

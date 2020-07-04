@@ -1,0 +1,84 @@
+#LSSDpass {
+	background-image: url(../img/sheriffCerf/bg.png);
+	background-repeat: no-repeat;
+    background-position: center;
+    --webkit-background-size: 100% 100%;
+	width: 724px;
+	height: 545px;
+	font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	align-items: center;
+}
+#LSSDpass .content {
+	height: 476px;
+	width: 300px;
+	margin-top: 31px;
+	margin-left: 30px;
+	position: relative;
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+#LSSDpass .content .header {
+	width: 100%;
+	margin-top: 30px;
+	padding-left: 16px;
+	font-weight: 800;
+	color: #2a2a2a;
+	text-transform: uppercase;
+	font-size: 28px;
+}
+#LSSDpass .content .stats {
+	padding: 0 18px;
+	margin-top: 42px;
+}
+#LSSDpass .content .stats li {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+#LSSDpass .content .stats li:nth-last-child(1) {
+	margin: 0;
+}
+#LSSDpass .content .stats li .params {
+	font-size: 14px;
+	font-weight: 500;
+	color: #303030;
+}
+#LSSDpass .content .stats li .value {
+	font-weight: 800;
+	font-size: 14px;
+	color: #303030;
+}
+#LSSDpass .content .persImages {
+	width: 124px;
+	position: absolute;
+	height: 168px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	bottom: 14px;
+	left: 14px;
+}
+#LSSDpass .numberDocs {
+	position: absolute;
+	bottom: 71px;
+	right: 61px;
+	width: 208px;
+	height: 28px;
+	background: rgba(0, 0, 0, .20);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	color: #ffffff;
+	font-size: 23px;
+	letter-spacing: 8px;
+}

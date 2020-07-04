@@ -1,0 +1,90 @@
+
+.window {
+  position: absolute;
+  border-radius: 5px;
+  color: white;
+  width: 526px;
+  min-width: 320px;
+  font-family: GothamPro;
+}
+.window-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #220f28;
+  width: 100%;
+  height: 55px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5px 5px 0 0;
+}
+.window-header__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 17px;
+  margin-left: 25px;
+}
+.window-header__counter {
+  font-weight: 700;
+  font-size: 17px;
+  padding: 10px 30px;
+  margin-right: 7px;
+  border-radius: 5px;
+  background-color: #1a0c1f;
+}
+.window-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(36, 19, 41, 0.9);
+  border-radius: 0 0 5px 5px;
+  padding: 0 10px 12px 10px;
+  max-height: 640px;
+  min-height: 40px;
+  overflow-y: auto;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+.window-main::-webkit-scrollbar {
+  width: 0; 
+}
+.window-main__element {
+  cursor: pointer;
+  background-color: rgba(26, 12, 31, 0.64);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 15px 20px 17px 20px;
+  margin-top: 10px;
+}
+.window-main__element td:first-child {
+  width: 100%;
+}
+.window .selected {
+  background: -webkit-gradient(linear, left top, right top, from(#9c00ff), color-stop(60%, #e300eb));
+  background: linear-gradient(90deg, #9c00ff 0%, #e300eb 60%);
+}
+        
+.window .selected input[type="text"] {
+    border-bottom: 1px solid #000;
+    color: #000;
+    text-align: center;
+}
+.window-main__element td:nth-child(2){
+  white-space: nowrap;
+}
+.window input[type="text"] {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5vh;
+  text-align: right;
+}

@@ -1,0 +1,329 @@
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro-BoldItalic.eot');
+	src: local('Gotham Pro Bold Italic'), local('GothamPro-BoldItalic'),
+		url('../fonts/GothamPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro-BoldItalic.woff') format('woff'),
+		url('../fonts/GothamPro-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro-Italic.eot');
+	src: local('Gotham Pro Italic'), local('GothamPro-Italic'),
+		url('../fonts/GothamPro-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro-Italic.woff') format('woff'),
+		url('../fonts/GothamPro-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro-Medium.eot');
+	src: local('Gotham Pro Medium'), local('GothamPro-Medium'),
+		url('../fonts/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro-Medium.woff') format('woff'),
+		url('../fonts/GothamPro-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro-BlackItalic.eot');
+	src: local('Gotham Pro Black Italic'), local('GothamPro-BlackItalic'),
+		url('../fonts/GothamPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro-BlackItalic.woff') format('woff'),
+		url('../fonts/GothamPro-BlackItalic.ttf') format('truetype');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro-Bold.eot');
+	src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+		url('../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro-Bold.woff') format('woff'),
+		url('../fonts/GothamPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro Narrow';
+	src: url('../fonts/GothamProNarrow-Bold.eot');
+	src: local('Gotham Pro Narrow Bold'), local('GothamProNarrow-Bold'),
+		url('../fonts/GothamProNarrow-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamProNarrow-Bold.woff') format('woff'),
+		url('../fonts/GothamProNarrow-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro Narrow';
+	src: url('../fonts/GothamProNarrow-Medium.eot');
+	src: local('Gotham Pro Narrow Medium'), local('GothamProNarrow-Medium'),
+		url('../fonts/GothamProNarrow-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamProNarrow-Medium.woff') format('woff'),
+		url('../fonts/GothamProNarrow-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro-LightItalic.eot');
+	src: local('Gotham Pro Light Italic'), local('GothamPro-LightItalic'),
+		url('../fonts/GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro-LightItalic.woff') format('woff'),
+		url('../fonts/GothamPro-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro-Light.eot');
+	src: local('Gotham Pro Light'), local('GothamPro-Light'),
+		url('../fonts/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro-Light.woff') format('woff'),
+		url('../fonts/GothamPro-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro-Black.eot');
+	src: local('Gotham Pro Black'), local('GothamPro-Black'),
+		url('../fonts/GothamPro-Black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro-Black.woff') format('woff'),
+		url('../fonts/GothamPro-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro.eot');
+	src: local('Gotham Pro'), local('GothamPro'),
+		url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro.woff') format('woff'),
+		url('../fonts/GothamPro.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro-MediumItalic.eot');
+	src: local('Gotham Pro Medium Italic'), local('GothamPro-MediumItalic'),
+		url('../fonts/GothamPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro-MediumItalic.woff') format('woff'),
+		url('../fonts/GothamPro-MediumItalic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic;
+}
+#HUD {
+	font-weight: 400;
+	font-family: 'Gotham Pro', sans-serif;
+}
+#HUD .rightHud {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	display: flex;
+	flex-direction: column;
+}
+#HUD .rightHud .moneyBlock {
+	display: flex;
+	justify-content: space-between;
+}
+#HUD .rightHud .moneyBlock .money {
+	margin-right: 22px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 900;
+	color: #b900f7;
+}
+#HUD .rightHud .moneyBlock .money img,
+#HUD .rightHud .moneyBlock .bank img {
+	margin-right: 12px;
+	width: 30px;
+}
+
+#HUD .rightHud .moneyBlock .bank {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 900;
+	color: #fff;
+}
+#HUD .rightHud .wanted {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 10px;
+}
+#HUD .rightHud .wanted img {
+	margin-left: 4px;
+	width: 28px;
+    max-width: 28px;
+}
+#HUD .rightHud .onlineBlock {
+	height: 30px;
+	display: flex;
+	align-items: center;
+	background: rgb(28,9,37);
+	background: linear-gradient(90deg, rgba(28,9,37,0) 40%, rgba(29,3,42,0.68) 100%);
+	border-right: 4px solid #b700f7;
+	justify-content: flex-end;
+	color: #ffffff;
+	margin-top: 20px;
+	padding: 8px 20px 5px 0;
+    margin-right: -10px;
+}
+#HUD .rightHud .onlineBlock img {
+	margin-right: 4px;
+}
+#HUD .helperHud {
+    position: absolute;
+    right: 0px;
+    top: 240px;
+    width: 250px;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+#HUD .helperHud .buttonHide {
+	position: relative;
+	width: 50px;
+	height: 30px;
+	background: rgb(183,0,247);
+    background: linear-gradient(-90deg, rgba(183,0,247,0.7) 0%, rgba(183,0,247,0) 70%);
+	padding-left: 8px;
+	display: flex;
+	align-items: flex-end;
+	outline: none;
+    border: none;
+}
+#HUD .helperHud .buttonHide img {
+	position: absolute;
+	right: 5px;
+	top: 8px;
+}
+#HUD .helperHud .helpInfo {
+	width: 100%;
+	height: 240px;
+	border-right: 8px solid #b700f7;
+	background: rgb(183,0,247);
+	background: linear-gradient(-90deg, rgba(29,3,42,1) 0%, rgba(183,0,247,0) 100%);
+	padding-top: 15px;
+	padding-left: 21px;
+}
+#HUD .helperHud .helpInfo li {
+	width: 220px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: bold;
+	color: #ffffff;
+}
+#HUD .helperHud .helpInfo li .button {
+	height: 30px;
+	margin: 3px 0;
+	line-height: 35px;
+	min-width: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0,0,0,0.5);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 5px;
+}
+#HUD .phoneMicHud {
+	position: absolute;
+	bottom: 20px;
+	left: 330px;
+	display: flex;
+	flex-direction: column;
+	height: 180px;
+	justify-content: space-evenly;
+	align-items: center;
+}
+#HUD .phoneMicHud .phone {
+	object-fit: contain;
+    max-width: 34px;
+	width: 34px;
+}
+#HUD .phoneMicHud .microphone {
+	object-fit: contain;
+	max-width: 43px;
+	width: 43px;
+}
+
+#hints * { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+#hints { position: absolute; top: 30%; left: 0%; width: 270px; height: 310px; overflow: hidden; font-family: 'Gotham Pro'; }
+
+@media screen and (max-width: 1280px) { #hints { top: 32%; height: 255.5px; width: 240px; } }
+
+#hints::before { content: ''; position: absolute; top: 0; left: 0; height: 35px; width: 40px; background: -webkit-gradient(linear, left top, right top, from(rgba(183, 0, 247, 0.99)), to(rgba(125, 185, 232, 0))); background: linear-gradient(to right, rgba(183, 0, 247, 0.99) 0%, rgba(125, 185, 232, 0) 100%); }
+
+#hints .hints-checkbox { position: relative; background: url(../img/button.svg) no-repeat center center; background-size: 16px 16px; display: block; width: 35px; height: 35px; border: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; cursor: pointer; -webkit-transition: -webkit-transform .3s; transition: -webkit-transform .3s; transition: transform .3s; transition: transform .3s, -webkit-transform .3s; }
+
+#hints .hints-checkbox:checked { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+
+#hints .hints-checkbox:checked ~ div { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+
+#hints .hints-checkbox:focus { display: none; }
+
+#hints .hints-block { border-left: 6px solid #b700f7; position: relative; -webkit-transition: -webkit-transform .3s; transition: -webkit-transform .3s; transition: transform .3s; transition: transform .3s, -webkit-transform .3s; }
+
+#hints .hints-block::before { content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: #b700f7; background: -webkit-gradient(linear, left top, right top, from(rgba(58, 7, 83, 0.8)), to(rgba(183, 0, 247, 0))); background: linear-gradient(90deg, rgba(58, 7, 83, 0.8) 0%, rgba(183, 0, 247, 0) 100%); z-index: -1; }
+
+#hints .hints-list { padding: 13px; width: 100%; }
+
+@media screen and (max-width: 1600px) { #hints .hints-list { padding: 10px; } }
+
+@media screen and (max-width: 1280px) { #hints .hints-list { padding: 10px; } }
+
+@media screen and (max-width: 1024px) { #hints .hints-list { padding: 5px; } }
+
+#hints .hints-list__item { margin: 16px 0px; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-weight: 600; }
+
+@media screen and (max-width: 1280px) { #hints .hints-list__item { margin: 8px 0px; } }
+
+@media screen and (max-width: 1024px) { #hints .hints-list__item { margin: 5px 0px; } }
+
+#hints .hints-list__item-title { font-size: 16px; }
+
+@media screen and (max-width: 1024px) { #hints .hints-list__item-title { font-size: 14px; } }
+
+#hints .hints-list__item-button { font-size: 18px; background: rgba(0, 0, 0, 0.5); min-width: 30px; height: 30px; border-radius: 4px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 7px; }
+
+@media screen and (max-width: 1024px) { #hints .hints-list__item-button { font-size: 14px; padding: 3px; } }
+
+#hints .hints-list__item-button img { width: 16px; height: 16px; display: block; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
+
+#hints.right { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; right: 0; left: auto; top: 30%; }
+
+#hints.right::before { right: 0; top: 3px; left: auto; width: 40px; background: -webkit-gradient(linear, left top, right top, from(rgba(125, 185, 232, 0)), color-stop(99%, rgba(183, 0, 247, 0.99)), to(#b700f7)); background: linear-gradient(to right, rgba(125, 185, 232, 0) 0%, rgba(183, 0, 247, 0.99) 99%, #b700f7 100%); }
+
+@media screen and (max-width: 1024px) { #hints.right { width: 200px; height: 228px; } }
+
+#hints.right .hints-checkbox { position: absolute; top: 3px; }
+
+#hints.right .hints-checkbox:checked ~ div { -webkit-transform: translateX(100%); transform: translateX(100%); }
+
+#hints.right .hints-block { width: 100%; border-right: 6px solid #b700f7; border-left: none; }
+
+#hints.right .hints-block::before { content: ''; position: absolute; top: 0; left: auto; right: 0; height: 100%; width: 100%; background: #b700f7; background: -webkit-gradient(linear, left top, right top, from(rgba(183, 0, 247, 0)), color-stop(99%, rgba(58, 7, 83, 0.99)), to(#3a0753)); background: linear-gradient(to right, rgba(183, 0, 247, 0) 0%, rgba(58, 7, 83, 0.99) 99%, #3a0753 100%); z-index: -1; }
+
+#hints.right .hints-list__item { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }

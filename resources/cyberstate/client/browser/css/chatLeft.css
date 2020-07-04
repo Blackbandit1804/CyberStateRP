@@ -1,0 +1,151 @@
+.chatLeft {
+    color: #fff;
+    font-size: 2vh;
+    font-family: 'Chalet-LondonNineteenSixty';
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60vh;
+}
+
+/*.chatLeft hr {
+	opacity: 0.2;
+	border-color: #aaa;
+	width: 60%;
+	margin: 0 0 0 auto;
+}*/
+.chatLeft input[type="text"] {
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: #fff;
+    height: 3.1vh;
+    padding: 1vh;
+    width: 56vh;
+    border-radius: 4px;
+}
+
+.chatLeft input[type="text"]:focus {
+    outline: none;
+}
+
+.chatLeft .chat-bottom {
+    margin-top: 2vh;
+    display: inline-flex;
+}
+
+.chatLeft .chat-content {
+    transition: 1s;
+    height: calc(25 * 12px);
+    overflow-y: hidden;
+    text-align: left;
+    font-size: 16px;
+}
+
+.chatLeft .chat-content div {
+    padding: 3px;
+    word-break: break-word;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.chatLeft .chat-tags {
+    display: flex;
+    font-size: 1.2vh;
+    margin-top: 0.2vh;
+}
+
+.chatLeft .chat-tags div {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    margin-right: 0.2vh;
+    padding: 0.3vh 1vh;
+}
+
+.chatLeft .chat-tags div:not(.active):hover {
+    background: #fff;
+    color: #000;
+    opacity: 0.7;
+}
+
+.chatLeft .chat-tags div.active {
+    background: #fff;
+    color: #000;
+}
+
+.chatLeft .chat-bottom .help {
+    background: none;
+    bottom: 2.95vh;
+    font-size: 1.5vh;
+    opacity: 0.5;
+    position: absolute;
+    right: 5.2vh;
+}
+
+.chatLeft .chat-bottom .help:hover {
+    background: none;
+    box-shadow: 1px #fff;
+    color: #fff;
+    opacity: 1;
+}
+
+.chatLeft .chat-tags .say {
+    /* color: #fff; */
+}
+
+.chatLeft .chat-tags .shout {
+    /* color: #e4a600; */
+}
+
+.chatLeft .chat-tags .whisper {
+    /* color: #c0c0c0; */
+}
+
+.chatLeft .chat-tags .ooc {
+    /* color: #4bc0c4; */
+}
+
+.chatLeft .chat-tags .me {
+    /* color: #f0d2f4; */
+}
+
+.chatLeft .chat-tags .do {
+    /* color: #f0d2f4; */
+}
+
+.chatLeft .chat-tags .try {
+    /* color: #f0d2f4; */
+}
+
+.chatLeft .chat-tags .radio {
+    /* color: #4bc0c4; */
+}
+
+.chatLeft .chat-tags .dep {
+    /* color: #f4d2d2; */
+}
+
+.chatLeft .tag {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 4px 0px 0px 4px;
+    color: #aaa;
+    font-size: 1.1vh;
+    position: relative;
+    width: 0;
+    /* text-align: right; */
+    text-transform: uppercase;
+    height: 3.1vh;
+}
+
+.chatLeft .tag a {
+    position: relative;
+    top: -1.3vh;
+    padding-left: 7px;
+}
+
+.chatLeft .tag a:after {
+    content: ':';
+}
+
+.chatLeft .userId {
+    font-family: 'Chalet-ParisNineteenSixty';
+}

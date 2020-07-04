@@ -1,0 +1,320 @@
+@font-face {
+    font-family: London;
+    src: url(../fonts/LONDONSIXTY.ttf);
+   }
+@font-face {
+    font-family: OpenSansBold;
+    src: url(../fonts/OpenSans/OpenSans-Bold.woff);
+   }
+   
+@font-face {
+    font-family: OpenSansRegular;
+    src: url(../fonts/OpenSans/OpenSans-Regular.woff);
+   }
+   
+@font-face {
+    font-family: OpenSansSemibold;
+    src: url(../fonts/OpenSans/OpenSans-Semibold.woff);
+   }
+@font-face {
+    font-family: OpenSansExtraBold;
+    src: url(../fonts/OpenSans/OpenSans-ExtraBold.ttf);
+   }
+
+.gangWrap .gangPad{
+    position: relative;
+    width: 677px;
+    height: 402px;
+    top: calc( 50vh - 201px);
+    left: calc( 50vw + 100px);
+    margin-right: 20px;
+}
+
+.gangWrap .gangPad .padBox{
+    position: absolute;
+    z-index: 1;
+}
+.gangWrap .gangPad .padGlass{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/bandTablet/glass.png);
+}
+
+.gangWrap .gangPad .padBox .menuWrap{
+    margin: 58px 62px 0 62px;
+}
+.gangWrap .gangPad .padBox .menuWrap .headMainPad {
+    margin-bottom: 10px;
+}
+.gangWrap .gangPad .padBox .menuWrap .headMainPad .left{
+    float: left;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: "OpenSansRegular";
+}
+
+.gangWrap .gangPad .padBox .menuWrap .headMainPad .right img{
+    margin-right: 3px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .headMainPad .right{
+    float: right;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "London";
+    bottom: 0;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .mainPad .firRow{
+     width: 212px;
+     margin-right: 2px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .mainPad .secRow{
+     width: 172px;
+     margin-right: 2px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .mainPad .treRow{
+     width: 164px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .mainPad .padBtnRow{
+    float: left;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .mainPad .padBtnRow .btn{
+    margin-top: 2px;
+    position: relative;
+    font-size: 13px;
+    font-family: "OpenSansSemibold";
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .mainPad .padBtnRow .btn p{
+    position: absolute; 
+    bottom: 0;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .mainPad .padBtnRow .btnChat p,
+.gangWrap .gangPad .padBox .menuWrap .mainPad .padBtnRow .btnCar p,
+.gangWrap .gangPad .padBox .menuWrap .mainPad .padBtnRow .btnMap p,
+.gangWrap .gangPad .padBox .menuWrap .mainPad .padBtnRow .btnGBank p,
+.gangWrap .gangPad .padBox .menuWrap .mainPad .padBtnRow .btnLester p
+{
+    margin-left: 6px;
+    margin-bottom: 6px;
+}
+
+.mainPad .btn .textGangBank,
+.mainPad .btn .textSostav{
+    width: 50%;
+    margin-left: 6px;
+    margin-bottom: 6px;
+}
+
+.mainPad .btn .countOnline{
+    right: 0;
+    font-size: 36px;
+    margin-right: 10px;
+    margin-bottom: 16px;
+}
+
+.mainPad .btn .sumGangBank,
+.mainPad .btn .textOnline{
+    right: 0;
+    margin-right: 10px;
+    margin-bottom: 6px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .mainPad .btnCar,
+.gangWrap .gangPad .padBox .menuWrap .mainPad .btnChat{
+    height: 76px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .mainPad .btnList{
+    height: 156px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .mainPad .btnMap{
+    height: 76px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .mainPad .btnGBank{
+    height: 76px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .mainPad .btnLester{
+    height: 76px;
+    width: 79px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .gangMapInfo,
+.gangWrap .gangPad .padBox .menuWrap .gangBankInfo,
+.gangWrap .gangPad .padBox .menuWrap .lesterOptions,
+.gangWrap .gangPad .padBox .menuWrap .gangList {
+    position: relative;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .backBtn{
+    float: left;
+    position: absolute;
+    left: -25px;
+    display: table-cell;
+    vertical-align: middle;
+    cursor:pointer;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .backBtn img{
+    width: 20px;
+    height: 20px;
+    top: 48%;
+    position: relative;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .backBtn,
+.gangWrap .gangPad .padBox .menuWrap .contentMap,
+.gangWrap .gangPad .padBox .menuWrap .contentList
+{
+    height: 220px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .contentList{
+    padding-left: 9px;
+    padding-top: 9px;
+    
+}
+
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangLesterOpt,
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangPlayerList,
+.gangWrap .gangPad .padBox .menuWrap .contentList .headerList {
+    width: 535px;
+}
+.gangWrap .gangPad .padBox .menuWrap .contentList .headerList div{
+    float: left;
+    width: 265px;
+    font-size: 18px;
+    font-family: "London";
+    text-transform: uppercase;
+    
+}
+
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangBankInfoUse{
+    overflow-y: scroll;
+    height: 170px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangLesterOpt,
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangPlayerList {
+    overflow-y: scroll;
+    height: 190px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangBankInfoUse .bankTransRow div,
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangLesterOpt .lesterNameRow div,
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangPlayerList .playerNameRow div{
+    float: left;
+    border-bottom: 1px solid rgba(240, 240, 240, 0.3);
+    text-transform: uppercase;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangBankInfoUse .bankTransRow .name,
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangLesterOpt .lesterNameRow .option,
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangPlayerList .playerNameRow .name{
+    width: 265px;
+    font-family: "OpenSansSemibold";
+}
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangBankInfoUse .bankTransRow .name b{
+    font-family: "OpenSansExtraBold";
+}
+
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangBankInfoUse .bankTransRow .price,
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangLesterOpt .lesterNameRow .price,
+.gangWrap .gangPad .padBox .menuWrap .contentList .gangPlayerList .playerNameRow .streetName{
+    width: 258px;
+    font-family: "OpenSansRegular";
+}
+
+.gangWrap .gangPad .padBox .menuWrap .footerBtn .footBtnP{
+    float: left;
+    margin-left: 4px;
+    margin-top: 18px;
+    margin-right: 6px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-family: "OpenSansRegular";
+    font-size: 13px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .footerBtn .footBtnB{
+    float: right;
+    margin-top: 18px;
+    padding: 3px 10px;
+    background-color: #303030;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: "OpenSansRegular";
+}
+
+
+.gangWrap .gangPad .padBox .menuWrap .contentList .headerGangBank{
+    position: relative;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .contentList .headerGangBank div{
+    text-align: center;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .contentList .headerGangBank .titleGBank{
+    font-family: "OpenSansSemibold";
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .contentList .headerGangBank .summGBank{
+    font-family: "OpenSansSemibold";
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .contentList .headerGangBank .titleTGBank{
+    float: left;
+    position: absolute;
+    top: 26px;
+    font-family: "London";
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .gangMapInfo .contentMap img{
+    width: 555px;
+    height: 240px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .gangMapInfo .contentMap{
+    margin-bottom: 9px;
+    overflow: hidden;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .gangMapInfo .gangZonesCount b{
+    font-family: "OpenSansBold";
+}
+.gangWrap .gangPad .padBox .menuWrap .gangMapInfo .gangZonesCount{
+    float: left;
+    font-size: 13px;
+    font-family: "OpenSansRegular";
+    margin-top: 5px;
+}
+
+.gangWrap .gangPad .padBox .menuWrap .gangMapInfo .mapBtn{
+    float: right;
+    padding: 5px;
+    margin-left: 5px;
+}

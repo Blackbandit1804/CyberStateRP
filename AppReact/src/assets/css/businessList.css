@@ -1,0 +1,188 @@
+#businessList {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    width: 42.59259259259259vh;
+    font-size: 1.388888888888889vh;
+    margin: 0;
+}
+/* Header */
+#businessList .header {
+    color: black;
+    width: 42.59259259259259vh;
+    height: 3.703703703703704vh;
+    line-height: 3.703703703703704vh;
+    background-color: white;
+    text-align: center;
+    text-transform: uppercase;
+
+    border-radius: 0.1851851851851852vh 0.1851851851851852vh 0 0;
+}
+/* Body */
+#businessList .body {
+    width: 41.11111111111111vh;
+    height: 47.31481481481481vh;
+    margin-top: 0.1851851851851852vh;
+
+    background-color: rgba(0, 0, 0, 0.70);
+}
+#businessList .body .child {
+    margin-right: -1.481481481481481vh;
+    overflow: overlay;
+    height: 47.31481481481481vh;
+
+    color: white;
+    font-size: 1.203703703703704vh !important;
+    font-weight: 400 !important;
+}
+
+#businessList .body .child .clothes {
+    margin: auto;
+    width: 37.96296296296296vh;
+    margin-top: 3.055555555555556vh;
+}
+#businessList .body .child .clothes .child_header {
+    height: 3.703703703703704vh;
+
+    text-transform: uppercase;
+    font-size: 1.481481481481481vh !important;
+    font-weight: 600 !important;
+    line-height: 3.703703703703704vh;
+    text-align: center;
+
+    border-radius: 0.1851851851851852vh 0.1851851851851852vh 0 0;
+}
+#businessList .body .child .clothes img {
+    margin-top: 0.462962962962963vh;
+}
+#businessList .body .child .clothes img.imgresize {
+    width: 37.96296296296296vh;
+    height: 9.259259259259259vh;
+}
+#businessList .body .child .clothes .text {
+    margin-top: 0.7407407407407407vh;
+}
+#businessList .body .child .clothes .helpInfo {
+    margin-top: 0.5555555555555556vh;
+}
+#businessList .body .child .clothes .helpInfo button:focus,
+#businessList .buttons .left button:focus,
+#businessList .buttons .right button:focus {
+    outline: 0;
+}
+#businessList .body .child .clothes .helpInfo button {
+    width: 17.22222222222222vh;
+    height: 2.314814814814815vh;
+    line-height: 2.314814814814815vh;
+    border: none;
+    border-radius: 0.1851851851851852vh;
+    color: white;
+
+    font-size: 1.111111111111111vh !important;
+    font-weight: 600;
+}
+#businessList .body .child .clothes .helpInfo button:first-child:hover {
+    background: -webkit-linear-gradient( 180deg, rgb(245,127,40) 0%, rgb(245,127,40) 100%);
+}
+#businessList .body .child .clothes .helpInfo button:last-child:hover {
+    background-image: -webkit-linear-gradient( 180deg, rgb(0,163,70) 0%, rgb(0,163,70) 100%);
+}
+#businessList .body .child .clothes .helpInfo button:first-child {
+    float: left;
+
+    background-image: -moz-linear-gradient( 180deg, rgb(163,88,0) 0%, rgb(245,127,40) 100%);
+    background-image: -webkit-linear-gradient( 180deg, rgb(163,88,0) 0%, rgb(245,127,40) 100%);
+    background-image: -ms-linear-gradient( 180deg, rgb(163,88,0) 0%, rgb(245,127,40) 100%);
+
+}
+#businessList .body .child .clothes .helpInfo button:last-child {
+    float: right;
+
+    background-image: -moz-linear-gradient( 180deg, rgb(17,130,65) 0%, rgb(0,163,70) 100%);
+    background-image: -webkit-linear-gradient( 180deg, rgb(17,130,65) 0%, rgb(0,163,70) 100%);
+    background-image: -ms-linear-gradient( 180deg, rgb(17,130,65) 0%, rgb(0,163,70) 100%);
+}
+.helpInfo button img.helpimg {
+    margin: 0 !important;
+    margin-right: 0.462962962962963vh !important;
+    vertical-align: sub;
+}
+
+#businessList .body .child div:last-child {
+    margin-bottom: 2.777777777777778vh !important;
+}
+
+/* Hover */
+#businessList .body .child::-webkit-scrollbar {
+    width: 1.296296296296296vh;
+}
+#businessList .body .child::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.70);
+}
+#businessList .body .child::-webkit-scrollbar-thumb {
+    background: white;
+}
+#businessList .body .child::-webkit-scrollbar-thumb:hover {
+    background: rgb(218, 218, 218);
+}
+/* Buttons */
+#businessList .buttons {
+    margin-top: 0.1851851851851852vh;
+}
+
+#businessList .buttons .left {
+    float: left;
+}
+
+#businessList .buttons .right {
+    float: right;
+}
+
+#businessList .buttons .left button,
+#businessList .buttons .right button {
+    width: 21.01851851851852vh;
+    height: 3.703703703703704vh;
+
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0.70);
+    color: white;
+
+    text-transform: uppercase;
+
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 600 !important;
+
+    transition: 0.3s;
+}
+
+#businessList .buttons .left button {
+    border-radius: 0 0 0 0.1851851851851852vh;
+    border-left: 0.3703703703703704vh solid #d0d0d0;
+}
+
+#businessList .buttons .right button {
+    border-radius: 0 0 0.1851851851851852vh 0;
+    border-left: 0.3703703703703704vh solid rgb(172, 5, 5);
+}
+
+#businessList .buttons .left button:hover,
+#businessList .buttons .right button:hover {
+    background-color: rgba(0, 0, 0, 0.80);
+}
+
+
+#businessList .body .child .clothes.newSubText {
+    margin-top: 4.444444444444444vh !important;
+}
+#businessList .body .child .clothes.newSubText:last-child {
+    padding-bottom: 0.462962962962963vh;
+}
+#businessList .body .child .clothes .child_header.clothes {
+    background-image: -moz-linear-gradient( 180deg, rgb(51,9,114) 0%, rgb(197,57,255) 50%, rgb(65,9,149) 100%);
+    background-image: -webkit-linear-gradient( 180deg, rgb(51,9,114) 0%, rgb(197,57,255) 50%, rgb(65,9,149) 100%);
+    background-image: -ms-linear-gradient( 180deg, rgb(51,9,114) 0%, rgb(197,57,255) 50%, rgb(65,9,149) 100%);
+}
+#businessList .body .child .clothes.newSubText .child_header.bs {
+    background-image: -moz-linear-gradient( 180deg, rgb(5,85,79) 0%, rgb(0,212,195) 50%, rgb(5,85,79) 100%);
+    background-image: -webkit-linear-gradient( 180deg, rgb(5,85,79) 0%, rgb(0,212,195) 50%, rgb(5,85,79) 100%);
+    background-image: -ms-linear-gradient( 180deg, rgb(5,85,79) 0%, rgb(0,212,195) 50%, rgb(5,85,79) 100%);
+}

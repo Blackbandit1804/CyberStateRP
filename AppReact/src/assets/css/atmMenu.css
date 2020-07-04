@@ -1,0 +1,253 @@
+.bankMain{
+    width: calc(100vw);
+    height: calc(100vh);
+    top: calc(0vh);
+    position: relative;
+    left: calc(0vw);
+    background-image: url(../img/atm/bg.png);
+    font-family: 'OpenSans';
+}
+
+.bankMain .topLine{
+    background-color: #e32a2b;
+    width: calc(100vw);
+    height: 10px;
+}
+
+.bankMain .menuBox{
+    background-color: #fff;
+    margin: 0 auto;
+    width:  calc( (100vw - 1280px)/(1920 - 1280) * (1280 - 900) + 900px);
+    height: calc( 100vh - 10px );
+}
+
+.bankMain .headBank{
+    width: 100%;
+}
+
+.bankMain .headBank .logo{
+    float: left;
+    margin: 15px 0 15px 35px;
+}
+.bankMain .headBank .numberBank{
+    float: right;
+    margin-right: 25px;
+    font-size: 30px;
+    line-height: 122px;
+}
+
+.bankMain .headBank .headBLineClear{
+    background-color: #e32a2b;
+    height: 5px;
+    clear: both;
+}
+
+.bankMain .menuBox .leftBg{
+    float: left;
+}
+.bankMain .menuBox .activeMenu{
+    float: right;
+}
+.bankMain .menuBox .activeMenu{
+    margin-left: 35px;
+    margin-top: 55px;
+    width:  calc( ((100vw - 1280px)/(1920 - 1280) * (1280 - 900) + 900px) - ((100vw - 1280px)/(1920 - 1280) * (160 - 100) + 100px) - 35px );
+}
+
+.bankMain .menuBox .leftBg{
+    width: calc( (100vw - 1280px)/(1920 - 1280) * (160 - 100) + 100px);
+    height: calc( 100vh - 191px ); /* отнимаем высоту(сумму) блоков сверу и снизу*/
+}
+
+.bankMain .menuBox .leftBg img{
+    position: relative;
+    top: calc( (100vh - 191px)/2 - ((100vw - 1280px)/(1920 - 1280) * (675 - 422) + 422px)/2);
+    width: calc( (100vw - 1280px)/(1920 - 1280) * (160 - 100) + 100px);
+    height: calc( (100vw - 1280px)/(1920 - 1280) * (675 - 422) + 422px);
+}
+
+.bankMain .menuBox .bottomLine{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    color: #fff;
+    background-image: url(../img/atm/bgBtn.png);
+    background-repeat: repeat-x ;
+    clear: both;
+}
+
+
+.activeMenu .iconPlayer, .activeMenu .cardInfo{
+    float: left;
+}
+
+.bankMain .infoBlockB .iconPlayer img{
+    width: 114px;
+    height: 114px;
+    border: 3px solid #ff0000;
+    border-radius: 2px;
+}
+
+.bankMain .infoBlockB .cardInfo{
+    margin-left: 24px;
+    text-transform: uppercase;
+}
+
+.bankMain .infoBlockB .cardInfo .numberCart{
+    font-size: 24px;
+}
+.bankMain .infoBlockB .cardInfo .nameCart{
+    font-size: 30px;
+}
+
+.bankMain .btn{
+    color: #fff;
+    font-size: calc( (100vw - 1280px)/(1920 - 1280) * (30 - 20) + 20px);
+    height: calc( (100vw - 1280px)/(1920 - 1280) * (70 - 40) + 40px);
+    line-height: calc( (100vw - 1280px)/(1920 - 1280) * (70 - 40) + 40px);
+    background-image: url(../img/atm/bgBtn.png);
+    background-repeat: repeat-x ;
+    text-transform: uppercase;
+}
+.bankMain .buttonsBlock{
+    width: 100%;
+}
+
+.bankMain .buttonsBlock .leftBtn, .bankMain .infoMoney .balanceInfo{
+    float: left;
+}
+
+.activeMenu .buttonsBlock .leftBtn .btn, 
+.activeMenu .balanceInfo .btn
+{
+    border-radius: 4px;
+    margin: 7px 0;
+    padding: 0 24px;
+}
+.bankMain .activeMenu .rightBtn{
+    float: right;
+}
+
+.activeMenu .rightBtn .btn{
+    border-radius: 4px 0 0 4px;
+    margin: 7px 0;
+    padding: 0 24px;
+}
+
+.bankMain .infoMoney .balanceInfo, 
+.bankMain .withdrawMoney .balanceInfo,
+.bankMain .transferMoney .balanceInfo,
+.bankMain .withdrawOther .balanceInfo
+{
+    width: calc( ((100vw - 1280px)/(1920 - 1280) * (1280 - 900) + 900px) - ((100vw - 1280px)/(1920 - 1280) * (160 - 100) + 100px) - ((100vw - 1280px)/(1920 - 1280) * (250 - 180) + 180px) - 40px);
+    float: left;
+}
+
+.bankMain .infoMoney .balanceInfo div,
+.bankMain .transferMoney .balanceInfo div,
+.bankMain .withdrawOther .balanceInfo div
+{
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+.bankMain .infoMoney .balanceInfo .balanceInfoHead{
+    margin-bottom: calc( (100vw - 1280px)/(1920 - 1280) * (70 - 40) + 40px);
+}
+
+.bankMain .infoMoney .balanceInfo .balanceInfoHead, 
+.bankMain .transferMoney .balanceInfo .balanceInfoHead,
+.bankMain .withdrawMoney .balanceInfo .balanceInfoHead,
+.bankMain .withdrawOther .balanceInfo .balanceInfoHead
+{
+    margin-top: 50px;
+    background-color: #c0c0c0;
+    width: calc( (100vw - 1280px)/(1920 - 1280) * (550 - 400) + 400px);
+    padding:  0 15px;
+    height: calc( (100vw - 1280px)/(1920 - 1280) * (70 - 40) + 40px);
+    line-height: calc( (100vw - 1280px)/(1920 - 1280) * (70 - 40) + 40px);
+    font-size: calc( (100vw - 1280px)/(1920 - 1280) * (30 - 20) + 20px);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+ .bankMain .withdrawMoney .balanceInfo .balanceInfoHelp,
+
+ .bankMain .withdrawOther .balanceInfo .balanceInfoHelp,
+ .bankMain .transferMoney .balanceInfo .balanceInfoHelp{
+    width: calc( (100vw - 1280px)/(1920 - 1280) * (550 - 400) + 400px);
+    margin: 0 auto;
+    font-size: calc( (100vw - 1280px)/(1920 - 1280) * (14 - 10) + 10px);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+ }
+.bankMain .withdrawOther .balanceInfo .OtherWithdHelp,
+.bankMain .transferMoney .balanceInfo .OtherWithdHelp{
+    width: calc( (100vw - 1280px)/(1920 - 1280) * (550 - 400) + 400px);
+    margin: 0 auto;
+    font-size: calc( (100vw - 1280px)/(1920 - 1280) * (14 - 10) + 10px);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+
+.bankMain .infoMoney .balanceInfo .balanceInfoInAccount, 
+.bankMain .infoMoney .balanceInfo .balanceInfoSum
+{
+    width: calc( (100vw - 1280px)/(1920 - 1280) * (550 - 400) + 400px);
+    padding:  0 15px;
+    font-size: calc( (100vw - 1280px)/(1920 - 1280) * (48 - 35) + 35px);
+    
+}
+
+.bankMain .infoMoney .rightBtn{
+    margin-top: calc( (100vw - 1280px)/(1920 - 1280) * (150 - 50) + 50px);
+}
+
+
+.bankMain .withdrawMoney .balanceInfo .rowWithdraw{
+    float: left;
+} 
+
+.bankMain .withdrawMoney .balanceInfoHead,
+.bankMain .withdrawMoney .withdrawBtns
+{
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.bankMain .withdrawMoney .withdrawBtns{
+    width: calc( (100vw - 1280px)/(1920 - 1280) * (550 - 400) + 400px);
+}
+.bankMain .withdrawMoney .withdrawBtns .left{
+    margin-left: 20px;
+}
+.bankMain .withdrawMoney .withdrawBtns .right{
+    margin-left: 20px;
+}
+
+.bankMain .withdrawMoney .withdrawBtns .btn{
+    width: calc( (100vw - 1280px)/(1920 - 1280) * (200 - 130) + 130px);
+}
+
+.withdrawOther input,
+.transferMoney input{
+    text-align: center;
+    border: calc( (100vw - 1280px)/(1920 - 1280) * (5 - 3) + 3px) solid #e32a2b;
+    border-radius: 5px;
+    width: calc( (100vw - 1280px)/(1920 - 1280) * (550 - 400) + 400px);
+    height: calc( (100vw - 1280px)/(1920 - 1280) * (70 - 40) + 40px);
+    line-height: calc( (100vw - 1280px)/(1920 - 1280) * (70 - 40) + 40px);
+    font-size: calc( (100vw - 1280px)/(1920 - 1280) * (30 - 20) + 20px);
+    margin-bottom: 20px;
+}
+
+.bankMain .withdrawOther .withdrawBtn,
+.bankMain .transferMoney .sendMoneyBtn{
+    width: calc( (100vw - 1280px)/(1920 - 1280) * (250 - 150) + 150px);
+}

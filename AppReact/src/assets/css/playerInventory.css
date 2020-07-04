@@ -1,0 +1,436 @@
+@font-face {
+    font-family: GothamProBold;
+    src: url(../fonts/GothamPro-Bold.ttf);
+}
+
+#invWrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#playerInventory {
+    display: grid;
+    grid-template-columns: 230px 1fr 250px;
+    /* grid-template-rows: 80px auto; */
+    grid-gap: 20px;
+    width: 900px;
+}
+#playerInventory .inventoryBlock {
+    background-color: rgba(28, 9, 37, 0.8);
+    border-radius: 10px;
+}
+#playerInventory .fastInventory {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#playerInventory .fastInventory .fastItem {
+    position: relative;
+    margin: 10px 0;
+    height: 60px;
+    width: 60px;
+    background: rgba(28, 9, 37, 1);
+    border-radius: 10px;
+}
+#playerInventory .fastInventory .fastItem:before {
+    content: "1";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    background: linear-gradient(to top, #8051eb 0%,#a414da 100%);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    line-height: 22px;
+    font-family: 'GothamProBold';
+}
+#playerInventory .fastInventory .fastItem:nth-child(2):before {
+    content: "2";
+}
+#playerInventory .fastInventory .fastItem:nth-child(3):before {
+    content: "3";
+}
+#playerInventory .fastInventory .fastItem:nth-child(4):before {
+    content: "4";
+}
+#playerInventory .fastInventory .fastItem:nth-child(5):before {
+    content: "5";
+}
+#playerInventory .leftInventory {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+}
+#playerInventory .personInventory {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    position: relative;
+}
+#playerInventory .rightInventory {
+    grid-area: 2 / 3 / 3 / 4;
+    display: flex;
+    flex-direction: column;
+    max-height: 680px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-right: 10px;
+    width: 265px;
+}
+#playerInventory .leftInventory {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+}
+#playerInventory .personInventory .playerView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#playerInventory .personInventory .playerLoadout {
+    display: grid;
+    grid-template-columns: min-content 3fr min-content;
+    grid-gap: 20px;
+    width: 50%;
+    margin: 20px 0;
+    justify-content: center;
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem {
+    height: 60px;
+    min-width: 60px;
+    max-width: 120px;
+    width: 100%;
+    background: rgba(28, 9, 37, 1);
+    border-radius: 10px;
+    position: relative;
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem.smallItem {
+    max-width: 60px;
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem.centerItem {
+    margin: 0 auto;
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem.expandedItem {
+    height: 100%;
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemIcon {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: auto 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #343037;
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemIcon.active {
+    background: linear-gradient(to right, #8051eb 0%,#a414da 100%);
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemGlasses {
+    -webkit-mask-image: url('../images/glasses.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemCap {
+    -webkit-mask-image: url('../images/cap.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemNeck {
+    -webkit-mask-image: url('../images/chain.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemTie {
+    -webkit-mask-image: url('../images/tie.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemJacket {
+    -webkit-mask-image: url('../images/jacket.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemArm {
+    -webkit-mask-image: url('../images/arm.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemVest {
+    -webkit-mask-image: url('../images/vest.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemShirt {
+    -webkit-mask-image: url('../images/tshirt.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemClocks {
+    -webkit-mask-image: url('../images/apple-watch.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemVisa {
+    -webkit-mask-image: url('../images/visa-card.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemPassport {
+    -webkit-mask-image: url('../images/passport.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemPants {
+    -webkit-mask-image: url('../images/pants.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemBackpack {
+    -webkit-mask-image: url('../images/backpack.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemPhone {
+    -webkit-mask-image: url('../images/phone.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemMask {
+    -webkit-mask-image: url('../images/mask.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemKeyCar {
+    -webkit-mask-image: url('../images/keycar.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemKeyHome {
+    -webkit-mask-image: url('../images/keyhome.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem .itemBoots {
+    -webkit-mask-image: url('../images/shoes.svg');
+}
+#playerInventory .personInventory .playerLoadout .playerLoadoutItem.expandedItem {
+    grid-area: 4 / 2 / span 2 / 3;
+}
+
+#playerInventory .personInventory .inventoryHeader, #playerInventory .leftInventory .inventoryHeader {
+    background: rgba(28, 9, 37, 1);
+    color: white;
+    font-family: 'GothamProBold';
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 0 0 5px 5px;
+}
+#playerInventory .leftInventory .inventoryHeader {
+    margin-bottom: 10px;
+}
+#playerInventory .personInventory .inventoryHeader:after, #playerInventory .leftInventory .inventoryHeader:after {
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    height: 4px;
+    content: '';
+    background: #824dea;
+    border-radius: 4px;
+}
+#playerInventory .personInventory .inventoryHeader h4, #playerInventory .leftInventory .inventoryHeader h4 {
+    text-align: center;
+    padding: 10px 0 5px;
+    margin: 0;
+    font-size: 14px;
+}
+#playerInventory .rightInventory .subInventory, #playerInventory .leftInventory .subInventory {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+#playerInventory .leftInventory .subInventory {
+    margin-left: 0px;
+}
+#playerInventory .rightInventory .subInventory:last-child, #playerInventory .leftInventory .subInventory:last-child {
+    margin-bottom: 0px;
+}
+#playerInventory .rightInventory .subInventory:before {
+    position: absolute;
+    left: 0px;
+    top: 170px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 22px;
+    content: 'Куртка';
+    color: black;
+    transform: rotate(-90deg);
+    transform-origin: 0 100%;
+    height: 20px;
+    width: 150px;
+    font-family: 'GothamProBold';
+    background: linear-gradient(to bottom, #8051eb 0%,#a414da 100%);
+    border-radius: 5px 5px 0 0;
+}
+#playerInventory .slot {
+    flex: 0 0 40px;
+    height: 40px;
+    background: rgba(28, 9, 37, 1);
+    border-radius: 5px;
+    margin: 5px 0 0 5px;
+}
+#playerInventory .slot.active {
+    background: rgba(48, 16, 64, 1);
+}
+#playerInventory .inventoryGrid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    margin-bottom: 5px;
+}
+#playerInventory .subInventory.row5 .inventoryGrid {
+    width: calc(40px*5 + 5px*6);
+}
+#playerInventory .rightInventory .row5.subInventory:before {
+    content: 'Куртка';
+}
+#playerInventory .subInventory.row3 .inventoryGrid {
+    width: calc(40px*3 + 5px*4);
+}
+#playerInventory .row3.subInventory:before {
+    content: 'Брюки';
+    width: 100px;
+    top: 100px;
+}
+#playerInventory .itemsGrid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+#playerInventory .itemsGrid .card {
+    background-color: #461561;
+    border-radius: 5px;
+    position: absolute;
+}
+
+#playerInventory .itemsGrid .card .svgImage, .dragPreviewItem .svgImage {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: auto 50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #8051eb 0%,#a414da 100%);
+}
+#playerInventory .itemsGrid .card .pngImage, .dragPreviewItem .pngImage {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+#playerInventory .playerLoadoutItem .itemsGrid .card {
+    background-color: transparent;
+}
+#playerInventory .itemsGrid .mergeLayer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#playerInventory .rightInventory .backpackBlock.subInventory:before {
+    content: 'Сумка';
+    width: 300px;
+    top: 355px;
+}
+#playerInventory .personInventory .playerStates {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+    margin-top: 20px;
+}
+#playerInventory .personInventory .playerState {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+#playerInventory .personInventory .playerState .stateIcon {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 50%;
+    width: 100%;
+    height: 40px;
+    background-color: #7d7383;
+}
+
+#playerInventory .personInventory .playerState .stateBar {
+    background-color: #ccc;
+    border-radius: 10px;
+    height: 10px;
+    width: 100%;
+}
+#playerInventory .personInventory .playerState .stateBar>div {
+    background-color: black;
+    height: 10px;
+    border-radius: 10px;
+}
+#playerInventory .personInventory .playerState.playerWater .stateIcon {
+    -webkit-mask-image: url('../images/water.svg');
+}
+#playerInventory .personInventory .playerState.playerHP .stateIcon {
+    -webkit-mask-image: url('../images/hp.svg');
+}
+#playerInventory .personInventory .playerState.playerFood .stateIcon {
+    -webkit-mask-image: url('../images/food.svg');
+}
+#playerInventory .personInventory .playerState.playerWater .stateBar {
+    background-color: #1c1c51;
+}
+#playerInventory .personInventory .playerState.playerHP .stateBar {
+    background-color: #3f222e;
+}
+#playerInventory .personInventory .playerState.playerFood .stateBar {
+    background-color: #16282e;
+}
+#playerInventory .personInventory .playerState.playerWater .stateBar>div {
+    background-color: #1c67ff;
+}
+#playerInventory .personInventory .playerState.playerHP .stateBar>div {
+    background-color: #cb8450;
+}
+#playerInventory .personInventory .playerState.playerFood .stateBar>div {
+    background-color: #00a651;
+}
+.invModal {
+    position: absolute;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    background: rgba(28, 9, 37, 0.7);
+}
+.dragPreviewItem {
+    background-color: #301f57;
+    border-radius: 5px;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+#playerInventory ::-webkit-scrollbar {
+    width: 10px;
+}
+#playerInventory ::-webkit-scrollbar-track {
+    background: rgba(42, 41, 60, 0.8);
+    border-radius: 10px;
+}
+/* Handle */
+#playerInventory ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #8051eb 0%,#a414da 100%);
+    border-radius: 10px;
+}
+/* Handle on hover */
+#playerInventory ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #8a57ff 0%,#b715f4 100%);
+    border-radius: 10px;
+}
+
+.inventoryMenu {
+    background: rgba(42, 41, 60, 0.8);
+    color: #fff;
+    min-width: 150px;
+    position: absolute;
+    font-size: 12px;
+}
+
+.inventoryMenu .invMenuItem {
+    border-bottom: 1px solid #222;
+    border-left: 5px solid #8051eb;
+    font-weight: bold;
+    padding: 1vh;
+}
+
+.inventoryMenu .invMenuItem:hover {
+    background: #fff;
+    border-left: 5px solid #b715f4;
+    color: #000;
+}
