@@ -688,7 +688,7 @@ function generateHairValues(collection) {
 function generateHeadOverlayValues(overlayId, collection) {
 	let selectedIndex = 0;
 
-	const itemsCount = currentMenu === 8 ? 7 : game.getNumHeadOverlayValues(overlayId);
+	const itemsCount = currentMenu === 8 ? 7 : game.getPedHeadOverlayNum(overlayId);
 
 	for (let i = 0; i < itemsCount + 1; i++) {
 		if (currentHeadOverlay.index === i - 1) {

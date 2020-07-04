@@ -884,7 +884,7 @@ alt.on(`Client::init`, (view) => {
 			return info.values.blushes.length;
 		}
 
-		return game.getNumHeadOverlayValues(headOverlayId);
+		return game.getPedHeadOverlayNum(headOverlayId);
 	}
 
 	function isHeadOverlayHasColor(headOverlayId) {

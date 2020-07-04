@@ -23,7 +23,7 @@ class Scaleform {
 					break;
 				case "number":
 					if (Number.isInteger(arg)) {
-						game.addScaleformMovieMethodParameterInt(arg);
+						game.scaleformMovieMethodAddParamInt(arg);
 					} else {
 						game.addScaleformMovieMethodParameterFloat(arg);
 					}

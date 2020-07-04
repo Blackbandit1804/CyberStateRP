@@ -45,7 +45,7 @@ const drawText = (text, position, options) => {
   const wordWrap = options.wordWrap;
   const align = options.align;
 
-  game.setNotificationTextEntry("CELL_EMAIL_BCON");
+  game.beginTextCommandThefeedPost("CELL_EMAIL_BCON");
   for (let i = 0; i < text.length; i += 99)
   {
       const subStringText = text.substr(i, Math.min(99, text.length - i));
@@ -86,9 +86,9 @@ const drawText = (text, position, options) => {
 
 const notify = (text) => {
   alt.nextTick(() => {
-    game.setNotificationTextEntry("STRING");
+    game.beginTextCommandThefeedPost("STRING");
     game.addTextComponentScaleform(text);
-    game.drawNotification(true, true);
+    game.endTextCommandThefeedPostTicker(true, true);
   })
 };
 

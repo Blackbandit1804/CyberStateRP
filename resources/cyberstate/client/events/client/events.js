@@ -109,23 +109,23 @@ alt.on(`Client::init`, (view) => {
     
     alt.on("BN_Show", (message, flashing = false, textColor = -1, bgColor = -1, flashColor = [255, 255, 255, 200]) => {
         if (textColor > -1) game.setNotificationColorNext(textColor);
-        if (bgColor > -1) game.setNotificationBackgroundColor(bgColor);
-        if (flashing) game.setNotificationFlashColor(flashColor[0], flashColor[1], flashColor[2], flashColor[3]);
+        if (bgColor > -1) game.thefeedSetNextPostBackgroundColor(bgColor);
+        if (flashing) game.thefeedSetAnimpostfxColor(flashColor[0], flashColor[1], flashColor[2], flashColor[3]);
     
-        game.setNotificationTextEntry("CELL_EMAIL_BCON");
+        game.beginTextCommandThefeedPost("CELL_EMAIL_BCON");
         for (let i = 0, msgLen = message.length; i < msgLen; i += maxStringLength) game.addTextComponentSubstringPlayerName(message.substr(i, Math.min(maxStringLength, message.length - i)));
-        game.drawNotification(flashing, true);
+        game.endTextCommandThefeedPostTicker(flashing, true);
     });
     
     alt.on("BN_ShowWithPicture", (title, sender, message, notifPic, icon = 0, flashing = false, textColor = -1, bgColor = -1, flashColor = [255, 255, 255, 200]) => {
         if (textColor > -1) game.setNotificationColorNext(textColor);
-        if (bgColor > -1) game.setNotificationBackgroundColor(bgColor);
-        if (flashing) game.setNotificationFlashColor(flashColor[0], flashColor[1], flashColor[2], flashColor[3]);
+        if (bgColor > -1) game.thefeedSetNextPostBackgroundColor(bgColor);
+        if (flashing) game.thefeedSetAnimpostfxColor(flashColor[0], flashColor[1], flashColor[2], flashColor[3]);
     
-        game.setNotificationTextEntry("CELL_EMAIL_BCON");
+        game.beginTextCommandThefeedPost("CELL_EMAIL_BCON");
         for (let i = 0, msgLen = message.length; i < msgLen; i += maxStringLength) game.addTextComponentSubstringPlayerName(message.substr(i, Math.min(maxStringLength, message.length - i)));
         game.setNotificationMessage(notifPic, notifPic, flashing, icon, title, sender);
-        game.drawNotification(false, true);
+        game.endTextCommandThefeedPostTicker(false, true);
     });
     
     alt.on("closedMode.open", (pin) => {
