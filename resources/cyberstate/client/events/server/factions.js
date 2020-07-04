@@ -5,8 +5,7 @@ alt.labels = [];
 alt.onServer(`Faction::init::marker`, (data) => {
     data = JSON.parse(data);
 
-    var pos = new alt.Vector3(data.x, data.y, data.z);
-    pos.z -= 0.5;
+    var pos = new alt.Vector3(data.x, data.y, data.z - 0.5);
     
     var marker = alt.helpers.marker.new(21, pos, undefined, undefined, 1, {r: 255, g: 187, b: 0, alpha: 0}, undefined, true, 2, data.sqlId);
 
@@ -33,8 +32,7 @@ alt.onServer(`Faction::init::marker`, (data) => {
 alt.onServer(`Faction::init::warehouse::marker`, (data) => {
     data = JSON.parse(data);
 
-    var pos = new alt.Vector3(data.wX, data.wY, data.wZ);
-    pos.z -= 0.5;
+    var pos = new alt.Vector3(data.wX, data.wY, data.wZ - 0.5);
 
     var warehouseMarker = alt.helpers.marker.new(21, pos, undefined, undefined, 1, {r: 0, g: 187, b: 255, alpha: 70}, undefined, true, 2);
 
@@ -44,8 +42,7 @@ alt.onServer(`Faction::init::warehouse::marker`, (data) => {
 alt.onServer(`Faction::init::storage::marker`, (data) => {
     data = JSON.parse(data);
 
-    var pos = new alt.Vector3(data.sX, data.sY, data.sZ);
-    pos.z -= 0.5;
+    var pos = new alt.Vector3(data.sX, data.sY, data.sZ - 0.5);
 
     var storageMarker = alt.helpers.marker.new(21, pos, undefined, undefined, 1, {r: 0, g: 187, b: 255, alpha: 70}, undefined, true, 2);
 

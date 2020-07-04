@@ -49,8 +49,7 @@ var bizesInfo = [{
 alt.onServer(`Biz::init::marker`, (data) => {
     data = JSON.parse(data);
 
-    var pos = new alt.Vector3(data.x, data.y, data.z - 0.7);
-    pos.z += data.markers_deltaz;
+    var pos = new alt.Vector3(data.x, data.y, data.z - 0.7 + data.markers_deltaz);
 
     var marker = alt.helpers.marker.new(1, pos, undefined, undefined, data.markers_scale, {r: 187, g: 255, b: 0, alpha: data.markers_alpha}, undefined, true, 2, data.sqlId + 10000);
 
