@@ -123,19 +123,19 @@
             <div class="authentication card" style="display: none">
                 <div class="left-block">
                     <div class="left-registration">
-                        <h2>Регистрация аккаунта</h2>
+                        <h2>Register an account</h2>
                         <div class="reg-button">
                             <button v-on:click="setSelector(0)">Войти</button>
                         </div>
                     </div>
                     <div class="left-login" style="display:none;">
-                        <h2>Вход в аккаунт</h2>
+                        <h2>Login</h2>
                         <div class="reg-button">
                             <button v-on:click="setSelector(1)">Регистрация</button>
                         </div>
                     </div>
                     <div class="left-lost" style="display:none;">
-                        <h2>Забыли пароль?</h2>
+                        <h2>Forgot password?</h2>
                         <div class="reg-button">
                             <button v-on:click="setSelector(0)">Войти</button>
                         </div>
@@ -144,45 +144,45 @@
 
                 <div class="right-block">
                     <div class="registration" style="display: none;">
-                        <p>
-                            Твоя история начинается здесь и сейчас! Зарегистрируйся, чтобы начать своё увлекательное путешествие. 
-                            Не забудь ввести промокод, чтобы получить вознаграждение, которое обязательно поможет тебе в самом начале твоей жизни в штате.
+                        <p>                      
+							Your story begins here and now! Sign up to start your exciting journey.
+                            Do not forget to enter a promotional code to receive a reward that will definitely help you at the very beginning of your life in the state.
                         </p>
                         <div>
-                            <label for="reg-email">Введите ваш Email:</label>
+                            <label for="reg-email">Enter your email:</label>
                             <input class="auth-input" id="reg-email" type="text" placeholder="Email" required="required" spellcheck="false">
                         </div>
                         <div>
-                            <label for="reg-login">Введите ваш логин:</label>
+                            <label for="reg-login">Enter your username:</label>
                             <input class="auth-input" id="reg-login" type="text" placeholder="Логин" required="required" spellcheck="false">
                         </div>
                         <div>
-                            <label for="reg-password">Придумайте пароль:</label>
+                            <label for="reg-password">Enter your password:</label>
                             <input class="auth-input" id="reg-password" type="password" placeholder="Пароль" required="required" spellcheck="false">
                         </div>
                         <div>
-                            <label for="reg-password2">Повторите пароль:</label>
+                            <label for="reg-password2">Confirm your password:</label>
                             <input class="auth-input" id="reg-password2" type="password" placeholder="Пароль" required="required" spellcheck="false">
                         </div>
                         <div>
-                            <label for="promocode">Введите промокод:</label>
+                            <label for="promocode">Enter a promotional code:</label>
                             <input class="auth-input" id="promocode" type="text" placeholder="Промокод" required="required" spellcheck="false">
                         </div>
                         <div class="reg-button-wrapper">
-                            <button class="button" onclick="regAccountHandler(-1)">Продолжить</button>
+                            <button class="button" onclick="regAccountHandler(-1)">Continue</button>
                         </div>
                     </div>
 
                     <div class="login" style="display: none;">
-                        <p>
-                            Для того, чтобы зайти в свой аккаунт, введите свой Логин и Пароль, указанный при регистрации. 
-                            Учтите, что аккаунты форума и сервера не синхронизированы!
+                        <p>                            
+							In order to log into your account, enter your username and password specified during registration.
+                            Please note that forum and server accounts are not synchronized!
                         </p>
                         <div class="login-form">
                             <div class="enter-info">
-                                <label for="login-email">Логин или Email</label>
+                                <label for="login-email">Username or Email</label>
                                 <input id="login-email" type="text" name="email" class="loginOrEmail" placeholder="Почта или логин" required="required" spellcheck="false">
-                                <label for="login-password">Пароль</label>
+                                <label for="login-password">Password</label>
                                 <input id="login-password" type="password" name="email" class="password" placeholder="Пароль" required="required" spellcheck="false">
                             </div>
 
@@ -191,8 +191,8 @@
                                     <input type="checkbox">
                                     <span class="slider round"></span>
                                 </label>
-                                <span class="remember">Запомнить</span>
-                                <div class="cant-enter" v-on:click="setSelector(2)">Не удаётся войти?</div>
+                                <span class="remember">Remember me</span>
+                                <div class="cant-enter" v-on:click="setSelector(2)">Unable to login?</div>
                             </div>
                         </div>
                         <button onclick="authAccountHandler()">Авторизация</button>
@@ -202,13 +202,14 @@
                         <div></div>
                         <div class="recovery-block">
                             <div class="recovery-form">
-                                <label for="recovery-login">Никнейм или Email</label>
+                                <label for="recovery-login">Username or Email</label>
                                 <input id="recovery-login" type="text" required="required" spellcheck="false">
-                                <p>На этой странице вы сможете отправить письмо на свою электронную почту - которая привязана к вашему игровому аккаунту на сервере GTA V Cyber State RP. После отправки вы получите инструкцию о ворсстановлении
-                                    доступа и пароля вашего аккаунта и игрового персонажа. Пожалуйста будьте внимательны при вводе своего электронного адреса.
+                                <p>
+									On this page you can send a code to your email - which is tied to your game account on the GTA V Cyber ​​State RP server. After sending you will receive instructions on how to restore
+                                    access and password of your account and game character. Please be careful when entering your email addres.
                                 </p>
                                 <p class="recovery-status"></p>
-                                <button class="recovery-button" onclick="recoveryAccountHandler()">Прислать код</button>
+                                <button class="recovery-button" onclick="recoveryAccountHandler()">Send code</button>
                             </div>
                         </div>
                     </div>
@@ -217,72 +218,72 @@
             </div>
         </div>
         <div class="auth-modal recovery-modal" style="display: none;">
-            <h2>Восстановление</h2>
+            <h2>Recovery</h2>
             <div class="recovery-code-form">
-                <label for="recovery-code">Код, который вам пришел:</label>
+                <label for="recovery-code">Enter the code:</label>
                 <input id="recovery-code" type="text" placeholder="Код" required="required" spellcheck="false">
             </div>
             <div class="recovery-code-buttons">
-                <button onclick="recoveryCodeEntered()">Подтвердить</button>
-                <button class="cancel" v-on:click="hideRecoveryCodeScreen()">Отменить</button>
+                <button onclick="recoveryCodeEntered()">Confirm</button>
+                <button class="cancel" v-on:click="hideRecoveryCodeScreen()">Cancel</button>
             </div>
         </div>
         <div class="auth-modal email-confirm-modal" style="display: none;">
-            <h2>Подтверждение почты</h2>
+            <h2>Confirm email</h2>
             <div class="email-confirm-form">
-                <label for="email-confirm-code">Код, который вам пришел:</label>
+                <label for="email-confirm-code">Enter the code:</label>
                 <input id="email-confirm-code" type="text" placeholder="Код" required="required" spellcheck="false">
             </div>
             <div class="email-confirm-buttons">
-                <button class="email-confirm-button">Подтвердить</button>
-                <button class="cancel" onclick="regAccountHandler()">Пропустить</button>
+                <button class="email-confirm-button">Confirm</button>
+                <button class="cancel" onclick="regAccountHandler()">Skip</button>
             </div>
         </div>
         <div class="auth-modal forgot-password-modal" style="display: none;">
-            <h2>Придумайте пароль</h2>
+            <h2>Create a new password</h2>
             <div class="forgot-password-form">
-                <label for="forgot-password">Введите новый пароль:</label>
+                <label for="forgot-password">Enter your new password:</label>
                 <input id="forgot-password" type="password" placeholder="Пароль" required="required" spellcheck="false">
-                <label for="forgot-password2">Повторите новый пароль:</label>
+                <label for="forgot-password2">Confirm your new password:</label>
                 <input id="forgot-password2" type="password" placeholder="Пароль" required="required" spellcheck="false">
             </div>
             <div class="forgot-password-buttons">
-                <button onclick="recoveryChangePassword()">Подтвердить</button>
+                <button onclick="recoveryChangePassword()">Confirm</button>
             </div>
         </div>
     </div>
     <script src="js/authenticationApp.js"></script>
     <div id="selectorCharacters" style="display: none">
         <div class="selector-header">
-            <h2>Выбор</h2>
-            <h3>персонажа</h3>
+            <h2>Select</h2>
+            <h3>Character</h3>
         </div>
         <div class="selector-server-name">
             <span>CyberState RP #1</span>
         </div>
         <div class="selector-donate">
-            Баланс: <span class="donate">999999</span><img src="img/selectorCharacter/VC_ico.png">
+            Balance: <span class="donate">999999</span><img src="img/selectorCharacter/VC_ico.png">
         </div>
 
         <div class="user-blocks">
             <div class="user-block busy">
                 <div class="user-block-header">
                     <div class="user-level">
-                        <span>Уровень</span>
+                        <span>Level</span>
                         <span class="user-level-counter level">10</span>
                     </div>
                     <div class="user-character-image">
                         <img src="img/selectorCharacter/selector-user.png">
                     </div>
                     <div class="user-hours">
-                        <span>Часов в игре</span>
+                        <span>Hours</span>
                         <span class="user-hours-counter hours">212</span>
                     </div>
                 </div>
                 <div class="user-block-body">
                     <div class="user-block-item">
                         <div class="user-block-item-left">
-                            Никнейм
+                            Username
                         </div>
                         <div class="user-block-item-right playerName">
                             Dyrem
@@ -290,7 +291,7 @@
                     </div>
                     <div class="user-block-item">
                         <div class="user-block-item-left">
-                            Опыт
+                            Experience
                         </div>
                         <div class="user-block-item-right exp">
                             32/48
@@ -298,7 +299,7 @@
                     </div>
                     <div class="user-block-item">
                         <div class="user-block-item-left">
-                            Дата создания
+                            Date created
                         </div>
                         <div class="user-block-item-right regDate">
                             01.01.2019
@@ -306,7 +307,7 @@
                     </div>
                     <div class="user-block-item">
                         <div class="user-block-item-left">
-                            Фракция
+                            Faction
                         </div>
                         <div class="user-block-item-right faction">
                             Бог
@@ -314,7 +315,7 @@
                     </div>
                     <div class="user-block-item">
                         <div class="user-block-item-left">
-                            Денег на руках
+                            Cash
                         </div>
                         <div class="user-block-item-right money">
                             100.000$
@@ -322,7 +323,7 @@
                     </div>
                     <div class="user-block-item">
                         <div class="user-block-item-left">
-                            Денег на счету
+                            Bank
                         </div>
                         <div class="user-block-item-right bank">
                             $1.000.000.000
@@ -330,8 +331,8 @@
                     </div>
                 </div>
                 <div class="user-block-buttons">
-                    <button class="auth-btn">Выбрать персонажа</button>
-                    <button class="delete-button">Удалить персонажа?</button>
+                    <button class="auth-btn">Choose character</button>
+                    <button class="delete-button">Delete character?</button>
                 </div>
             </div>
 
@@ -346,10 +347,10 @@
                     </div>
                 </div>
                 <div class="user-block-body">
-                    <p>Вы хотите начать жизнь на Cyber State, то почему бы не создать персонажа?</p>
+                    <p>If you want to start a life on CyberState, why not create a character then?</p>
                 </div>
                 <div class="user-block-buttons">
-                    <button class="open-btn" onclick="alt.emit(`events.emitServer`, `initNewCharacter`)">Добавить персонажа</button>
+                    <button class="open-btn" onclick="alt.emit(`events.emitServer`, `initNewCharacter`)">Add character</button>
                 </div>
             </div>
 
@@ -364,10 +365,10 @@
                     </div>
                 </div>
                 <div class="user-block-body">
-                    <p>Если вам надоело играть на вашем персонаже, и вы хотите начать новую жизнь на Cyber State, то почему бы не создать второго персонажа и не начать жизнь с чистого листа?</p>
+                    <p>If you are tired of playing on your character and you want to start a new life on Cyber ​​State, then why not create a second character and start life from scratch?</p>
                 </div>
                 <div class="user-block-buttons">
-                    <button class="open-btn">Открыть слот</button>
+                    <button class="open-btn">Open slot</button>
                 </div>
             </div>
 
@@ -384,12 +385,12 @@
                 </div>
 
                 <div class="user-block-body">
-                    <h4>Это VIP слот</h4>
-                    <p>Вам не хватает двух персонажей? Тогда этот слот именно для вас. Разблокируйте его прямо сейчас!</p>
+                    <h4>VIP slot</h4>
+                    <p>Two characters aren't enough for you? Unlock this one now!</p>
                 </div>
 
                 <div class="user-block-buttons">
-                    <button class="open-btn">Купить VIP слот</button>
+                    <button class="open-btn">Buy VIP slot</button>
                 </div>
             </div>
         </div>
@@ -407,7 +408,7 @@
         <div class="header">
             <table>
                 <tr>
-                    <td class="name">Заголовок</td>
+                    <td class="name">Head</td>
                     <td align="right" class="count">1 / 19</td>
                 </tr>
             </table>
@@ -439,7 +440,7 @@
             <div class="opacity">
             </div>
             <div class="content">
-                <p class="header">Заголовок</p>
+                <p class="header">Head</p>
                 <table class="items">
                     <!-- Filling from infoTable.js -->
                 </table>
@@ -452,18 +453,18 @@
             </div>
             <div class="content">
                 <span class="close" onclick="modalAPI.hide()">x</span>
-                <p class="header">Новый персонаж</p>
+                <p class="header">New character</p>
                 <div class="text">
-                    Для завершения создания персонажа остался последний шаг.<br />
-                    Придумайте имя в формате "Имя Фамилия".<br />
+                    The last step left is to create a name.<br />
+                    Create a name in the format "Firstname LastName".<br />
 
 
                     <br /><br />
 
-                    <span>Введите имя:</span>
+                    <span>Enter name:</span>
                     <input type="text" placeholder="Имя персонажа" />
                     <br /><br />
-                    <center><button>Создать</button></center>
+                    <center><button>Create</button></center>
                 </div>
             </div>
         </div>
@@ -479,13 +480,13 @@
     </div>
     <div id="notification" style="display: none">
         <div class="title">
-          <span>Предложение</span>
+          <span>Job</span>
         </div>
         <div class="body">
-          <span class="text">Вы хотите уволится с работы ?</span>
+          <span class="text">You want to quit your job?</span>
           <div class="body__buttons">
-            <button class="success">Принять</button>
-            <button class="danger">Закрыть (<span>5с</span>)</button>
+            <button class="success">Confirm</button>
+            <button class="danger">Cancel (<span>5с</span>)</button>
           </div>
         </div>
     </div>
@@ -495,35 +496,35 @@
             <div class="opacity">
             </div>
             <div class="content">
-                <p class="header">О персонаже</p>
+                <p class="header">About character</p>
                 <table class="items">
                     <!-- Dublicate of infoTables['character_info'] -->
                     <tr>
-                        <td>Имя</td>
+                        <td>Name</td>
                         <td align="right">-</td>
                     </tr>
                     <tr>
-                        <td>Транспорт</td>
+                        <td>Vehicles</td>
                         <td align="right">-</td>
                     </tr>
                     <tr>
-                        <td>Место жительства</td>
+                        <td>Origin</td>
                         <td align="right">-</td>
                     </tr>
                     <tr>
-                        <td>Бизнес</td>
+                        <td>Business</td>
                         <td align="right">-</td>
                     </tr>
                     <tr>
-                        <td>Организация</td>
+                        <td>Organisation</td>
                         <td align="right">-</td>
                     </tr>
                     <tr>
-                        <td>Работа</td>
+                        <td>Job</td>
                         <td align="right">-</td>
                     </tr>
                     <tr>
-                        <td>Семейное положение</td>
+                        <td>Family status</td>
                         <td align="right">-</td>
                     </tr>
                 </table>
@@ -539,11 +540,11 @@
                 <span class="close" onclick="hideWindow('.bizLogs')">x</span>
                 <table>
                     <thead>
-                        <td>Наименование</td>
-                        <td>Цена</td>
-                        <td>Товар</td>
-                        <td>Чек</td>
-                        <td>Дата</td>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Product</td>
+                        <td>Check</td>
+                        <td>Date</td>
                     </thead>
                     <tbody>
                         <!-- Filling from playersOnline.js -->
@@ -568,7 +569,7 @@
         <div class="menu-header">
             <img src="img/customization/header.png">
             <h3>
-                <span><a>НАСЛЕДИЕ</a></span>
+                <span><a>HERITAGE</a></span>
                 <span class="right">{{ selectedItem + 1 }} / {{ maxItem }}</span>
             </h3>
         </div>
@@ -585,14 +586,14 @@
         </div>
 
         <div class="help-text">
-            <a>Измените внешний вид.</a>
+            <a>Change look.</a>
             <img src="img/customization/info-icon.png">
         </div>
 
         <div class="additional-settings">
             <div class="contrast-slider">
                 <p>
-                    Насыщенность
+                    Strenght
                     <a>0%</a>
                     <a>100%</a>
                 </p>
@@ -605,7 +606,7 @@
 
                 <div class="color-selector_">
                     <p>
-                        Цвет ({{ selectedColor + 1 }} из {{ maxColor }})
+                        Color ({{ selectedColor + 1 }} out of {{ maxColor }})
                         <a v-on:click="colorsTo(0)">
                             <</a> <a v-on:click="colorsTo(1)">>
                         </a>
@@ -621,26 +622,26 @@
         <div class="header">Downtown Cab Company</div>
         <div class="body">
             <div class="title-wrap" style="display: ">
-                <div class="title" style="display: none">Таксист</div>
+                <div class="title" style="display: none">Taxi driver</div>
             </div>
             <div class="welcome" style="display: ">
-                <p>Войти в систему таксокомпании?</p>
-                <button class="auth-btn" onclick="authTaxi()">ВХОД</button>
+                <p>Log into the taxi company system?</p>
+                <button class="auth-btn" onclick="authTaxi()">LOGIN</button>
             </div>
             <div class="auth" style="display: none">
                 <input class="login" type="text" placeholder="Логин" readonly />
                 <input class="password" type="password" placeholder="Пароль" readonly /><br />
-                <button class="auth-btn">ВОЙТИ</button>
+                <button class="auth-btn">CANCEL</button>
             </div>
             <div class="wait" style="display: none">
-                <p>Подождите...</p>
+                <p>Logging in...</p>
             </div>
             <div class="main" style="display: none">
                 <div class="menu">
-                    <div class="title-menu">Меню</div>
-                    <div class="item selected" data-modal="stats">Статистика</div>
-                    <div class="item" data-modal="taxi_order">Мои заказы</div>
-                    <div class="item" data-modal="free_orders">Свободные</div>
+                    <div class="title-menu">Menu</div>
+                    <div class="item selected" data-modal="stats">Statistic</div>
+                    <div class="item" data-modal="taxi_order">My orders</div>
+                    <div class="item" data-modal="free_orders">Available</div>
                 </div>
                 <div class="content">
                     <table class="stats" style="display: ">
@@ -648,87 +649,87 @@
                             <td>
                                 <div class="icon i-orders"><img src="img/ok.png" /></div>
                             </td>
-                            <td>Выполнено за сегодня</td>
+                            <td>Completed today</td>
                             <td class="orders">492</td>
                         </tr>
                         <tr>
                             <td>
                                 <div class="icon i-dollar"><img src="img/dollar.png" /></div>
                             </td>
-                            <td>Доход за сегодня</td>
+                            <td>Today's revenue</td>
                             <td class="pay">9K</td>
                         </tr>
                     </table>
                     <div class="taxi_order" style="display: none">
                         <hr />
-                        <h1>Мои заказы</h1>
-                        <p><b class="state">Выполняется</b> ЗАКАЗ №<b class="orderId">113</b></p>
+                        <h1>My orders</h1>
+                        <p><b class="state">Performed</b> ORDER №<b class="orderId">113</b></p>
                         <br /><br />
 
                         <div class="info">
-                            <b>Клиент:</b>
+                            <b>Client:</b>
                             <p class="name">Rock Star</p>
-                            <b>Район, улица:</b>
+                            <b>Area, Street:</b>
                             <p class="street">East Galileo Ave</p>
-                            <b>Расстояние:</b>
+                            <b>Distance:</b>
                             <p class="distance">121547.0 M</p>
-                            <b>Сумма поездки:</b>
+                            <b>Price:</b>
                             <p class="price">5112$</p>
-                            <b>Время поездки:</b>
+                            <b>Time driving:</b>
                             <p class="time">4:53:31</p>
                         </div>
                     </div>
                     <div class="free_orders" style="display: none">
                         <hr />
-                        <h1>Свободные</h1>
-                        <b>ЗАКАЗЫ</b>
+                        <h1>Available</h1>
+                        <b>ORDERS</b>
 
                         <div class="orders scroll" style="height: 28vh">
-                            <p class="wrap-delete-order"><span class="delete-order">Удалить заказ</span></p>
+                            <p class="wrap-delete-order"><span class="delete-order">Delete order</span></p>
                             <table class="order">
                                 <tr>
-                                    <td>Имя клиента</td>
+                                    <td>Client name</td>
                                     <td class="name">Carter Slade</td>
                                 </tr>
                                 <tr>
-                                    <td>Растояние</td>
+                                    <td>Distance</td>
                                     <td class="distance">1500.0m</td>
                                 </tr>
                                 <tr>
-                                    <td class="accept"><button>Принять</button></td>
-                                    <td class="call"><button>Звонок</button></td>
+                                    <td class="accept"><button>Accept</button></td>
+                                    <td class="call"><button>Call</button></td>
                                 </tr>
                             </table>
 
-                            <p class="wrap-delete-order"><span class="delete-order">Удалить заказ</span></p>
+                            <p class="wrap-delete-order"><span class="delete-order">Delete order</span></p>
                             <table class="order">
                                 <tr>
-                                    <td>Имя клиента</td>
+                                    <td>Client name</td>
                                     <td class="name">Carter Slade</td>
                                 </tr>
                                 <tr>
-                                    <td>Растояние</td>
+                                    <td>Distance</td>
                                     <td class="distance">1500.0m</td>
                                 </tr>
                                 <tr>
-                                    <td class="accept"><button>Принять</button></td>
-                                    <td class="call"><button>Звонок</button></td>
+                                    <td class="accept"><button>Accept</button></td>
+                                    <td class="call"><button>Call</button></td>
                                 </tr>
                             </table>
 
-                            <p class="wrap-delete-order"><span class="delete-order">Удалить заказ</span></p>
+                            <p class="wrap-delete-order"><span class="delete-order">Delete order</span></p>
                             <table class="order">
                                 <tr>
-                                    <td>Имя клиента</td>
+                                    <td>Client name</td>
                                     <td class="name">Carter Slade</td>
                                 </tr>
                                 <tr>
-                                    <td>Растояние</td>
+                                    <td>Distance</td>
                                     <td class="distance">1500.0m</td>
                                 </tr>
                                 <tr>
-                                    <td class="accept"><button>Принять</button></td>
-                                    <td class="call"><button>Звонок</button></td>
+                                    <td class="accept"><button>Accept</button></td>
+                                    <td class="call"><button>Call</button></td>
                                 </tr>
                             </table>
                         </div>
@@ -741,20 +742,20 @@
     <div id="console" style="display: none">
         <div class="console-content scroll">
             <div class="log">
-                <p>Добро пожаловать в консоль (<u>beta v2.0</u>) администрации сервера Cyber State RP!<br />
-                    help - список команд<br />
-                    help level - список команд по уровню<br />
-                    help name - описание команды<br />
-                    ~ - открыть/закрыть консоль<br />
-                    ENTER - быстрое закрытие консоли после ввода
+                <p>The administration of CyberState Roleplay (<u>beta v2.0</u>) wish you a happy stay here!<br />
+                    help - list of commands<br />
+                    help level - list of commands for level<br />
+                    help name - command description<br />
+                    ~ - open/close console<br />
+                    ENTER - close console after input
                 </p>
             </div>
         </div>
         <div class="console-admin">
             <div class="admin-open">Admin<span class="count"></span></div>
             <div class="selector" style="display: none">
-                <span class="select-chat">Чат<span class="count"></span></span>
-                <span class="select-report active">Репорт<span class="count"></span></span>
+                <span class="select-chat">Chat<span class="count"></span></span>
+                <span class="select-report active">Report<span class="count"></span></span>
                 <!-- <span class="select-anticheat">Анти-чит<span class="count"></span></span> -->
             </div>
             <div class="console-chat" style="display: none">
@@ -769,25 +770,25 @@
                 <div class="report-list">
                     <input type="text" placeholder="nickname" readonly />
                     <div class="content scroll">
-                        <div class="empty">Можно отдохнуть</div>
+                        <div class="empty">You can relax</div>
                     </div>
                     <div class="report_menu" style="display: none">
-                        <div class="menuitem">Пункт 1</div>
-                        <div class="menuitem">Пункт 2</div>
-                        <div class="menuitem">Пункт 3</div>
-                        <div class="menuitem">Пункт 4</div>
+                        <div class="menuitem">Report 1</div>
+                        <div class="menuitem">Report 2</div>
+                        <div class="menuitem">Report 3</div>
+                        <div class="menuitem">Report 4</div>
                     </div>
                 </div>
                 <div class="report-dialog">
                     <div class="selector">
-                        <span class="select-all active">Все</span>
-                        <span class="select-claim">Жалобы</span>
-                        <span class="select-help">Вопросы</span>
-                        <span class="select-my">Мои</span>
-                        <span class="select-busy">Занятые</span>
+                        <span class="select-all active">All</span>
+                        <span class="select-claim">Complaints</span>
+                        <span class="select-help">Questions</span>
+                        <span class="select-my">Mine</span>
+                        <span class="select-busy">Occupied</span>
                     </div>
                     <div class="dialog-messages scroll">
-                        <div class="empty">Откройте тикет</div>
+                        <div class="empty">Create a tickeet</div>
                     </div>
                     <input type="text" placeholder="message" />
                 </div>
@@ -802,7 +803,7 @@
         <div class="container">
             <div class="header">
                 <div class="houseText">
-                    Панель управления дома №{{ houseId }}
+                   Control panel of house №{{ houseId }}
                 </div>
                 <img src="images/close.png" alt="">
             </div>
@@ -811,33 +812,33 @@
                     <!--<div class="images"></div>-->
                     <div class="contentHouse">
                         <div class="alert house_open">
-                            Дом {{ houseLockState }} 
+                            House {{ houseLockState }} 
                             <div class="action" v-on:click="lockUnlockHouse">{{ houseLockAction }}</div>
                         </div>
                         <ul class="actions">
-                            <li v-on:click="invitePlayer">Пригласить игрока</li>
-                            <li v-on:click="sellHouseToGov">Продать государству</li>
-                            <li v-on:click="sellHouseToPlayer">Продать игроку</li>
-                            <li>Ежедневный налог</li>
-                            <li v-on:click="exitMenu">Выйти из меню дома</li>
+                            <li v-on:click="invitePlayer">Invite a player</li>
+                            <li v-on:click="sellHouseToGov">Sell house to government</li>
+                            <li v-on:click="sellHouseToPlayer">Sell house to player</li>
+                            <li>Daily tax</li>
+                            <li v-on:click="exitMenu">Close menu</li>
                         </ul>
                         <div class="upgradeBox">
                             <div class="headerHouse">
-                                <div class="text">Информация о доме</div>	
+                                <div class="text">House information</div>	
                                 <div class="break"></div>
                             </div>
                             <ul class="upgrade">
                                 <li>
-                                    <img src="images/webcam.png" alt="">
-                                    Видео наблюдение
+                                    <img src="images/webcam.png" alt="">                                    
+									Video surveillance
                                 </li>
                                 <li>
                                     <img src="images/lock.png" alt="">
-                                    Защита <br> замка
+                                    House <br> protection
                                 </li>
                                 <li>
                                     <img src="images/hand-with-smartphone-and-wireless-internet.png" alt="">
-                                    Сигнализация
+                                    Alarm
                                 </li>
                             </ul>
                         </div>
@@ -849,34 +850,34 @@
                             <div class="images">
                                 <img src="images/images_house.png" alt="">
                             </div>
-                            <div class="buttonAction" v-on:click="inspectHouse">Войти в дом [ {{ houseLock }} ]</div>
-                            <div class="buttonAction" v-on:click="exitMenu">Выйти из карточки дома</div>
+                            <div class="buttonAction" v-on:click="inspectHouse">Enter house [ {{ houseLock }} ]</div>
+                            <div class="buttonAction" v-on:click="exitMenu">Exit house</div>
                             
                         </div>
                         <div class="houseStats">
                             <div class="headerHouse">
-                                <div class="text">Информация о доме</div>	
+                                <div class="text">House information</div>	
                                 <div class="break"></div>
                             </div>
                             <ul class="stats">
                                 <li>
-                                    <div class="params">Адрес</div>
+                                    <div class="params">Address</div>
                                     <div class="value">{{ houseAddress }}</div>
                                 </li>
                                 <li>
-                                    <div class="params">Класс дома</div>
+                                    <div class="params">Class</div>
                                     <div class="value">{{ houseClass }}</div>
                                 </li>
                                 <li>
-                                    <div class="params">Площадь</div>
+                                    <div class="params">Square</div>
                                     <div class="value">{{ houseSquare }}</div>
                                 </li>
                                 <li>
-                                    <div class="params">Количество комнат</div>
+                                    <div class="params">Rooms</div>
                                     <div class="value">{{ houseRooms }}</div>
                                 </li>
                                 <li v-if="houseOwner">
-                                    <div class="params">Владелец</div>
+                                    <div class="params">Owner</div>
                                     <div class="value">{{ houseOwner }}</div>
                                 </li>
                             </ul>
@@ -885,14 +886,14 @@
                     <div class="footer">
                         <div class="costHouse">
                             <div class="label">
-                                Цена дома:
+                                House price:
                             </div>
                             <div class="value">
                                 $ {{ housePrice }}
                             </div>
                         </div>
                         <div class="btn_buy" v-if="!houseOwner" v-on:click="buyHouse">
-                            Купить
+                            Buy
                         </div>
                     </div>
                 </div>
