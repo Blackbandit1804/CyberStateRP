@@ -133,19 +133,19 @@ alt.on(`Client::init`, (view) => {
     });
     
     alt.on("toBlur", (time = 1000) => {
-        game.triggerScreenblurFadeIn(time);
+        game.transitionToBlurred(time);
     });
     
     alt.on("fromBlur", (time = 1000) => {
-        game.triggerScreenblurFadeOut(time);
+        game.transitionFromBlurred(time);
     });
 
     view.on("toBlur", (time = 1000) => {
-        game.triggerScreenblurFadeIn(time);
+        game.transitionToBlurred(time);
     });
     
     view.on("fromBlur", (time = 1000) => {
-        game.triggerScreenblurFadeOut(time);
+        game.transitionFromBlurred(time);
     });
     
     alt.on('effect', (effect, duration) => {

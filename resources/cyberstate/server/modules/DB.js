@@ -7,7 +7,7 @@ module.exports = {
             connectionLimit: 10,
             host: 'localhost',
             user: 'root',
-            password: 't00r',
+            password: 'toor',
             database: 'cyberstate_gs',
             debug: false
         });

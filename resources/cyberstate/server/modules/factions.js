@@ -36,20 +36,24 @@ module.exports = {
                 alt.log(`Ранги загружены: ${i} шт.`);
             });
 
-            DB.Query("SELECT id,name,faction,rank FROM characters Where faction>0", (e, result) => {
-                for (var i = 0; i < result.length; i++) {
-                    let data = {
-                        id: result[i].id,
-                        name: result[i].name,
-                    };
+            DB.Query("SELECT id,name,faction,rank FROM characters Where faction > 0", (e, result) => {
+                if (result && result.length > 0) {
+                    for (var i = 0; i < result.length; i++) {
+                        let data = {
+                            id: result[i].id,
+                            name: result[i].name,
+                        };
 
-                    alt.factionPlayerList[result[i].faction].push(data);
+                        alt.factionPlayerList[result[i].faction].push(data);
 
-                    delete result[i].id;
-                    delete result[i].name;
-                    delete result[i].faction;
+                        delete result[i].id;
+                        delete result[i].name;
+                        delete result[i].faction;
+                    }
+                    alt.log(`Игроки фракций загружены: ${i} шт.`);
+                } else {
+                    alt.log(`Игроки фракций загружены: 0.`);
                 }
-                alt.log(`Игроки фракций загружены: ${i} шт.`);
             });
         });
     }
@@ -132,7 +136,7 @@ function initFactionsUtils() {
 function initFactionUtils(faction) {
     faction.setName = (name) => {
         faction.name = name;
-        alt.emitClient(null, `Faction::setParams`, `blip_name`, faction.sqlId, JSON.stringify({name: name}));
+        alt.emitClient(null, `Faction::setParams`, `blip_name`, faction.sqlId, JSON.stringify({ name: name }));
         DB.Query("UPDATE factions SET name=? WHERE id=?", [faction.name, faction.sqlId]);
     };
     faction.setLeader = (sqlId, name) => {
@@ -177,19 +181,19 @@ function initFactionUtils(faction) {
     };
     faction.setBlip = (blip) => {
         if (blip < 1) blip = 1;
-        alt.emitClient(null, `Faction::setParams`, `blip_sprite`, faction.sqlId, JSON.stringify({sprite: blip}));
+        alt.emitClient(null, `Faction::setParams`, `blip_sprite`, faction.sqlId, JSON.stringify({ sprite: blip }));
         DB.Query("UPDATE factions SET blip=? WHERE id=?", [blip, faction.sqlId]);
     };
     faction.setBlipColor = (blipColor) => {
         if (blipColor < 1) blipColor = 1;
-        alt.emitClient(null, `Faction::setParams`, `blip_color`, faction.sqlId, JSON.stringify({color: blipColor}));
+        alt.emitClient(null, `Faction::setParams`, `blip_color`, faction.sqlId, JSON.stringify({ color: blipColor }));
         DB.Query("UPDATE factions SET blipColor=? WHERE id=?", [blipColor, faction.sqlId]);
     };
     faction.setPosition = (pos, heading) => {
         pos.z -= 1.5;
         faction.pos = pos;
         pos.z += 1.5;
-        alt.emitClient(null, `Faction::setParams`, `blip_pos`, faction.sqlId, JSON.stringify({position: pos}));
+        alt.emitClient(null, `Faction::setParams`, `blip_pos`, faction.sqlId, JSON.stringify({ position: pos }));
         faction.h = heading;
 
         faction.showColshape.destroy();
@@ -209,7 +213,7 @@ function initFactionUtils(faction) {
         if (!faction.warehouse) return;
         var warehouse = faction.warehouse;
         pos.z -= 1.5;
-        alt.emitClient(null, `Faction::setParams`, `warehouse_pos`, faction.sqlId, JSON.stringify({position: pos}));
+        alt.emitClient(null, `Faction::setParams`, `warehouse_pos`, faction.sqlId, JSON.stringify({ position: pos }));
         warehouse.position = pos;
         pos.z += 1.5;
 
@@ -231,7 +235,7 @@ function initFactionUtils(faction) {
         var storage = faction.storage;
         pos.z -= 1.5;
         storage.position = pos;
-        alt.emitClient(null, `Faction::setParams`, `storage_pos`, faction.sqlId, JSON.stringify({position: pos}));
+        alt.emitClient(null, `Faction::setParams`, `storage_pos`, faction.sqlId, JSON.stringify({ position: pos }));
         pos.z += 1.5;
 
         storage.showColshape.destroy();
@@ -259,7 +263,7 @@ var models = ['prop_box_ammo04a', 'prop_box_ammo04a', 'prop_box_ammo04a', 'prop_
 
 // Организации, который могут брать маты с бесконечного склада.
 var factionIds = [
-    [5, 6, 7], 
+    [5, 6, 7],
     [6, 7],
     [7],
 ];

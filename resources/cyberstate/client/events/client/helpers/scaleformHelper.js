@@ -16,7 +16,7 @@ class Scaleform {
 		for (const arg of args) {
 			switch (typeof(arg)) {
 				case "string":
-					game.addScaleformMovieMethodParameterString(arg);
+					game.scaleformMovieMethodAddParamTextureNameString(arg);
 					break;
 				case "boolean":
 					game.addScaleformMovieMethodParameterBool(arg);
