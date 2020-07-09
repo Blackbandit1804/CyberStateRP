@@ -52,7 +52,7 @@ const ContactCreate = props => {
                     >
                         Отменить
                     </div>
-                    <div className="title">Контакт</div>
+                    <div className="title">Contact</div>
                     <div
                         className="control"
                         onClick={() => saveContact()}
@@ -76,7 +76,7 @@ const ContactCreate = props => {
                                 <input
                                     name="firstName"
                                     type="text"
-                                    placeholder="Имя"
+                                    placeholder="Name"
                                     onChange={handleInputChange}
                                     value={values.firstName}
                                 />
@@ -85,7 +85,7 @@ const ContactCreate = props => {
                                 <input
                                     name="lastName"
                                     type="text"
-                                    placeholder="Фамилия"
+                                    placeholder="Surname"
                                     onChange={handleInputChange}
                                     value={values.lastName}
                                 />
@@ -105,7 +105,7 @@ const ContactCreate = props => {
                                     <input
                                         name="num"
                                         type="number"
-                                        placeholder="Номер"
+                                        placeholder="room"
                                         onChange={handleInputChange}
                                         value={values.num}
                                     />

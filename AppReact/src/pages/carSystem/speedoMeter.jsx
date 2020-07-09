@@ -92,9 +92,7 @@ class SpeedoMeter extends React.Component {
             if(speed2 > max_rpm) speed2 = max_rpm;
             rotation = -47.0 + ((speed2 * 251.0) / max_rpm_rot);
         }
-
-    
-
+		
         return (
             <div id="speedo" style={{display: this.state.speedStatus === true ? 'flex' : 'none'}}>
                 <div className="speedo-fuel">

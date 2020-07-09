@@ -71,13 +71,13 @@ class ArmyTablet extends React.Component {
     sendAdvert(e) {
         e.preventDefault();
         const { advert } = this.state;
-        if (!advert.replace(/^\s+|\s+$/g,"")) return mp.trigger(`nError`, `Текст не должен быть пустой!`);
+        if (!advert.replace(/^\s+|\s+$/g,"")) return mp.trigger(`nError`, `Text must not be empty!`);
         if (advert.length != 0 && advert.length < 150) {
             mp.trigger('tablet.army.sendAdvert', advert);
             this.setState({ advert: '' });
             this.setState({ LSAMPage: 'A' });
         } else {
-            return mp.trigger(`nError`, `Текст превышает длину 150 символов!`);
+            return mp.trigger(`nError`, `Text exceeds 150 characters!`);
         }
     }
 
@@ -131,29 +131,29 @@ class ArmyTablet extends React.Component {
                 <div className="tablet-background" style={{position: 'absolute', zIndex: '99', display: showTablet === true ? 'block' : 'none'}}>
                     <div className="imurfather">
                         <div className="header">
-                            <div className="ARMY newyorksixty">UNITED STATES army</div>
-                            <div className="subtext londonsixty">Единая государственная база данных</div>
+                            <div className="ARMY newyorksixty">Unified States Army</div>
+                            <div className="subtext londonsixty">Unified State Database</div>
                             <hr/>
                             <img src={logo} style={{width: '90px', height: '90px'}}/>
-                            <div className="time londonsixty"><Clock format={'HH:mm'} ticking={true} timezone={'Europe/Moscow'} /></div>
+                            <div className="time londonsixty"><Clock format={'HH:mm'} ticking={true} timezone={'Europe/Berlin'} /></div>
                         </div>
                         {this.state.LSAMPage === 'A' ?
                         <div id="pageA">
                             <div className="pageA">
                                 <div className="buttons">
-                                    <button onClick={() => this.handleOnClick('B', 'page')}>Список солдат</button>
-                                    <button onClick={() => this.handleOnClick('C', 'page')}>Информация по базе</button>
-                                    <button onClick={() => this.handleOnClick('D', 'page')}>Моя карточка</button>
-                                    <button onClick={() => this.handleOnClick('E', 'page')}>Запросить помощь</button>
-                                    <button onClick={() => this.handleOnClick('F', 'page')}>Список задач <div className="number">1</div></button>
-                                    <button onClick={() => this.handleOnClick('G', 'page')}>Новость штата</button>
+                                    <button onClick={() => this.handleOnClick('B', 'page')}>List of soldiers</button>
+                                    <button onClick={() => this.handleOnClick('C', 'page')}>Base Information</button>
+                                    <button onClick={() => this.handleOnClick('D', 'page')}>My card</button>
+                                    <button onClick={() => this.handleOnClick('E', 'page')}>Request help</button>
+                                    <button onClick={() => this.handleOnClick('F', 'page')}>Task list <div className="number">1</div></button>
+                                    <button onClick={() => this.handleOnClick('G', 'page')}>State News</button>
                                 </div>
                                 <div className="text">
-                                    Используйте базу данных United States Army, чтобы знать стратегию своих потенциальных
-                                    врагов.
+                                    Use the United States Army Database to Know Your Potential's Strategy
+                                    enemies.
                                 </div>
                                 <div className="buttons_nav">
-                                    <button className="exitbutton focus" onClick={() => this.handleOnClick('', 'exit')} style={{float: 'right', top: '12.5em'}}>Выход</button>
+                                    <button className="exitbutton focus" onClick={() => this.handleOnClick('', 'exit')} style={{float: 'right', top: '12.5em'}}>Output</button>
                                 </div>
                             </div>
                         </div> : null}
@@ -168,7 +168,7 @@ class ArmyTablet extends React.Component {
                                         <div className="fst">
                                             <table>
                                                 <tbody><tr>
-                                                    <th>Склад материалов № 1</th>
+                                                    <th>Warehouse No. 1</th>
                                                 </tr>
                                                 <tr>
                                                     <td>{this.state.warehouse.warehouse_1}</td>
@@ -179,7 +179,7 @@ class ArmyTablet extends React.Component {
                                         <div className="scnd">
                                             <table>
                                                 <tbody><tr>
-                                                    <th>Склад материалов № 2</th>
+                                                    <th>Warehouse No. 2</th>
                                                 </tr>
                                                 <tr>
                                                     <td>{this.state.warehouse.warehouse_2}</td>
@@ -191,8 +191,8 @@ class ArmyTablet extends React.Component {
                                 </div>
                             </div>
                             <div className="buttons_nav">
-                                <button className="back focus" onClick={() => this.handleOnClick('A', 'page')} style={{float: 'left'}}>Назад</button>
-                                <button className="exitbutton focus" onClick={() => this.handleOnClick('', 'exit')} style={{float: 'right'}}>Выход</button>
+                                <button className="back focus" onClick={() => this.handleOnClick('A', 'page')} style={{float: 'left'}}>Back</button>
+                                <button className="exitbutton focus" onClick={() => this.handleOnClick('', 'exit')} style={{float: 'right'}}>Output</button>
                             </div>
                         </div> : null}
                         {this.state.LSAMPage === 'F' ?
@@ -203,26 +203,26 @@ class ArmyTablet extends React.Component {
                                     <div>
                                         {this.state.calls.map(item =>
                                         <div className="call">
-                                            <div className="color">Задача от:</div>
+                                            <div className="color">Task from:</div>
                                             {item.rank} {item.name}
-                                            <div className="color">Расстояние:</div>
+                                            <div className="color">Distance:</div>
                                             TO DO
-                                            <div className="color">Сообщение:</div>
+                                            <div className="color">Message:</div>
                                             {item.message}
-                                            <div className="color">Выполняют:</div>
+                                            <div className="color">Perform:</div>
                                             {item.members}
-                                            <button onClick={() => this.removeCall(item.id)} className="getcall">Принять</button>
+                                            <button onClick={() => this.removeCall(item.id)} className="getcall">To accept</button>
                                         </div>
                                         )}
                                     </div> :
                                     <div>
-                                        <div className="londonsixty" style={{color: 'white', fontSize: '18px', textAlign: 'center'}}>Список пуст.</div>
+                                        <div className="londonsixty" style={{color: 'white', fontSize: '18px', textAlign: 'center'}}>the list is empty.</div>
                                     </div>}
                                 </div>
                             </div>
                             <div className="map">
                                 <img src={map} style={{width: '520px', height: '334px'}}/>
-                                <div onClick={() => this.handleOnClick('A', 'page')} className="buttons_nav"><button className="exitbutton focus">Назад</button></div>
+                                <div onClick={() => this.handleOnClick('A', 'page')} className="buttons_nav"><button className="exitbutton focus">Back</button></div>
                             </div>
                         </div> : null}
                         {this.state.LSAMPage === 'B' ?
@@ -231,8 +231,8 @@ class ArmyTablet extends React.Component {
                             <div style={{height: '58%', top: '2em', position: 'relative', overflow: 'auto'}}>
                                 <table style={{width: '85%', borderCollapse: 'collapse'}}>
                                     <tr className="header">
-                                        <th>Имя Фамилия</th>
-                                        <th>Должность</th>
+                                        <th>First Name Last Name</th>
+                                        <th>Position</th>
                                     </tr>
                                     {this.state.playersOnline.length !== 0 ?
                                     this.state.playersOnline.map(item => (
@@ -243,58 +243,58 @@ class ArmyTablet extends React.Component {
                                 </table>
                             </div> :
                             <div>
-                                <div className="londonsixty" style={{color: 'white', fontSize: '18px', textAlign: 'center'}}>Список пуст.</div>
+                                <div className="londonsixty" style={{color: 'white', fontSize: '18px', textAlign: 'center'}}>the list is empty.</div>
                             </div>}
                             <div className="buttons_nav">
-                                <button className="back focus" onClick={() => this.handleOnClick('A', 'page')} style={{float: 'left'}}>Назад</button>
-                                <button className="exitbutton focus" onClick={() => this.handleOnClick('', 'exit')} style={{float: 'right'}}>Выход</button>
+                                <button className="back focus" onClick={() => this.handleOnClick('A', 'page')} style={{float: 'left'}}>Back</button>
+                                <button className="exitbutton focus" onClick={() => this.handleOnClick('', 'exit')} style={{float: 'right'}}>Output</button>
                             </div>
                         </div> : null}
                         {this.state.LSAMPage === 'D' ?
                         <div id="pageD_User">
                             <div className="info">
-                                <div className="nameHeader">Имя Фамилия</div>
+                                <div className="nameHeader">First Name Last Name</div>
                                 <div className="name">{window.clientStorage.name}</div>
-                                <div className="postHeader">Должность</div>
+                                <div className="postHeader">Position</div>
                                 <div className="post">{window.clientStorage.factionRankName}</div>
-                                <div className="postHeader">Выполнено</div>
-                                <div className="post mission">16 <div style={{display: 'contents', color: '#d9c997'}}>миссий</div> </div>
+                                <div className="postHeader">Performed</div>
+                                <div className="post mission">16 <div style={{display: 'contents', color: '#d9c997'}}>missions</div> </div>
                             </div>
                             <div className="image">
                                 <img src={profil} style={{width: '140px', height: '140px'}}/>
                             </div>
                             <div className="buttons_nav">
-                                <button className="back focus" onClick={() => this.handleOnClick('A', 'page')} style={{float: 'left'}}>Назад</button>
-                                <button className="exitbutton focus" onClick={() => this.handleOnClick('', 'exit')} style={{float: 'right'}}>Выход</button>
+                                <button className="back focus" onClick={() => this.handleOnClick('A', 'page')} style={{float: 'left'}}>Back</button>
+                                <button className="exitbutton focus" onClick={() => this.handleOnClick('', 'exit')} style={{float: 'right'}}>Output</button>
                             </div>
                         </div> : null}
                         {this.state.LSAMPage === 'E' ?
                         <div id="pageE_Help">
-                            <div className="header">Запросить помощь по экстренной связи</div>
+                            <div className="header">Request emergency assistance</div>
                             <div className="buttons">
-                                <button className="back focus">Ближайший экипаж</button>
-                                <button className="exitbutton focus">Экипаж полиции</button>
-                                <button className="exitbutton focus">Экипаж ФРБ</button>
-                                <button className="exitbutton focus">Экипаж Медиков</button>
-                                <button className="exitbutton focus">Код #999</button>
+                                <button className="back focus">Nearest Crew</button>
+                                <button className="exitbutton focus">Police Crew</button>
+                                <button className="exitbutton focus">FIB Crew</button>
+                                <button className="exitbutton focus">Medical Crew</button>
+                                <button className="exitbutton focus">Code #999</button>
                             </div>
                             <div className="buttons_nav">
-                                <button className="back focus" onClick={() => this.handleOnClick('A', 'page')} style={{float: 'left'}}>Назад</button>
-                                <button className="exitbutton focus" onClick={() => this.handleOnClick('', 'exit')} style={{float: 'right'}}>Выход</button>
+                                <button className="back focus" onClick={() => this.handleOnClick('A', 'page')} style={{float: 'left'}}>Back</button>
+                                <button className="exitbutton focus" onClick={() => this.handleOnClick('', 'exit')} style={{float: 'right'}}>Output</button>
                             </div>
                         </div> : null}
                         {this.state.LSAMPage === 'G' ?
                         <div id="pageG_News">
                             <div className="news">
-                                <div className="header">ГОСУДАРСТВЕННОЕ ОБЪЯВЛЕНИЕ</div>
+                                <div className="header">STATE ANNOUNCEMENT</div>
                                 <div className="input">
                                     <textarea id="advert" name="advert" maxLength="150" value={this.state.advert} onChange={this.onChange}></textarea>
                                 </div>
-                                <button className="buttonGoodWay" onClick={this.sendAdvert}>Подать ОБЪЯВЛЕНИЕ</button>
+                                <button className="buttonGoodWay" onClick={this.sendAdvert}>Submit ANNOUNCEMENT</button>
                             </div>
                             <div className="buttons_nav">
-                                <button className="back focus" onClick={() => this.handleOnClick('A', 'page')} style={{float: 'left'}}>Назад</button>
-                                <button className="exitbutton focus" onClick={() => this.handleOnClick('', 'exit')} style={{float: 'right'}}>Выход</button>
+                                <button className="back focus" onClick={() => this.handleOnClick('A', 'page')} style={{float: 'left'}}>Back</button>
+                                <button className="exitbutton focus" onClick={() => this.handleOnClick('', 'exit')} style={{float: 'right'}}>Output</button>
                             </div>
                         </div> : null}
                     </div>

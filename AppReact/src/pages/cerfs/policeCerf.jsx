@@ -69,7 +69,7 @@ class PoliceCerf extends React.Component {
                     <ul className="stats">
                         <li>
                             <div className="params">
-                                Имя
+                                Name
                             </div>
                             <div className="value">
                                 {this.state.data.Name}
@@ -77,15 +77,15 @@ class PoliceCerf extends React.Component {
                         </li>
                         <li>
                             <div className="params">
-                                Пол
+                                Floor
                             </div>
                             <div className="value">
-                                {this.state.data.Sex === 0 ? 'Женский' : 'Мужской'}
+                                {this.state.data.Sex === 0 ? 'Female' : 'Male'}
                             </div>
                         </li>
                         <li>
                             <div className="params">
-                                Звание
+                                Rank
                             </div>
                             <div className="value">
                                 {this.state.data.Rank}

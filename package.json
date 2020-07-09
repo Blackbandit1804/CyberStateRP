@@ -1,14 +1,14 @@
 {
-  "name": "cyberstate",
+  "name": "CyberStateRP",
   "version": "1.0.0",
-  "description": "",
+  "description": "AltV:MP RolePlay Script",
   "main": "index.js",
   "scripts": {
     "start": "cd ../../ && altv-server.exe"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "exec": "^0.2.1",
@@ -18,6 +18,9 @@
     "safe-timers": "^1.1.0"
   },
   "devDependencies": {
-    "@altv/types-natives": "^1.1.0"
+    "@altv/types-natives": "^1.1.0",
+	"@altv/types-server": "^1.2.0",
+	"@altv/types-client": "^1.1.0",
+	"@altv/types-webview": "^1.0.2"
   }
 }

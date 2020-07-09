@@ -80,11 +80,11 @@ class ArmyCerf extends React.Component {
                             </div>
                             <ul className="headInfo">
                                 <li>
-                                    <div className="label">Имя:</div>
+                                    <div className="label">Name:</div>
                                     <div className="value">{this.state.data.Name}</div>
                                 </li>
                                 <li>
-                                    <div className="label">Ранг:</div>
+                                    <div className="label">Rank:</div>
                                     <div className="value">{window.clientStorage.factionRank}</div>
                                 </li>
                             </ul>
@@ -92,7 +92,7 @@ class ArmyCerf extends React.Component {
                     </div>
                     <ul className="stats">
                         <li>
-                            <div className="label">Звание:</div>
+                            <div className="label">Rank:</div>
                             <div className="value">{this.state.data.Rank}</div>
                         </li>
                     </ul>

@@ -11,7 +11,7 @@ const InventoryMergeLayer = props => {
         const targetItem = inv.findItemBySqlId(targetItemSqlId)
         if (!item || !targetItem) {
             // REMOVE
-            alt.emit('nError', 'Client: Один из предметов для слияния не найден!')
+            alt.emit('nError', 'Client: One of the merge items not found!')
             return false
         }
         //console.log(JSON.stringify(item))
@@ -45,7 +45,7 @@ const InventoryMergeLayer = props => {
         //console.log(`MERGE ITEM: ${JSON.stringify(props)}`)
         if (!item || !targetItem) {
             // REMOVE
-            alt.emit('nError', 'Client: Один из предметов для слияния не найден!')
+            alt.emit('nError', 'Client: One of the merge items not found!')
             return false
         }
         // патроны
@@ -82,7 +82,7 @@ const InventoryMergeLayer = props => {
         ) {
             if (targetItem.params.count >= 20) {
                 // REMOVE
-                alt.emit('nError', 'Client: Один из предметов для слияния не найден!')
+                alt.emit('nError', 'Client: One of the merge items not found!')
                 return false
             }
             window.inventoryAPI.delete(itemSqlId)

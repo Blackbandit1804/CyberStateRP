@@ -107,9 +107,9 @@ export const xyToIndex = (width, height, coord) => {
 }
 
 export const getNameByFactionId = _id => {
-    const names = ['Мэрия', 'LSPD', 'BCSO', 'FIB', 'EMC', 'Fort Zancudo', 'Merryweather', 'Weazel News',
-        'The families', 'The Ballas Gang', 'Varios Los Aztecas Gang', 'Los Santos Vagos',
-        'Marabunta Grande', 'Русская мафия', 'Итальянская мафия', 'Японская мафия', 'Мексиканская мафия',
+    const names = ['City Hall', 'LSPD', 'BCSO', 'FIB', 'EMC', 'Fort Zancudo', 'Merryweather', 'Weazel News',
+        'The Families', 'The Ballas Gang', 'Varios Los Aztecas Gang', 'Los Santos Vagos',
+        'Marabunta Grande', 'Russian Mafia', 'Italian Mafia', 'Japanese Mafia', 'Mexican Mafia',
     ]
     const id = Math.clamp(_id, 1, names.length - 1)
     return names[id - 1]
