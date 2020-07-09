@@ -6,7 +6,7 @@ export const popupSettings = () => {
         2: [],
         3: [],
         4: [{
-            text: 'Разделить',
+            text: 'Split up',
             handler: sqlId => {
                 window.inventoryAPI.show(false)
                 window.modalAPI.show('item_split', JSON.stringify({
@@ -26,7 +26,7 @@ export const popupSettings = () => {
         14: [],
         15: [],
         16: [{
-            text: 'Посмотреть',
+            text: 'Look',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'showDocuments', sqlId)
             },
@@ -40,7 +40,7 @@ export const popupSettings = () => {
         23: [],
         24: [],
         25: [{
-            text: 'Использовать',
+            text: 'Use',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.useHealth', sqlId)
             },
@@ -49,50 +49,50 @@ export const popupSettings = () => {
         27: [],
         28: [],
         29: [{
-            text: 'Посмотреть',
+            text: 'Look',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'documents.showFaction', -1)
             },
         }],
         30: [{
-            text: 'Выпить',
+            text: 'Drink',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.eat', sqlId)
             },
         }],
         31: [{
-            text: 'Съесть',
+            text: 'Eat',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.eat', sqlId)
             },
         }],
         32: [{
-            text: 'Съесть',
+            text: 'Eat',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.eat', sqlId)
             },
         }],
         33: [{
-            text: 'Пососать',
+            text: 'Suck',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.eat', sqlId)
             },
         }],
         34: [{
-            text: 'Достать',
+            text: 'To get',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.takeSmoke', sqlId)
             },
         }],
         35: [{
-            text: 'Выпить',
+            text: 'Drink',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.eat', sqlId)
             },
         }],
         36: [],
         37: [{
-            text: 'Разделить',
+            text: 'Split up',
             handler: sqlId => {
                 window.inventoryAPI.show(false)
                 window.modalAPI.show('item_split', JSON.stringify({
@@ -101,7 +101,7 @@ export const popupSettings = () => {
             },
         }],
         38: [{
-            text: 'Разделить',
+            text: 'Split up',
             handler: sqlId => {
                 window.inventoryAPI.show(false)
                 window.modalAPI.show('item_split', JSON.stringify({
@@ -110,7 +110,7 @@ export const popupSettings = () => {
             },
         }],
         39: [{
-            text: 'Разделить',
+            text: 'Split up',
             handler: sqlId => {
                 window.inventoryAPI.show(false)
                 window.modalAPI.show('item_split', JSON.stringify({
@@ -119,7 +119,7 @@ export const popupSettings = () => {
             },
         }],
         40: [{
-            text: 'Разделить',
+            text: 'Split up',
             handler: sqlId => {
                 window.inventoryAPI.show(false)
                 window.modalAPI.show('item_split', JSON.stringify({
@@ -141,44 +141,44 @@ export const popupSettings = () => {
         52: [],
         53: [],
         54: [{
-            text: 'Парковка',
+            text: 'Parking',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.parkCarByKeys', sqlId)
             },
         },
         {
-            text: 'Двери',
+            text: 'Doors',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.lockCarByKeys', sqlId)
             },
         },
         {
-            text: 'Поиск',
+            text: 'Search',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.searchCarByKeys', sqlId)
             },
         },
         {
-            text: 'Доставить',
+            text: 'Deliver',
             handler: sqlId => {
                 const item = window.inventoryAPI.getItem(sqlId)
-                if (!item) return alt.emit('nError', 'Ключи не найдены!')
+                if (!item) return alt.emit('nError', 'No keys found!')
                 const { model } = item.params
                 if (window.clientStorage.sqlId !== item.params.owner) {
-                    return alt.emit('nError', `Вы не владелец ${model}!`)
+                    return alt.emit('nError', `You are not the owner ${model}!`)
                 }
                 window.inventoryAPI.show(false)
                 alt.emit('choiceMenu.show', 'accept_fix_car', sqlId)
             },
         },
         {
-            text: 'Продать',
+            text: 'To sell',
             handler: sqlId => {
                 const item = window.inventoryAPI.getItem(sqlId)
-                if (!item) return alt.emit('nError', 'Ключи не найдены!')
+                if (!item) return alt.emit('nError', 'No keys found!')
                 const { model } = item.params
                 if (window.clientStorage.sqlId !== item.params.owner) {
-                    return alt.emit('nError', `Вы не владелец ${model}!`)
+                    return alt.emit('nError', `You are not the owner ${model}!`)
                 }
                 window.inventoryAPI.show(false)
                 window.modalAPI.show('sell_player_car', JSON.stringify({ sqlId }))
@@ -186,13 +186,13 @@ export const popupSettings = () => {
         },
         ],
         55: [{
-            text: 'Употребить',
+            text: 'To use',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.useDrugs', sqlId)
             },
         },
         {
-            text: 'Разделить',
+            text: 'Split up',
             handler: sqlId => {
                 window.inventoryAPI.show(false)
                 window.modalAPI.show('item_split', JSON.stringify({
@@ -202,13 +202,13 @@ export const popupSettings = () => {
         },
         ],
         56: [{
-            text: 'Употребить',
+            text: 'To use',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.useDrugs', sqlId)
             },
         },
         {
-            text: 'Разделить',
+            text: 'Split up',
             handler: sqlId => {
                 window.inventoryAPI.show(false)
                 window.modalAPI.show('item_split', JSON.stringify({
@@ -218,13 +218,13 @@ export const popupSettings = () => {
         },
         ],
         57: [{
-            text: 'Употребить',
+            text: 'To use',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.useDrugs', sqlId)
             },
         },
         {
-            text: 'Разделить',
+            text: 'Split up',
             handler: sqlId => {
                 window.inventoryAPI.show(false)
                 window.modalAPI.show('item_split', JSON.stringify({
@@ -234,13 +234,13 @@ export const popupSettings = () => {
         },
         ],
         58: [{
-            text: 'Употребить',
+            text: 'To use',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.useDrugs', sqlId)
             },
         },
         {
-            text: 'Разделить',
+            text: 'Split up',
             handler: sqlId => {
                 window.inventoryAPI.show(false)
                 window.modalAPI.show('item_split', JSON.stringify({
@@ -250,37 +250,37 @@ export const popupSettings = () => {
         },
         ],
         59: [{
-            text: 'Поиск',
+            text: 'Search',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.searchHouseByKeys', sqlId)
             },
         }],
         60: [{
-            text: 'Посмотреть',
+            text: 'Look',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'documents.showFaction', -1)
             },
         }],
         61: [{
-            text: 'Посмотреть',
+            text: 'Look',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'documents.showFaction', -1)
             },
         }],
         62: [{
-            text: 'Курить',
+            text: 'To smoke',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.useSmoke', sqlId)
             },
         }],
         63: [{
-            text: 'Посмотреть',
+            text: 'Look',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'documents.showFaction', -1)
             },
         }],
         64: [{
-            text: 'Посмотреть',
+            text: 'Look',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'documents.showFaction', -1)
             },
@@ -350,7 +350,7 @@ export const popupSettings = () => {
     }
     forIn(itemMenus, (value, key) => {
         itemMenus[key].push({
-            text: 'Выбросить',
+            text: 'Throw away',
             handler: sqlId => {
                 alt.emit('events.emitServer', 'item.throw', sqlId)
             },

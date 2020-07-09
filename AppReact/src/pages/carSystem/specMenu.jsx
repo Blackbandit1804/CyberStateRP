@@ -34,22 +34,22 @@ class SpecMenu extends React.Component {
     render() {
         var specifications = [
             {
-                name: 'Скорость'    
+                name: 'Speed'    
             },
             {
-                name: 'Ускорение'    
+                name: 'Acceleration'    
             },
             {
-                name: 'Торможение'    
+                name: 'Braking'    
             },
             {
-                name: 'Сцепление'    
+                name: 'Clutch'    
             }
         ];
 
         return(
             <div id="custom" style={this.state.specMenu === true ? {display: 'block'} : {display: 'none'}}>
-                <div className="header">Основные характеристики</div>
+                <div className="header">Main characteristics</div>
                 <div className="body">
                     {specifications.map((item, i) => (
                     <div className="category" key={i}>

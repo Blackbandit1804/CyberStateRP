@@ -49,7 +49,7 @@ const ContactDial = props => {
                         onClick={() => addDigit('2')}
                     >
                         <div className="digit">2</div>
-                        <div className="chars">АБВГ</div>
+                        <div className="chars">ABC</div>
                     </div>
                     <div
                         className="key"
@@ -57,7 +57,7 @@ const ContactDial = props => {
                         onClick={() => addDigit('3')}
                     >
                         <div className="digit">3</div>
-                        <div className="chars">ДЕЖЗ</div>
+                        <div className="chars">DEF</div>
                     </div>
                     <div
                         className="key"
@@ -65,7 +65,7 @@ const ContactDial = props => {
                         onClick={() => addDigit('4')}
                     >
                         <div className="digit">4</div>
-                        <div className="chars">ИЙКЛ</div>
+                        <div className="chars">GHI</div>
                     </div>
                     <div
                         className="key"
@@ -73,7 +73,7 @@ const ContactDial = props => {
                         onClick={() => addDigit('5')}
                     >
                         <div className="digit">5</div>
-                        <div className="chars">МНОП</div>
+                        <div className="chars">JKL</div>
                     </div>
                     <div
                         className="key"
@@ -81,7 +81,7 @@ const ContactDial = props => {
                         onClick={() => addDigit('6')}
                     >
                         <div className="digit">6</div>
-                        <div className="chars">РСТУ</div>
+                        <div className="chars">MNO</div>
                     </div>
                     <div
                         className="key"
@@ -89,7 +89,7 @@ const ContactDial = props => {
                         onClick={() => addDigit('7')}
                     >
                         <div className="digit">7</div>
-                        <div className="chars">ФХЦЧ</div>
+                        <div className="chars">PQRS</div>
                     </div>
                     <div
                         className="key"
@@ -97,7 +97,7 @@ const ContactDial = props => {
                         onClick={() => addDigit('8')}
                     >
                         <div className="digit">8</div>
-                        <div className="chars">ШЩЪЫ</div>
+                        <div className="chars">TUV</div>
                     </div>
                     <div
                         className="key"
@@ -105,7 +105,7 @@ const ContactDial = props => {
                         onClick={() => addDigit('9')}
                     >
                         <div className="digit">9</div>
-                        <div className="chars">ЬЭЮЯ</div>
+                        <div className="chars">WXYZ</div>
                     </div>
                     <div className="key asterisk">
                         <div className="icon">

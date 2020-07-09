@@ -32,7 +32,7 @@ const Contacts = props => {
             <div className="container">
                 <div className="control-bar">
                     <div className="control inactive" />
-                    <div className="title">Контакты</div>
+                    <div className="title">Contacts</div>
                     <div
                         className="control add"
                         role="presentation"
@@ -49,7 +49,7 @@ const Contacts = props => {
                 </div>
                 <div className="workspace">
                     <div className="my-number">
-                        <b>Мой номер:</b>
+                        <b>My number:</b>
                         &nbsp;
                         { phone.myNumber }
                     </div>

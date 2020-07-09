@@ -7,16 +7,16 @@ class BuyCar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            titleText: "Автомагазин",
-            basicText: "Основные характеристики",
-            fullText: "Полные характеристики",
-            panelOptionsText: "панель покупки транспорта",
-            colorText: "выбор цвета",
-            speedText: "Скорость",
-            accelerationText: "Ускорение",
-            brakingText: "Торможение",
-            clutchText: "Управляемость",
-            closeText: "Закрыть",
+            titleText: "Car Dealer",
+            basicText: "Main characteristics",
+            fullText: "Full specifications",
+            panelOptionsText: "vehicle purchase panel",
+            colorText: "color selection",
+            speedText: "Speed",
+            accelerationText: "Acceleration",
+            brakingText: "Braking",
+            clutchText: "Controllability",
+            closeText: "Close",
             id: 0,
             catalogData: null,
             colorSelect: null,
@@ -386,17 +386,17 @@ class BuyCar extends React.Component {
                     </div>
                     {this.state.selectCarData !== null ?
                     <div className="fullOptCar" id="fullOpt">
-                        <p>Марка: <b> {this.state.selectCarData.title}</b></p>
+                        <p>Brand: <b> {this.state.selectCarData.title}</b></p>
                         <br/>
-                        <p>Вместимость: <b>{this.state.selectCarParam.maxPassagersCar}</b></p>
+                        <p>Capacity: <b>{this.state.selectCarParam.maxPassagersCar}</b></p>
                         <br/>
-                        <p>Скорость: <b>{this.state.selectCarParam.maxSpeedKm} км/ч</b></p>
-                        <p>Ускорение: <b>{this.state.selectCarParam.acceleration}</b></p>
-                        <p>Торможение: <b>{this.state.selectCarParam.braking}</b></p>
-                        <p>Сцепление: <b>{this.state.selectCarParam.controllability}</b></p>
+                        <p>Speed: <b>{this.state.selectCarParam.maxSpeedKm} km / h</b></p>
+                        <p>Acceleration: <b>{this.state.selectCarParam.acceleration}</b></p>
+                        <p>Braking: <b>{this.state.selectCarParam.braking}</b></p>
+                        <p>Clutch: <b>{this.state.selectCarParam.controllability}</b></p>
                         <br/>
-                        <p>Обьем бака: <b>{this.state.selectCarData.fuelTank} л.</b></p>
-                        <p>Расход: <b>{this.state.selectCarData.fuelRate} л.</b></p>
+                        <p>Volume of the tank: <b>{this.state.selectCarData.fuelTank} л.</b></p>
+                        <p>Consumption: <b>{this.state.selectCarData.fuelRate} л.</b></p>
                     </div> : null}
                 </div>
                 <div className="optionBlock" id="showOpti">
@@ -405,7 +405,7 @@ class BuyCar extends React.Component {
                     
                     <div className="buyCarOptions">
                         <div className="optionCar">
-                            Страховка: {parseInt(this.state.insurancePrice)}$
+                            Insurance: {parseInt(this.state.insurancePrice)}$
                             <div className="btnOption">
                                 <div className={this.state.insuranceBtn === false ? 'off' : 'on'} id="btnInsurance"></div>
                             </div>
@@ -414,7 +414,7 @@ class BuyCar extends React.Component {
                         <div style={{clear: 'both'}}></div>
 
                         <div className="optionCar">
-                            Новый цвет: {parseInt(this.state.colorPrice)}$
+                            New color: {parseInt(this.state.colorPrice)}$
                             <div className="btnOption">
                                 <div className={this.state.colorBtn === false ? 'off' : 'on'} id="btnColor" onClick={() => this.switchColorFnc()}></div>
                             </div>
@@ -423,8 +423,8 @@ class BuyCar extends React.Component {
                         <div style={{clear: 'both'}}></div>
                         
                         <div className="summInfo">
-                            <p>Итого: {parseInt(this.state.summPrice)}$</p>
-                            <div className="btnBuyCar" onClick={() => this.buyCar()}>Купить</div>
+                            <p>Total: {parseInt(this.state.summPrice)}$</p>
+                            <div className="btnBuyCar" onClick={() => this.buyCar()}>Buy</div>
                         </div>
                     </div>
 
@@ -444,12 +444,12 @@ class BuyCar extends React.Component {
                     
                     <div className="btnBlock" onClick={() => this.testDriveFnc()}>
                         <div className="border"></div>
-                        <div className="textBtn">Тест-драйв</div>
+                        <div className="textBtn">Test Drive</div>
                     </div>
 
                     <div className="btnBlock" onClick={() => this.exit()}>
                         <div className="border"></div>
-                        <div className="textBtn">Выйти</div>
+                        <div className="textBtn">Log off</div>
                     </div>
 
                     <div style={{clear: 'both'}}></div>
@@ -465,7 +465,6 @@ function mapStateToProps(state) {
         
     };
 }
-
 
 const connectedApp = connect(mapStateToProps)(BuyCar);
 export { connectedApp as BuyCar };

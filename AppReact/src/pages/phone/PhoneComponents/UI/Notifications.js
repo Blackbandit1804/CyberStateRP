@@ -8,11 +8,11 @@ const Notifications = props => {
                     <div className="icon">
                         <img src="../assets/img/apps_icons/message.svg" alt="" />
                     </div>
-                    <div className="title">Сообщения</div>
-                    <div className="age">38 минут назад</div>
+                    <div className="title">Messages</div>
+                    <div className="age">38 minutes ago</div>
                 </div>
                 <div className="body">
-                    <p>ECMS6235 20:12 Покупка $260  MASTERCARD Баланс: $129 570</p>
+                    <p>ECMS6235 20:12 Purchase $260  MASTERCARD Balance: $129 570</p>
                 </div>
             </li>
         </ul>

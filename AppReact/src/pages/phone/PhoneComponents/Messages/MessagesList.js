@@ -49,7 +49,7 @@ const MessagesList = props => {
                     </div>
                 </div>
                 <div className="title-bar">
-                    <div className="title">Сообщения</div>
+                    <div className="title">Messages</div>
                 </div>
                 <div className="workspace">
                     {getMessages()}

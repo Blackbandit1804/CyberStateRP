@@ -72,11 +72,11 @@ class MedicCerf extends React.Component {
                     <img src={require('../../assets/img/medicCerf/man.png')}/>
                 </div>
                 <div className="statsBlock">
-                    <div className="label">Имя фамилия</div>
+                    <div className="label">Name Surname</div>
                     <div className="value">{data.Name}</div>
                 </div>
                 <div className="statsBlock">
-                        <div className="label">Должность</div>
+                        <div className="label">Position</div>
                         <div className="value">{data.Rank}</div>
                     </div>
             </div>

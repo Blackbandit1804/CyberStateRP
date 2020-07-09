@@ -75,7 +75,7 @@ class FibCerf extends React.Component {
                             Federal Investigation Bureau
                         </div>
                         <div className="ruText">
-                            Удостверение специального агента
+                            Special Agent Certificate
                         </div>
                     </div>
                     <div className="infoBox">
@@ -84,13 +84,13 @@ class FibCerf extends React.Component {
                         </div>
                         <ul className="stats">
                             <li>
-                                <div className="params">Пол</div>
+                                <div className="params">Floor</div>
                                 <div className="value">
-                                    {this.state.data.Sex === 0 ? 'Женский' : 'Мужской'}
+                                    {this.state.data.Sex === 0 ? 'Female' : 'Male'}
                                 </div>
                             </li>
                             <li>
-                                <div className="params">Звание</div>
+                                <div className="params">Rank</div>
                                 <div className="value">
                                     {this.state.data.Rank}
                                 </div>
@@ -102,7 +102,7 @@ class FibCerf extends React.Component {
                     </div>
                 </div>
                 <div className="textBox">
-                    На сотруднике возложена обязанность предотвращать и защищать Соединенные Штаты от угроз терроризма и иностранной разведки.
+                    The employee has the responsibility to prevent and protect the United States from the threats of terrorism and foreign intelligence.
                 </div>
             </div>
 

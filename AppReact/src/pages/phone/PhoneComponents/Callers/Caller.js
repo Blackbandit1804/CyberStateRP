@@ -42,7 +42,7 @@ const Caller = props => {
                     <div className="caller">{contact}</div>
                     <div className="call-type">
                         { !phone.talkingToPhone
-                            ? 'Вызов iPhone...'
+                            ? 'Call iPhone...'
                             : styleTimer(timer)
                         }
                     </div>

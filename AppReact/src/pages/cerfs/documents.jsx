@@ -127,7 +127,7 @@ class Documents extends React.Component {
                 {this.state.page === 1 ?
                     <div className="content">
                         <div className="labelPage">
-                            Паспорт
+                            The passport
                         </div>
                         <div className="simcard">
                             <img src={require('../../assets/img/documents/sim-card-chip.png')}/>
@@ -143,16 +143,16 @@ class Documents extends React.Component {
                                 </div>
                                 <ul className="stats">
                                     <li>
-                                        <div className="params">Имя</div>
+                                        <div className="params">Name</div>
                                         <div className="value">{this.state.data.name !== undefined ? this.state.data.name.split(' ')[0] : null}</div>
                                     </li>
                                     <li>
-                                        <div className="params">Фамилия</div>
+                                        <div className="params">Surname</div>
                                         <div className="value">{this.state.data.name !== undefined ? this.state.data.name.split(' ')[1] : null}</div>
                                     </li>
                                     <li>
-                                        <div className="params">Пол</div>
-                                        <div className="value">{this.state.data.sex == 0 ? "Женский" : "Мужской"}</div>
+                                        <div className="params">Floor</div>
+                                        <div className="value">{this.state.data.sex == 0 ? "Female" : "Male"}</div>
                                     </li>
                                 </ul>
                             </div>
@@ -161,7 +161,7 @@ class Documents extends React.Component {
                 {this.state.page === 2 ?
                 <div className="content">
                     <div className="labelPage">
-                        Лицензии
+                        Licenses
                     </div>
                     {this.state.data.licenses !== undefined &&
                         <div className="licensesBox">
@@ -171,7 +171,7 @@ class Documents extends React.Component {
                                         <img src={require('../../assets/img/documents/icon_car.png')}/>
                                     </div>
                                     <div className="name">
-                                        Авто
+                                        Auto
                                     </div>
                                 </li>
                     
@@ -180,7 +180,7 @@ class Documents extends React.Component {
                                         <img src={require('../../assets/img/documents/icon_boat.png')}/>
                                     </div>
                                     <div className="name">
-                                        Водный транспорт
+                                        Boat
                                     </div>
                                 </li>
                                 <li className={this.state.data.licenses.indexOf(10) !== -1 ? "" : "disabled"}>
@@ -188,7 +188,7 @@ class Documents extends React.Component {
                                         <img src={require('../../assets/img/documents/icon_gun.png')}/>
                                     </div>
                                     <div className="name">
-                                        Оружие
+                                        Weapon
                                     </div>
                                 </li>
                                 <li className={(this.state.data.licenses.indexOf(11) || this.state.data.licenses.indexOf(12)) !== -1 ? "" : "disabled"}>
@@ -196,7 +196,7 @@ class Documents extends React.Component {
                                         <img src={require('../../assets/img/documents/icon_plane.png')}/>
                                     </div>
                                     <div className="name">
-                                        Воздушный транспорт
+                                        Plane
                                     </div>
                                 </li>
                                 <li className="disabled">
@@ -204,7 +204,7 @@ class Documents extends React.Component {
                                         <img src={require('../../assets/img/documents/icon-archery.png')}/>
                                     </div>
                                     <div className="name">
-                                        Охота
+                                        Hunting
                                     </div>
                                 </li>
                                 <li className="disabled">
@@ -212,7 +212,7 @@ class Documents extends React.Component {
                                         <img src={require('../../assets/img/documents/icon_case.png')}/>
                                     </div>
                                     <div className="name">
-                                        Бизнес
+                                        Business
                                     </div>
                                 </li>
                             </ul>
