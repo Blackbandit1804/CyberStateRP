@@ -5,7 +5,7 @@
 1.) Setup Database
 - Open the file resources/cyberstate/server/modules/DB.js
 - Edit the MySQL Login details as you want have.
-- Import the Database into your mysql server (UTF8MB4) MySQL 5.7
+- Import the Database into your mysql server (UTF8MB4) MySQL 8.0
 
 2.) Setup the Mail Sendin
 - Open the file resources/cyberstate/server/modules/mailSender.js
